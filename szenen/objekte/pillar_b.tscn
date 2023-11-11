@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bp23twwcjwjpl"]
 
-[ext_resource type="Texture2D" uid="uid://bg5keyqr0tirw" path="res://assets/sprites/pillar_VORLAEUFIG.png" id="1_tasid"]
+[ext_resource type="Texture2D" path="res://assets/sprites/pillar_VORLAEUFIG.png" id="1_tasid"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p455g"]
 radius = 15.0333
