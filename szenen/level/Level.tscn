@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2vxb8mfo7ksh"]
+
+[gd_scene load_steps=5 format=3 uid="uid://ct8c5s7tamylk"]
+
 
 [ext_resource type="Script" path="res://szenen/level/Level.gd" id="1_6dvvy"]
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_6sbvf"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
+
 [ext_resource type="PackedScene" uid="uid://cxc1mipvyf0xl" path="res://szenen/objekte/Seilstueck.tscn" id="4_gyvuw"]
+
+[ext_resource type="PackedScene" uid="uid://bp23twwcjwjpl" path="res://szenen/objekte/pillar_b.tscn" id="4_jmtgy"]
 
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
@@ -31,7 +36,9 @@ position = Vector2(499, 509)
 position = Vector2(797, 385)
 
 [node name="Katze" parent="." instance=ExtResource("1_6sbvf")]
+y_sort_enabled = true
 position = Vector2(324, 361)
+
 
 [node name="Seilstueck" parent="." instance=ExtResource("4_gyvuw")]
 points = PackedVector2Array(315, 233, 535, 246)
@@ -41,3 +48,7 @@ points = PackedVector2Array(659, 441, 535, 246)
 
 [node name="Seilstueck3" parent="." instance=ExtResource("4_gyvuw")]
 points = PackedVector2Array(512, 460, 779, 331)
+
+[node name="PillarB" parent="." instance=ExtResource("4_jmtgy")]
+position = Vector2(838, 328)
+
