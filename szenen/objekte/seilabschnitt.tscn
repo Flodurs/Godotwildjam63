@@ -1,5 +1,16 @@
-[gd_scene format=3 uid="uid://behvdqj4o8hbv"]
+[gd_scene load_steps=3 format=3 uid="uid://behvdqj4o8hbv"]
 
-[node name="Seilabschnitt" type="Node2D" groups=["Seilabschnitt"]]
+[ext_resource type="Script" path="res://szenen/objekte/seilabschnitt.gd" id="1_j6lr2"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ocokn"]
+b = Vector2(0, 0)
+
+[node name="Seilabschnitt" type="Area2D" groups=["Seilabschnitt"]]
+script = ExtResource("1_j6lr2")
 
 [node name="Line2D" type="Line2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_ocokn")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
