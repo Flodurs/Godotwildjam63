@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwh7edg1y4haq"]
+
+[ext_resource type="Texture2D" uid="uid://bd6q1n74332hg" path="res://assets/sprites/spiked_barricade.png" id="1_ep6xi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w2pfq"]
+radius = 238.023
+
+[node name="Spiked_barricade" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ep6xi")
+offset = Vector2(0, -140)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.35)
+shape = SubResource("CircleShape2D_w2pfq")
