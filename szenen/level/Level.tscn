@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cxc1mipvyf0xl" path="res://szenen/objekte/Seilstueck.tscn" id="5_ppn7a"]
 [ext_resource type="PackedScene" uid="uid://dx58tbjxxj8gv" path="res://szenen/objekte/rad.tscn" id="7_i1n3s"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/grass.tscn" id="7_r2t3v"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/seil.tscn" id="7_xqpbt"]
+[ext_resource type="PackedScene" uid="uid://b7732dj7h1yrt" path="res://szenen/objekte/seil.tscn" id="7_xqpbt"]
 
 [node name="level" type="Node2D"]
 y_sort_enabled = true

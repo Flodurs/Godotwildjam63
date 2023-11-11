@@ -54,7 +54,7 @@ volume_db = -0.37
 pitch_scale = 4.03
 
 [node name="kneulPosi" type="Marker2D" parent="."]
-position = Vector2(-91, -43)
+position = Vector2(-89, -38)
 
 [node name="Wollknaeul" parent="kneulPosi" instance=ExtResource("7_4m6lf")]
 scale = Vector2(0.1525, 0.1525)
