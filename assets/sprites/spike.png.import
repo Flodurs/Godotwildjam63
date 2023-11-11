@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8or5tngob5g"
-path="res://.godot/imported/Katze0.png-c994adcbca6e0acc233a47b67c960dc1.ctex"
+uid="uid://0g763jaf5bpr"
+path="res://.godot/imported/spike.png-a5538a9d89bc7e266f771b54f0b09206.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Katze0.png"
-dest_files=["res://.godot/imported/Katze0.png-c994adcbca6e0acc233a47b67c960dc1.ctex"]
+source_file="res://assets/sprites/spike.png"
+dest_files=["res://.godot/imported/spike.png-a5538a9d89bc7e266f771b54f0b09206.ctex"]
 
 [params]
 

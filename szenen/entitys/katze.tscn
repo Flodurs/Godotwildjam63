@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ceheqoktc83rp"]
+[gd_scene load_steps=10 format=3 uid="uid://ceheqoktc83rp"]
 
 [ext_resource type="Script" path="res://szenen/entitys/katze.gd" id="1_s5uc3"]
-[ext_resource type="Texture2D" uid="uid://csohg4xx7c4u6" path="res://assets/sprites/Katze0.png" id="2_3ilmo"]
-[ext_resource type="Texture2D" uid="uid://d140jplwkepq1" path="res://assets/sprites/Katze1.png" id="3_iq43t"]
-[ext_resource type="Texture2D" uid="uid://cf2pe8l3x37kq" path="res://assets/sprites/Katze2.png" id="4_y3brr"]
-[ext_resource type="Texture2D" uid="uid://cgoenb6l6xc5k" path="res://assets/sprites/Katze3.png" id="5_icgt0"]
+[ext_resource type="Texture2D" uid="uid://cd8or5tngob5g" path="res://assets/sprites/Katze0.png" id="2_3ilmo"]
+[ext_resource type="Texture2D" uid="uid://ey435liqbve6" path="res://assets/sprites/Katze1.png" id="3_iq43t"]
+[ext_resource type="Texture2D" uid="uid://cs5vln2q0eh0s" path="res://assets/sprites/Katze2.png" id="4_y3brr"]
+[ext_resource type="Texture2D" uid="uid://cr43q05dahe8k" path="res://assets/sprites/Katze3.png" id="5_icgt0"]
 [ext_resource type="AudioStream" uid="uid://ij2yvpeiekm" path="res://assets/sound/walk.mp3" id="6_bfmj0"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/wollknaeul.tscn" id="7_4m6lf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_30qp0"]
 animations = [{
@@ -51,3 +52,10 @@ shape = SubResource("CapsuleShape2D_4018o")
 stream = ExtResource("6_bfmj0")
 volume_db = -0.37
 pitch_scale = 4.03
+
+[node name="Wollknaeul" parent="." instance=ExtResource("7_4m6lf")]
+position = Vector2(-91, -43)
+scale = Vector2(0.1525, 0.1525)
+
+[node name="kneulPosi" type="Marker2D" parent="."]
+position = Vector2(-91, -43)

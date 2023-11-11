@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8or5tngob5g"
-path="res://.godot/imported/Katze0.png-c994adcbca6e0acc233a47b67c960dc1.ctex"
+uid="uid://bwwxnppaq6tw2"
+path="res://.godot/imported/wollekneule.png-8f9763e7e540d3ca4eacbaaa396a76f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Katze0.png"
-dest_files=["res://.godot/imported/Katze0.png-c994adcbca6e0acc233a47b67c960dc1.ctex"]
+source_file="res://assets/sprites/wollekneule.png"
+dest_files=["res://.godot/imported/wollekneule.png-8f9763e7e540d3ca4eacbaaa396a76f7.ctex"]
 
 [params]
 
