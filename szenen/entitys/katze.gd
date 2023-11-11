@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @export var speed = 400
 
+var playAudioFlag = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -25,8 +26,13 @@ func _process(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
+		if playAudioFlag == 0:
+			$AudioStreamPlayer.play()
+			playAudioFlag = 1
 	else:
+		playAudioFlag=0
 		$AnimatedSprite2D.stop()
+		$AudioStreamPlayer.stop()
 		
 	move_and_slide()
 
