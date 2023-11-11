@@ -1,26 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=6 format=3 uid="uid://ct8c5s7tamylk"]
 
+[ext_resource type="Script" path="res://szenen/level/Level.gd" id="1_6dvvy"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_fv7qr"]
-[ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="3_yxktc"]
+[ext_resource type="PackedScene" uid="uid://cy275b2isyok0" path="res://szenen/objekte/spike.tscn" id="5_7m1ht"]
+[ext_resource type="PackedScene" uid="uid://cxc1mipvyf0xl" path="res://szenen/objekte/Seilstueck.tscn" id="5_ppn7a"]
 
 [node name="level" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_6dvvy")
 
 [node name="Katze" parent="." instance=ExtResource("1_fv7qr")]
+position = Vector2(162, 176)
 
 [node name="Pillar" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(475, 244)
+position = Vector2(160, 394)
 
 [node name="Pillar2" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(822, 244)
+position = Vector2(1065, 353)
 
 [node name="Pillar3" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(685, 338)
+position = Vector2(818, 709)
 
-[node name="Objects" type="Node2D" parent="."]
-y_sort_enabled = true
+[node name="Pillar4" parent="." instance=ExtResource("1_caku8")]
+position = Vector2(361, 476)
 
-[node name="Rock" parent="Objects" instance=ExtResource("3_yxktc")]
-position = Vector2(232, 499)
-scale = Vector2(0.3, 0.3)
+[node name="Pillar5" parent="." instance=ExtResource("1_caku8")]
+position = Vector2(507, 680)
+
+[node name="Seilstueck" parent="." instance=ExtResource("5_ppn7a")]
+points = PackedVector2Array(178, 337, 798, 663)
+
+[node name="Seilstueck2" parent="." instance=ExtResource("5_ppn7a")]
+points = PackedVector2Array(1048, 255, 835, 663)
+
+[node name="Seilstueck3" parent="." instance=ExtResource("5_ppn7a")]
+points = PackedVector2Array(1048, 255, 456, 238)
+
+[node name="spike" parent="." instance=ExtResource("5_7m1ht")]
+position = Vector2(674, 296)
