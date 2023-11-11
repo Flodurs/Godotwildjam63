@@ -13,4 +13,5 @@ script = ExtResource("1_j6lr2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("SegmentShape2D_ocokn")
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

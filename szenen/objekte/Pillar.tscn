@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_syccy"]
 radius = 18.1108
 
-[node name="Pillar" type="StaticBody2D"]
+[node name="Pillar" type="StaticBody2D" groups=["Pillar"]]
 script = ExtResource("1_8weh0")
 
 [node name="pillarIMage" type="Sprite2D" parent="."]
