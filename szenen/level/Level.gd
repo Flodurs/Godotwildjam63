@@ -1,7 +1,14 @@
 extends Node2D
 
+var seile = []
+var pillars = []
+
+
 func _ready():
-	$Pillar2.Seilstuecke = $Pillar2.verdecken($Line2D)
-#	$Pillar2.add_child($Pillar2.Seilstuecke)
-#	$Pillar2.Seilstuecke.visible= true
+	
+	for s in seile:
+		for p in pillars:
+			pass
+#	$Pillar2.Seilstuecke = $Pillar2.verdecken($Line2D)
+
 	
