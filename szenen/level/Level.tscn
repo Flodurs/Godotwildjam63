@@ -1,18 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=5 format=3 uid="uid://ct8c5s7tamylk"]
 
+[ext_resource type="Script" path="res://szenen/level/Level.gd" id="1_6dvvy"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_fv7qr"]
+[ext_resource type="PackedScene" uid="uid://cxc1mipvyf0xl" path="res://szenen/objekte/Seilstueck.tscn" id="5_ppn7a"]
 
 [node name="level" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_6dvvy")
 
 [node name="Katze" parent="." instance=ExtResource("1_fv7qr")]
 
 [node name="Pillar" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(475, 244)
+position = Vector2(475, 239)
 
 [node name="Pillar2" parent="." instance=ExtResource("1_caku8")]
 position = Vector2(822, 244)
 
 [node name="Pillar3" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(685, 338)
+position = Vector2(683, 324)
+
+[node name="Pillar4" parent="." instance=ExtResource("1_caku8")]
+position = Vector2(559, 262)
+
+[node name="Pillar5" parent="." instance=ExtResource("1_caku8")]
+position = Vector2(614, 330)
+
+[node name="Seilstueck" parent="." instance=ExtResource("5_ppn7a")]
+points = PackedVector2Array(482, 203, 677, 309)
+
+[node name="Seilstueck2" parent="." instance=ExtResource("5_ppn7a")]
+points = PackedVector2Array(815, 211, 677, 309)

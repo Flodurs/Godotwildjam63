@@ -9,6 +9,7 @@ func _ready():
 	start = get_point_position(0)  
 	ende = get_point_position(1)  
 	richtung = ende-start
+	add_to_group("Seile")
 	
 func platzieren(p1:Vector2, p2:Vector2):
 	pass
