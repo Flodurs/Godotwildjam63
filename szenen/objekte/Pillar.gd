@@ -3,8 +3,8 @@ extends StaticBody2D
 
 @export var seil_hoehe:int = 30
 var gewickelt:bool = false
-const linkeKanteX:int = -20
-const rechteKanteX:int = 20
+const linkeKanteX:int = -10
+const rechteKanteX:int = 10
 
 
 
@@ -19,16 +19,16 @@ func verdecken(seil): #seil muss typ Seilstueck haben
 		var punktRechts:Vector2 = Vector2.ZERO
 		
 		punktLinks.x = position.x + linkeKanteX
-		punktLinks.y = seil.getYAtX(punktLinks.x)
+		punktLinks.y = seil.getYAtX(punktLinks.x) 
 		punktRechts.x = global_position.x + rechteKanteX
-		punktRechts.y = seil.getYAtX(punktRechts.x)
+		punktRechts.y = seil.getYAtX(punktRechts.x) 
 		
 		
 		var verdeckungsLinie = Line2D.new()
 		verdeckungsLinie.width = 3
 		verdeckungsLinie.default_color = "ff0000"
 		
-		verdeckungsLinie. add_point(punktLinks- position)
+		verdeckungsLinie. add_point(punktLinks - position)
 		verdeckungsLinie.add_point(punktRechts - position)
 		add_child(verdeckungsLinie)
 		verdeckungsLinie.visible = true
