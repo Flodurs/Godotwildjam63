@@ -26,6 +26,9 @@ func verdecken(seil): #seil muss typ Seilstueck haben
 		
 		
 		var verdeckungsLinie = Line2D.new()
+		verdeckungsLinie.width = 3
+		verdeckungsLinie.default_color = "ff0000"
+		
 		verdeckungsLinie. add_point(punktLinks- position)
 		verdeckungsLinie.add_point(punktRechts - position)
 		add_child(verdeckungsLinie)
