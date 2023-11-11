@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxc1mipvyf0xl"]
+
+[ext_resource type="Script" path="res://Seilstück.gd" id="1_xch8n"]
+
+[node name="Seilstueck" type="Line2D"]
+script = ExtResource("1_xch8n")
