@@ -12,7 +12,6 @@ const rechteKanteX:int = 20
 func verdecken(seil): #seil muss typ Seilstueck haben
 	if (seil.get_point_count() != 2):
 		print("error: seil mit zu vielen punkten (oder zu wenig)")
-		return Line2D.new()
 	else:
 		var start:Vector2 = seil.get_point_position(0)
 		var richtung:Vector2 = seil.get_point_position(1)-seil.get_point_position(0)
