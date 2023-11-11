@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=3 format=3 uid="uid://ct8c5s7tamylk"]
 
+[ext_resource type="Script" path="res://szenen/level/Level.gd" id="1_6dvvy"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
 
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_6dvvy")
 
 [node name="Pillar" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(424, 326)
+position = Vector2(399, 254)
 
 [node name="Pillar2" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(524, 330)
+position = Vector2(304, 283)
