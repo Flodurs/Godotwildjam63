@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ceheqoktc83rp"]
+[gd_scene load_steps=10 format=3 uid="uid://ceheqoktc83rp"]
 
 [ext_resource type="Script" path="res://szenen/entitys/katze.gd" id="1_s5uc3"]
 [ext_resource type="Texture2D" uid="uid://cqa33tgaek23r" path="res://assets/sprites/katze1.png" id="2_px3b0"]
 [ext_resource type="Texture2D" uid="uid://cax110a2rhg6o" path="res://assets/sprites/Katze2.png" id="3_akpbw"]
 [ext_resource type="Texture2D" uid="uid://ctflnnpjwujgp" path="res://assets/sprites/Katze3.png" id="4_mu6w4"]
 [ext_resource type="Texture2D" uid="uid://e7uludmo3xmg" path="res://assets/sprites/Katze4.png" id="5_e3sf3"]
+[ext_resource type="AudioStream" uid="uid://ij2yvpeiekm" path="res://assets/sound/walk.mp3" id="6_bfmj0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_30qp0"]
 animations = [{
@@ -40,7 +41,7 @@ script = ExtResource("1_s5uc3")
 rotation = -1.5708
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_30qp0")
-frame_progress = 0.858751
+frame_progress = 0.960349
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
@@ -51,3 +52,8 @@ visible = false
 position = Vector2(-2, -7.62939e-06)
 scale = Vector2(49.75, 37.25)
 texture = SubResource("PlaceholderTexture2D_mn52i")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_bfmj0")
+volume_db = -0.37
+pitch_scale = 4.03
