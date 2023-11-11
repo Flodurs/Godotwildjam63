@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cs5vln2q0eh0s" path="res://assets/sprites/Katze2.png" id="4_y3brr"]
 [ext_resource type="Texture2D" uid="uid://cr43q05dahe8k" path="res://assets/sprites/Katze3.png" id="5_icgt0"]
 [ext_resource type="AudioStream" uid="uid://ij2yvpeiekm" path="res://assets/sound/walk.mp3" id="6_bfmj0"]
-[ext_resource type="PackedScene" uid="uid://hxobrte7utni" path="res://szenen/objekte/wollknaeul.tscn" id="7_4m6lf"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/wollknaeul.tscn" id="7_4m6lf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_30qp0"]
 animations = [{
@@ -41,7 +41,7 @@ z_as_relative = false
 position = Vector2(1.81188e-13, -51)
 scale = Vector2(0.11, 0.11)
 sprite_frames = SubResource("SpriteFrames_30qp0")
-frame_progress = 0.504905
+frame_progress = 0.174633
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)

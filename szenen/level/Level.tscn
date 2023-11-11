@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=11 format=3 uid="uid://ct8c5s7tamylk"]
 
 [ext_resource type="Script" path="res://szenen/level/Level.gd" id="1_6dvvy"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://szenen/objekte/rad.tscn" id="7_i1n3s"]
 [ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="7_r2t3v"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/seil.tscn" id="7_xqpbt"]
+[ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="8_8dxxq"]
 
 [node name="level" type="Node2D"]
 y_sort_enabled = true
@@ -61,6 +62,10 @@ scale = Vector2(0.15, 0.15)
 [node name="Grass2" parent="Objects" instance=ExtResource("7_r2t3v")]
 position = Vector2(-449, 194)
 scale = Vector2(0.3, 0.3)
+
+[node name="ConcretePile" parent="Objects" instance=ExtResource("8_8dxxq")]
+position = Vector2(572, 273)
+scale = Vector2(0.7, 0.7)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.7, 0.7)

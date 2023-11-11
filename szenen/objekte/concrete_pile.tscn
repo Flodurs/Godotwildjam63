@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3yj2axpflnrq"]
+
+[ext_resource type="Texture2D" uid="uid://c7p3djry447f4" path="res://assets/sprites/Objects/ConcretePile.png" id="1_apocg"]
+
+[node name="ConcretePile" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -164)
+texture = ExtResource("1_apocg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -164)
+polygon = PackedVector2Array(-347, 141, -292, 194, -179, 215, -105, 218, -63, 267, 53, 235, 112, 275, 227, 217, 318, 199, 315, 123, 261, 77, 15, 37, -179, 49, -297, 69, -336, 104)
