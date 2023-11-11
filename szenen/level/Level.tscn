@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=3 format=3 uid="uid://ct8c5s7tamylk"]
 
-[ext_resource type="Script" path="res://szenen/level/Level.gd" id="1_6dvvy"]
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_6sbvf"]
+
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/pillar_b.tscn" id="4_jmtgy"]
 [ext_resource type="PackedScene" uid="uid://cxc1mipvyf0xl" path="res://szenen/objekte/Seilstueck.tscn" id="5_ppn7a"]
@@ -41,14 +41,11 @@ scale = Vector2(2, 2)
 [node name="Katze" parent="." instance=ExtResource("1_6sbvf")]
 position = Vector2(324, 361)
 
+[ext_resource type="PackedScene" uid="uid://bp23twwcjwjpl" path="res://szenen/objekte/pillar_b.tscn" id="4_jmtgy"]
+
+[node name="Node2D" type="Node2D"]
+
+
+
 [node name="PillarB" parent="." instance=ExtResource("4_jmtgy")]
-position = Vector2(838, 328)
-
-[node name="Seilstueck" parent="." instance=ExtResource("5_ppn7a")]
-points = PackedVector2Array(312, 235, 531, 242)
-
-[node name="Seilstueck2" parent="." instance=ExtResource("5_ppn7a")]
-points = PackedVector2Array(658, 448, 531, 242)
-
-[node name="Seilstueck3" parent="." instance=ExtResource("5_ppn7a")]
-points = PackedVector2Array(784, 320, 511, 447)
+position = Vector2(386, 413)
