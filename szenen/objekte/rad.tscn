@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx58tbjxxj8gv"]
+
+[ext_resource type="Script" path="res://szenen/objekte/rad.gd" id="1_dvope"]
+[ext_resource type="Texture2D" uid="uid://b1xs62fc2t8tn" path="res://assets/sprites/rad.png" id="1_krvvv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vx5kd"]
+radius = 32.0624
+
+[node name="rad" type="StaticBody2D"]
+script = ExtResource("1_dvope")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.45, 1)
+shape = SubResource("CircleShape2D_vx5kd")
+
+[node name="radBild" type="Sprite2D" parent="."]
+position = Vector2(0, -65)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_krvvv")

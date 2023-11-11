@@ -1,48 +1,57 @@
-[gd_scene load_steps=7 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=8 format=3 uid="uid://ct8c5s7tamylk"]
 
 [ext_resource type="Script" path="res://szenen/level/Level.gd" id="1_6dvvy"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_fv7qr"]
-[ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="3_yxktc"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/spike.tscn" id="5_7m1ht"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/rock.tscn" id="3_yxktc"]
+[ext_resource type="PackedScene" uid="uid://cy275b2isyok0" path="res://szenen/objekte/spike.tscn" id="5_7m1ht"]
 [ext_resource type="PackedScene" uid="uid://cxc1mipvyf0xl" path="res://szenen/objekte/Seilstueck.tscn" id="5_ppn7a"]
+[ext_resource type="PackedScene" uid="uid://dx58tbjxxj8gv" path="res://szenen/objekte/rad.tscn" id="7_i1n3s"]
 
 [node name="level" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_6dvvy")
 
 [node name="Katze" parent="." instance=ExtResource("1_fv7qr")]
-position = Vector2(162, 176)
+position = Vector2(-377, -188)
 
 [node name="Pillar" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(160, 394)
+position = Vector2(-379, 30)
 
 [node name="Pillar2" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(1065, 353)
+position = Vector2(526, -11)
 
 [node name="Pillar3" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(818, 709)
+position = Vector2(279, 345)
 
 [node name="Pillar4" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(361, 476)
+position = Vector2(-178, 112)
 
 [node name="Pillar5" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(507, 680)
+position = Vector2(-32, 316)
 
 [node name="Seilstueck" parent="." instance=ExtResource("5_ppn7a")]
+position = Vector2(-539, -364)
 points = PackedVector2Array(178, 337, 798, 663)
 
 [node name="Seilstueck2" parent="." instance=ExtResource("5_ppn7a")]
+position = Vector2(-539, -364)
 points = PackedVector2Array(1048, 255, 835, 663)
 
 [node name="Seilstueck3" parent="." instance=ExtResource("5_ppn7a")]
+position = Vector2(-539, -364)
 points = PackedVector2Array(1048, 255, 456, 238)
 
 [node name="spike" parent="." instance=ExtResource("5_7m1ht")]
-position = Vector2(674, 296)
+position = Vector2(135, -68)
 
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Rock" parent="Objects" instance=ExtResource("3_yxktc")]
-position = Vector2(194, 588)
+position = Vector2(-345, 224)
 scale = Vector2(0.3, 0.3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.7, 0.7)
+
+[node name="rad" parent="Camera2D" instance=ExtResource("7_i1n3s")]

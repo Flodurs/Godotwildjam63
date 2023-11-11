@@ -29,8 +29,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4018o"]
-radius = 17.0
-height = 184.0
+radius = 12.0
+height = 154.0
 
 [node name="Katze" type="CharacterBody2D"]
 motion_mode = 1
@@ -44,7 +44,7 @@ sprite_frames = SubResource("SpriteFrames_30qp0")
 frame_progress = 0.174633
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
+position = Vector2(0, 1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_4018o")
 

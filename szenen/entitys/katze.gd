@@ -57,7 +57,7 @@ func hebeaufWolle():
 	var w = get_tree().get_nodes_in_group("Wolle")
 	var posi = w[0].global_position
 	var mPos = $kneulPosi.global_position
-	if (abs(posi-mPos).length() < 50):
+	if (abs(posi-mPos).length() < 100):
 		$"..".remove_child(w[0])
 		add_child(w[0])
 		w[0].position = $kneulPosi.position
