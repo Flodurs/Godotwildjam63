@@ -4,8 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_fv7qr"]
 
 [node name="level" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Katze" parent="." instance=ExtResource("1_fv7qr")]
 
 [node name="Pillar" parent="." instance=ExtResource("1_caku8")]
 position = Vector2(475, 244)
+
+[node name="Pillar2" parent="." instance=ExtResource("1_caku8")]
+position = Vector2(822, 244)
+
+[node name="Pillar3" parent="." instance=ExtResource("1_caku8")]
+position = Vector2(685, 338)
