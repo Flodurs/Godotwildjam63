@@ -1,12 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=3 format=3 uid="uid://ct8c5s7tamylk"]
 
+[ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_6sbvf"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
 
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
 
+[node name="Katze" parent="." instance=ExtResource("1_6sbvf")]
+position = Vector2(147, 111)
+
 [node name="Pillar" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(424, 326)
+position = Vector2(227, 386)
 
 [node name="Pillar2" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(524, 330)
+position = Vector2(580, 161)
+
+[node name="Pillar3" parent="." instance=ExtResource("1_caku8")]
+position = Vector2(683, 188)
+
+[node name="Line2D" type="Line2D" parent="."]
+y_sort_enabled = true
+points = PackedVector2Array(347, 289, 425, 292, 587, 60, 752, 164, 751, 251)
+
+[node name="Line2D2" type="Line2D" parent="."]
+y_sort_enabled = true
+position = Vector2(65, 315)
+scale = Vector2(1.02778, 1.12698)
+points = PackedVector2Array(0, 0, 222.811, -3.05176e-05, 183.892, -48.8028, 140.045, -51.4986, 97.2973, -54.1268)
