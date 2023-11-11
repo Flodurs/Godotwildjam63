@@ -53,9 +53,8 @@ stream = ExtResource("6_bfmj0")
 volume_db = -0.37
 pitch_scale = 4.03
 
-[node name="Wollknaeul" parent="." instance=ExtResource("7_4m6lf")]
-position = Vector2(-91, -43)
-scale = Vector2(0.1525, 0.1525)
-
 [node name="kneulPosi" type="Marker2D" parent="."]
 position = Vector2(-91, -43)
+
+[node name="Wollknaeul" parent="kneulPosi" instance=ExtResource("7_4m6lf")]
+scale = Vector2(0.1525, 0.1525)
