@@ -1,51 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=2 format=3 uid="uid://bllgydvr5omfx"]
 
-[ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_6sbvf"]
+[ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_fv7qr"]
 
-[ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/pillar_b.tscn" id="4_jmtgy"]
-[ext_resource type="PackedScene" uid="uid://cxc1mipvyf0xl" path="res://szenen/objekte/Seilstueck.tscn" id="5_ppn7a"]
+[node name="level" type="Node2D"]
 
-[node name="Level" type="Node2D"]
-y_sort_enabled = true
-script = ExtResource("1_6dvvy")
-
-[node name="Pillar" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(415, 262)
-scale = Vector2(2, 2)
-
-[node name="Pillar2" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(304, 283)
-scale = Vector2(2, 2)
-
-[node name="Pillar3" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(547, 296)
-scale = Vector2(2, 2)
-
-[node name="Pillar4" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(594, 420)
-scale = Vector2(2, 2)
-
-[node name="Pillar5" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(671, 502)
-scale = Vector2(2, 2)
-
-[node name="Pillar6" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(499, 509)
-scale = Vector2(2, 2)
-
-[node name="Pillar7" parent="." instance=ExtResource("1_caku8")]
-position = Vector2(797, 385)
-scale = Vector2(2, 2)
-
-[node name="Katze" parent="." instance=ExtResource("1_6sbvf")]
-position = Vector2(324, 361)
-
-[ext_resource type="PackedScene" uid="uid://bp23twwcjwjpl" path="res://szenen/objekte/pillar_b.tscn" id="4_jmtgy"]
-
-[node name="Node2D" type="Node2D"]
-
-
-
-[node name="PillarB" parent="." instance=ExtResource("4_jmtgy")]
-position = Vector2(386, 413)
+[node name="Katze" parent="." instance=ExtResource("1_fv7qr")]

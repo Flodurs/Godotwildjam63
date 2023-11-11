@@ -9,11 +9,11 @@ func _ready():
 func _physics_process(delta):
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("mRight"):
-		$AnimatedSprite2D.flip_v = 1
+		$AnimatedSprite2D.flip_h = 1
 		velocity.x += 1
 		
 	if Input.is_action_pressed("mLeft"):
-		$AnimatedSprite2D.flip_v = 0
+		$AnimatedSprite2D.flip_h = 0
 		
 		velocity.x -= 1
 	if Input.is_action_pressed("mDown"):
