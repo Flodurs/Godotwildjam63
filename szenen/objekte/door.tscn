@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://deymgoseatomc"]
+
+[ext_resource type="Script" path="res://szenen/objekte/door.gd" id="1_w45rm"]
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_w45rm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
