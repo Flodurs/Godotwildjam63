@@ -7,7 +7,6 @@
 radius = 6.0
 
 [node name="Pillar" type="StaticBody2D"]
-y_sort_enabled = true
 script = ExtResource("1_8weh0")
 
 [node name="pillarIMage" type="Sprite2D" parent="."]
