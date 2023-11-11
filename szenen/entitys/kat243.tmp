@@ -26,9 +26,8 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4018o"]
-radius = 52.0
-height = 228.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghjkr"]
+size = Vector2(68, 48)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mn52i"]
 
@@ -40,11 +39,11 @@ script = ExtResource("1_s5uc3")
 rotation = -1.5708
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_30qp0")
-frame_progress = 0.858751
+frame_progress = 0.61154
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_4018o")
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_ghjkr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

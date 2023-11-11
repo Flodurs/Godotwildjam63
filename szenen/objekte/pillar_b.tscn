@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp23twwcjwjpl"]
+
+[ext_resource type="Texture2D" uid="uid://bg5keyqr0tirw" path="res://assets/sprites/pillar_VORLAEUFIG.png" id="1_tasid"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p455g"]
+
+[node name="PillarB" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -77)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_tasid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p455g")
