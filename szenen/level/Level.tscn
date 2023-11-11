@@ -42,6 +42,7 @@ points = PackedVector2Array(1048, 255, 456, 238)
 position = Vector2(674, 296)
 
 [node name="Objects" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Rock" parent="Objects" instance=ExtResource("3_yxktc")]
 position = Vector2(194, 588)
