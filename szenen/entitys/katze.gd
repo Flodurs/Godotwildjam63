@@ -5,10 +5,8 @@ var playAudioFlag = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+	
+func _physics_process(delta):
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("mRight"):
 		$AnimatedSprite2D.flip_v = 1
@@ -35,4 +33,8 @@ func _process(delta):
 		$AudioStreamPlayer.stop()
 		
 	move_and_slide()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
 

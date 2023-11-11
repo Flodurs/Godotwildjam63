@@ -3,8 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://bg5keyqr0tirw" path="res://assets/sprites/pillar_VORLAEUFIG.png" id="1_tasid"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p455g"]
+radius = 15.0333
 
 [node name="PillarB" type="StaticBody2D"]
+z_as_relative = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -77)
