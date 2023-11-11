@@ -58,5 +58,3 @@ position = Vector2(-91, -43)
 
 [node name="Wollknaeul" parent="kneulPosi" instance=ExtResource("7_4m6lf")]
 scale = Vector2(0.1525, 0.1525)
-
-[node name="Area2D" type="Area2D" parent="kneulPosi"]
