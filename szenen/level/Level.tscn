@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bllgydvr5omfx"]
+[gd_scene load_steps=3 format=3 uid="uid://ct8c5s7tamylk"]
 
+[ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_fv7qr"]
 
 [node name="level" type="Node2D"]
 
 [node name="Katze" parent="." instance=ExtResource("1_fv7qr")]
+
+[node name="Pillar" parent="." instance=ExtResource("1_caku8")]
+position = Vector2(475, 244)
