@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl75k08wo6xhn"]
+
+[ext_resource type="Texture2D" uid="uid://cqtd6ggky0nvl" path="res://assets/sprites/Objects/Grass.png" id="1_cbnoc"]
+
+[node name="Grass" type="Sprite2D"]
+position = Vector2(0, -2)
+texture = ExtResource("1_cbnoc")
+offset = Vector2(0, -130)
