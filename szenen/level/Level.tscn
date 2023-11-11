@@ -7,6 +7,7 @@
 y_sort_enabled = true
 
 [node name="Katze" parent="." instance=ExtResource("1_fv7qr")]
+position = Vector2(121, 233)
 
 [node name="Pillar" parent="." instance=ExtResource("1_caku8")]
 position = Vector2(475, 244)
