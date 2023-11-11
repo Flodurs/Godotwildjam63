@@ -13,10 +13,12 @@ func _physics_process(_delta):
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("mRight"):
 		$AnimatedSprite2D.flip_h = 1
+		$kneulPosi.position.x = abs($kneulPosi.position.x)
 		velocity.x += 1
 		
 	if Input.is_action_pressed("mLeft"):
 		$AnimatedSprite2D.flip_h = 0
+		$kneulPosi.position.x = -abs($kneulPosi.position.x)
 		
 		velocity.x -= 1
 	if Input.is_action_pressed("mDown"):
@@ -49,7 +51,7 @@ func _process(_delta):
 func dropWolle():
 	var w = get_tree().get_nodes_in_group("Wolle")
 	var posi = w[0].global_position
-	remove_child(w[0])
+	$kneulPosi.remove_child(w[0])
 	$"..".add_child(w[0])
 	w[0].position = Vector2(posi.x, posi.y + 15)
 
@@ -59,6 +61,6 @@ func hebeaufWolle():
 	var mPos = $kneulPosi.global_position
 	if (abs(posi-mPos).length() < 100):
 		$"..".remove_child(w[0])
-		add_child(w[0])
-		w[0].position = $kneulPosi.position
+		$kneulPosi.add_child(w[0])
+		w[0].position = Vector2.ZERO
 		hatWolle = true
