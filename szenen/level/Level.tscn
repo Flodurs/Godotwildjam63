@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ct8c5s7tamylk"]
+[gd_scene load_steps=7 format=3 uid="uid://ct8c5s7tamylk"]
 
 [ext_resource type="Script" path="res://szenen/level/Level.gd" id="1_6dvvy"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="1_caku8"]
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_fv7qr"]
-[ext_resource type="PackedScene" uid="uid://cy275b2isyok0" path="res://szenen/objekte/spike.tscn" id="5_7m1ht"]
+[ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="3_yxktc"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/spike.tscn" id="5_7m1ht"]
 [ext_resource type="PackedScene" uid="uid://cxc1mipvyf0xl" path="res://szenen/objekte/Seilstueck.tscn" id="5_ppn7a"]
 
 [node name="level" type="Node2D"]
@@ -39,3 +40,9 @@ points = PackedVector2Array(1048, 255, 456, 238)
 
 [node name="spike" parent="." instance=ExtResource("5_7m1ht")]
 position = Vector2(674, 296)
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Rock" parent="Objects" instance=ExtResource("3_yxktc")]
+position = Vector2(194, 588)
+scale = Vector2(0.3, 0.3)
