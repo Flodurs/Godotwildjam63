@@ -48,7 +48,7 @@ func _process(_delta):
 
 func dropWolle():
 	var w = get_tree().get_nodes_in_group("Wolle")
-	var posi = w[0].globale_position
+	var posi = w[0].global_position
 	remove_child(w[0])
 	$"..".add_child(w[0])
 	w[0].position = Vector2(posi.x, posi.y + 15)

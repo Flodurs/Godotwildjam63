@@ -13,11 +13,27 @@ func _ready():
 func _process(delta):
 	
 	var catPos = get_tree().get_nodes_in_group("Katze")[0].position
+	
+#Create first Seil Segment
 	if dropped == 1:
 		if get_tree().get_nodes_in_group("Seilabschnitt").size() == 0:
 			var sA = seilAbsch.instantiate()
-			sA.Line2D.addPoint(catPos)
+			
 			add_child(sA)
+			get_tree().get_nodes_in_group("Seilabschnitt")[0].get_node("Line2D").add_point(dropPos)
+			get_tree().get_nodes_in_group("Seilabschnitt")[0].get_node("Line2D").add_point(catPos)
+	
+	
+	if get_tree().get_nodes_in_group("Seilabschnitt").size() == 0:
+		return 
+		
+#Process top Segment
+	get_tree().get_nodes_in_group("Seilabschnitt")[0].get_node("Line2D").set_point_position(get_tree().get_nodes_in_group("Seilabschnitt").size(),catPos)
+
+
+	
+	
+	
 			
 		
 	
