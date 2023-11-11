@@ -1,10 +1,10 @@
 extends StaticBody2D
 
 
-@export var seil_hoehe:int = 30
+@export var seil_hoehe:int = 50
 var gewickelt:bool = false
-const linkeKanteX:int = -10
-const rechteKanteX:int = 10
+const linkeKanteX:int = -20
+const rechteKanteX:int = 20
 
 func _ready():
 	add_to_group("Pillar")

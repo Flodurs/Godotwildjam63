@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy275b2isyok0"]
+
+[ext_resource type="Texture2D" uid="uid://0g763jaf5bpr" path="res://assets/sprites/spike.png" id="1_0hw8h"]
+[ext_resource type="Script" path="res://szenen/objekte/spike.gd" id="1_0obmy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_05k2l"]
+radius = 15.0
+height = 104.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7e128"]
+size = Vector2(72, 24)
+
+[node name="spike" type="StaticBody2D"]
+script = ExtResource("1_0obmy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6, -47)
+texture = ExtResource("1_0hw8h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_05k2l")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -53)
+shape = SubResource("RectangleShape2D_7e128")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

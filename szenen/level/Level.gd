@@ -11,4 +11,13 @@ func _ready():
 					p.verdecken(s)
 #	$Pillar2.Seilstuecke = $Pillar2.verdecken($Line2D)
 
+
+	
+#	var knaeul = get_tree().get_nodes_in_group("Wolle")
+#	var cat = get_tree().get_nodes_in_group("Player")
+#	if knaeul.size() >0 && cat.size > 0:
+#		for k in knaeul:
+#			for c in cat:
+#				c.add_child(k)
+
 	

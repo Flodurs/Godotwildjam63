@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://hxobrte7utni"]
+
+[ext_resource type="Script" path="res://szenen/objekte/wollknaeul.gd" id="1_14p6f"]
+[ext_resource type="Texture2D" uid="uid://bwwxnppaq6tw2" path="res://assets/sprites/wollekneule.png" id="1_jfvr6"]
+
+[node name="Wollknaeul" type="Sprite2D"]
+texture = ExtResource("1_jfvr6")
+script = ExtResource("1_14p6f")
