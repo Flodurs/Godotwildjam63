@@ -4,6 +4,11 @@ extends CharacterBody2D
 var playAudioFlag = 0
 var hatWolle: bool = true
 
+const kneul_schmutz = preload("res://assets/sprites/wollekneule_schmutzig.png")
+const haufen_schmutz = preload("res://assets/sprites/wollhaufen_schmutzig.png")
+const kneul_sauber = preload("res://assets/sprites/wollekneule_sauber.png")
+const haufen_sauber = preload("res://assets/sprites/wollhaufen_sauber.png")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("Player") # Replace with function body.
@@ -53,7 +58,8 @@ func dropWolle():
 	var posi = w[0].global_position
 	$kneulPosi.remove_child(w[0])
 	$"..".add_child(w[0])
-	w[0].position = Vector2(posi.x, posi.y + 15)
+	w[0].position = Vector2(posi.x, posi.y + 20)
+	w[0].set_texture(haufen_schmutz)
 
 func hebeaufWolle():
 	var w = get_tree().get_nodes_in_group("Wolle")
@@ -63,4 +69,5 @@ func hebeaufWolle():
 		$"..".remove_child(w[0])
 		$kneulPosi.add_child(w[0])
 		w[0].position = Vector2.ZERO
+		w[0].set_texture(kneul_schmutz)
 		hatWolle = true
