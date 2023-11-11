@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://b7732dj7h1yrt"]
+[gd_scene load_steps=2 format=3 uid="uid://b7732dj7h1yrt"]
+
+[ext_resource type="Script" path="res://szenen/objekte/seil.gd" id="1_afdkj"]
 
 [node name="Seil" type="Node2D"]
+script = ExtResource("1_afdkj")

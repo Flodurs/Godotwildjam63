@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://behvdqj4o8hbv"]
 
-[node name="Seilabschnitt" type="Line2D"]
+[node name="Seilabschnitt" type="Node2D" groups=["Seilabschnitt"]]
+
+[node name="Line2D" type="Line2D" parent="."]
