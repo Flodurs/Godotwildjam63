@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://5cgyo1yuenvq"]
+
+[ext_resource type="Texture2D" uid="uid://1u2cktdxk5ts" path="res://assets/sprites/Objects/Long Concrete.png" id="1_ovbxe"]
+
+[node name="LongConcrete" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-619, 141, -487, 198, -335, 148, 313, 32, 313, 32, 340, 53, 388, 23, 436, -36, 370, -59, 276, -64)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ovbxe")
