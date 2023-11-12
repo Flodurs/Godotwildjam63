@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cpkir3ceg65du"]
+[gd_scene load_steps=16 format=3 uid="uid://cpkir3ceg65du"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_chtnv"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="2_088v0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
 [ext_resource type="PackedScene" uid="uid://5cgyo1yuenvq" path="res://szenen/objekte/long_concrete.tscn" id="8_8a4ay"]
 [ext_resource type="PackedScene" uid="uid://djrura0ipe3nw" path="res://szenen/objekte/wind_emitter.tscn" id="9_k7bob"]
+[ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="9_uyeks"]
 [ext_resource type="Texture2D" uid="uid://bg5ashs80v1nv" path="res://assets/sprites/Background/floor.png" id="10_kppow"]
 [ext_resource type="Texture2D" uid="uid://bdwmuot6ok2uy" path="res://assets/sprites/Objects/Shadow.png" id="12_bgoay"]
 [ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="13_1k5b6"]
@@ -19,6 +20,7 @@
 script = ExtResource("2_a1d08")
 
 [node name="WindEmitter" parent="." index="0" instance=ExtResource("9_k7bob")]
+z_index = 4
 metadata/_edit_lock_ = true
 
 [node name="Katze" parent="." index="1"]
@@ -51,8 +53,13 @@ scale = Vector2(0.8, 0.8)
 position = Vector2(-330, -755)
 
 [node name="LongConcrete2" parent="Objects" index="7" instance=ExtResource("8_8a4ay")]
+z_index = -1
 position = Vector2(1162, -677)
 scale = Vector2(-1, 1)
+
+[node name="Reifen" parent="Objects" index="8" instance=ExtResource("9_uyeks")]
+position = Vector2(-801, 301)
+scale = Vector2(0.5, 0.5)
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("2_088v0")]
 position = Vector2(-379, 161)
