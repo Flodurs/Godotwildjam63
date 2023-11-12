@@ -8,10 +8,10 @@ func _ready():
 	pass
 
 func add_point(point:Vector2):
-	print("AMongus")
-	print(point)
 	$Line2D.add_point(point)
 
+func getVec() -> Vector2:
+	return $Line2D.get_point_position(1) - $Line2D.get_point_position(0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	if $Line2D.points.size() == 2:
