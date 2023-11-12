@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cpkir3ceg65du"]
+[gd_scene load_steps=15 format=3 uid="uid://cpkir3ceg65du"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_chtnv"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="2_088v0"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bdwmuot6ok2uy" path="res://assets/sprites/Objects/Shadow.png" id="12_bgoay"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/schalter.tscn" id="13_1k5b6"]
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="14_elfmc"]
+[ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="14_n07iq"]
 
 [node name="level1" groups=["Level"] instance=ExtResource("1_chtnv")]
 script = ExtResource("2_a1d08")
@@ -101,3 +102,7 @@ position = Vector2(-2559, -1314)
 rotation = -0.785398
 energy = 0.42
 height = 1.0
+
+[node name="Spiked_barricade" parent="." index="14" instance=ExtResource("14_n07iq")]
+position = Vector2(262, 71)
+scale = Vector2(0.5, 0.5)

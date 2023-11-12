@@ -157,3 +157,5 @@ func drawCheck(p, s):
 #	if (getYAtX(p.position.x) > p.position.y-p.seil_hoehe)&&(getYAtX(p.position.x) < p.position.y+10)||(getXAtY(p.position.y) > p.position.x+p.linkeKanteX && getXAtY(p.position.y) < p.position.x+p.rechteKanteX) :  #(seil vor pillar)und(seil nicht zu weit unter pillar) 
 #			if(p.position.x > min(get_point_position(0).x, get_point_position(1).x) || p.position.x < max(get_point_position(0).x, get_point_position(1).x)):  #und(sei lang genug)
 #				p.verdecken(self)
+
+
