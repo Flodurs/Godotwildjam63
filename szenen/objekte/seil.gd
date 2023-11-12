@@ -131,9 +131,13 @@ func drawCheck(p, s):
 	var draw: bool = true
 	if s.getYAtX(p.position.x+p.linkeKanteX) < p.position.y + p.seil_hoehe: #seil zu hoch (=dahinter)
 		draw = false
+		if(min(s.get_point_position(0).y, s.get_point_position(1).y) > p.position.y + p.seil_hoehe):
+			draw = true #unless rope ends before that
 #		print("a")
 	else: if (s.getYAtX(p.position.x+p.rechteKanteX) < p.position.y + p.seil_hoehe): #seil zu hoch[rechts]
 		draw = false
+		if(min(s.get_point_position(0).y, s.get_point_position(1).y) > p.position.y + p.seil_hoehe):
+			draw = true #unless rope ends before that
 #		print("b")
 	#seil unter pillar
 	else: if(s.getYAtX(p.position.x+p.linkeKanteX) > p.position.y-20 && s.getYAtX(p.position.x+p.rechteKanteX)> p.position.y-20):
