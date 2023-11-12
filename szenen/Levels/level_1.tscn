@@ -12,9 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://bg5ashs80v1nv" path="res://assets/sprites/Background/floor.png" id="10_kppow"]
 
 [node name="level1" groups=["Level"] instance=ExtResource("1_chtnv")]
+position = Vector2(110, -118)
 script = ExtResource("2_a1d08")
 
 [node name="WindEmitter" parent="." index="0" instance=ExtResource("9_k7bob")]
+visible = false
 
 [node name="Katze" parent="." index="1"]
 position = Vector2(583, 37)
@@ -60,5 +62,16 @@ position = Vector2(748, 0)
 
 [node name="Backgorund" type="Sprite2D" parent="." index="7"]
 z_index = -1
+position = Vector2(13, -3)
 scale = Vector2(2, 2)
 texture = ExtResource("10_kppow")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="8"]
+top_level = true
+color = Color(0.776471, 0.811765, 0.839216, 1)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="9"]
+position = Vector2(-2559, -1314)
+rotation = -0.785398
+energy = 0.42
+height = 1.0
