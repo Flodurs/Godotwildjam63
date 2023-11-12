@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://szenen/objekte/Area2D.gd" id="2_mr1gd"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3308s"]
-b = Vector2(247, -9)
+b = Vector2(608, -56)
 
 [node name="Seil" type="Node2D" groups=["Seil", "SeilMain"]]
 script = ExtResource("1_afdkj")
