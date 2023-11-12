@@ -53,16 +53,16 @@ position = Vector2(1162, -677)
 scale = Vector2(-1, 1)
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("2_088v0")]
-position = Vector2(-406, 161)
+position = Vector2(-542, 111)
 
 [node name="Pillar2" parent="Pillars" index="1" instance=ExtResource("2_088v0")]
-position = Vector2(-82, -104)
+position = Vector2(-94, -218)
 
 [node name="Pillar3" parent="Pillars" index="2" instance=ExtResource("2_088v0")]
-position = Vector2(15, 244)
+position = Vector2(258, 377)
 
 [node name="Pillar4" parent="Pillars" index="3" instance=ExtResource("2_088v0")]
-position = Vector2(-185, 171)
+position = Vector2(-147, 202)
 
 [node name="ForwardGate" parent="." index="5" instance=ExtResource("4_q4dfa")]
 position = Vector2(748, 0)
