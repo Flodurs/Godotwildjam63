@@ -5,7 +5,7 @@ var seilAbsch = preload("res://szenen/objekte/seilabschnitt.tscn")
 var dropPos = Vector2.ZERO
 var dropped = 1
 var conList = Array()
-var ziehtSeil:bool = true
+var ziehtSeil:bool = false
 var canAtt: bool = true
 
 var segment = SegmentShape2D.new()
@@ -15,12 +15,6 @@ var segment = SegmentShape2D.new()
 func _ready():
 	$dynLine/Area2D.monitorable = true
 	
-	$dynLine.add_point(Vector2(0, 0))
-	$dynLine.add_point(get_tree().get_nodes_in_group("Katze")[0].global_position)
-	
-	segment.a = $dynLine.get_point_position(0)
-	segment.b = $dynLine.get_point_position(1)
-	$dynLine/Area2D/CollisionShape2D.shape = segment
 	
 
 func inputCollision(area):
@@ -31,6 +25,7 @@ func inputCollision(area):
 				addCon(conList[conList.size()-1], conList[conList.size()-2]) #addCon top 2 list
 		else: 
 			conList.append(area)
+			addCon(conList[conList.size()-1], get_tree().get_nodes_in_group("Wolle")[0])
 		
 		canAtt = false
 		$colTimer.start()
@@ -50,17 +45,18 @@ func addCon(a,b):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	segment.a = $dynLine.get_point_position(0)
-	segment.b = $dynLine.get_point_position(1)
-	$dynLine/Area2D/CollisionShape2D.shape = segment
-	
 	if ziehtSeil:
+		segment.a = $dynLine.get_point_position(0)
+		segment.b = $dynLine.get_point_position(1)
+		$dynLine/Area2D/CollisionShape2D.shape = segment
+		
 		$dynLine.set_point_position(1, get_tree().get_nodes_in_group("Katze")[0].global_position)
 		if(conList.size() >= 1):
-			$dynLine.set_point_position(0, conList[conList.size()-1].global_position)
+			var con = conList.back()
+			$dynLine.set_point_position(0, con.getGloPos())
 			
 		#abloes logik:
-		if(get_tree().get_nodes_in_group("Seilabschnitt").size() > 1):
+		if(get_tree().get_nodes_in_group("Seilabschnitt").size() >= 1):
 			var lastSeg =  get_tree().get_nodes_in_group("Seilabschnitt").back()
 			var vectLastSeg = -lastSeg.getVec()
 			var vecCurr = $dynLine.get_point_position(1) - $dynLine.get_point_position(0)
@@ -69,7 +65,7 @@ func _process(_delta):
 			var lastAngle = vecZone.angle_to(vectLastSeg)
 			var currAngle = vecCurr.angle_to(vecZone)
 			var angle =  abs( (lastAngle) + (currAngle) )
-			print(Vector3(rad_to_deg(lastAngle),rad_to_deg(currAngle),rad_to_deg(angle)))
+#			print(Vector3(rad_to_deg(lastAngle),rad_to_deg(currAngle),rad_to_deg(angle)))
 			if(angle > deg_to_rad(182)):
 				abloesen()
 	
@@ -78,11 +74,28 @@ func abloesen():
 	print("abloesen")
 	conList.pop_back()
 	get_tree().get_nodes_in_group("Seilabschnitt")[get_tree().get_nodes_in_group("Seilabschnitt").size()-1].queue_free()
-	$dynLine.set_point_position(0, conList[conList.size()-1].global_position)
+	if conList.size() >0:
+		$dynLine.set_point_position(0, conList[conList.size()-1].global_position)
+	else:
+		$dynLine.set_point_position(0, get_tree().get_nodes_in_group("Wolle")[0].global_position)
 	
-	
-
-
 
 func _on_col_timer_timeout():
 	canAtt = true
+
+func startWolling():
+	$dynLine/Area2D.monitorable = true
+	$dynLine.add_point(get_tree().get_nodes_in_group("Wolle")[0].global_position)
+	$dynLine.add_point( get_tree().get_nodes_in_group("Katze")[0].global_position)
+	
+	ziehtSeil = true
+
+
+func stopWolling():
+	ziehtSeil= false
+	$dynLine.remove_point(1)
+	$dynLine.remove_point(0)
+	for i in get_tree().get_nodes_in_group("Seilabschnitt"):
+		i.queue_free()
+	while conList.size() > 0:
+		conList.pop_back()

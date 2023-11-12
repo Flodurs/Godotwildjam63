@@ -3,16 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_chtnv"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="2_088v0"]
 [ext_resource type="Script" path="res://szenen/Levels/level_1.gd" id="2_a1d08"]
-[ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="3_ore7q"]
-[ext_resource type="PackedScene" uid="uid://bjcuxfnidmejs" path="res://szenen/objekte/forward_gate.tscn" id="4_q4dfa"]
-[ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="4_ssknb"]
-[ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="5_43jcn"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
-[ext_resource type="PackedScene" uid="uid://5cgyo1yuenvq" path="res://szenen/objekte/long_concrete.tscn" id="8_8a4ay"]
-[ext_resource type="PackedScene" uid="uid://djrura0ipe3nw" path="res://szenen/objekte/wind_emitter.tscn" id="9_k7bob"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/rock.tscn" id="3_ore7q"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/forward_gate.tscn" id="4_q4dfa"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/grass.tscn" id="4_ssknb"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/concrete_pile.tscn" id="5_43jcn"]
+[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/wind_emitter.tscn" id="9_k7bob"]
+[ext_resource type="Texture2D" uid="uid://bg5ashs80v1nv" path="res://assets/sprites/Background/floor.png" id="10_kppow"]
 
 [node name="level1" groups=["Level"] instance=ExtResource("1_chtnv")]
-z_index = 1
 script = ExtResource("2_a1d08")
 
 [node name="WindEmitter" parent="." index="0" instance=ExtResource("9_k7bob")]
@@ -40,11 +39,8 @@ position = Vector2(-752, -290)
 scale = Vector2(0.7, 0.7)
 
 [node name="StaticBody2D" parent="Objects" index="5" instance=ExtResource("6_a6yn4")]
-position = Vector2(-727, -151)
+position = Vector2(178, 434)
 scale = Vector2(0.8, 0.8)
-
-[node name="LongConcrete" parent="Objects" index="6" instance=ExtResource("8_8a4ay")]
-position = Vector2(29, -462)
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("2_088v0")]
 position = Vector2(-379, 161)
@@ -61,3 +57,8 @@ script = null
 
 [node name="ForwardGate" parent="." index="5" instance=ExtResource("4_q4dfa")]
 position = Vector2(748, 0)
+
+[node name="Backgorund" type="Sprite2D" parent="." index="7"]
+z_index = -1
+scale = Vector2(2, 2)
+texture = ExtResource("10_kppow")
