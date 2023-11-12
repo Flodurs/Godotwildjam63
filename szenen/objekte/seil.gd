@@ -40,7 +40,7 @@ func addCon(a,b):
 	add_child(con)
 	con.add_point(a.global_position)
 	con.add_point(b.global_position)
-#	con.setup()
+	con.setup()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -65,18 +65,23 @@ func _process(_delta):
 			var lastAngle = vecZone.angle_to(vectLastSeg)
 			var currAngle = vecCurr.angle_to(vecZone)
 			var angle =  abs( (lastAngle) + (currAngle) )
-			if(angle > deg_to_rad(180)):
+			if(angle >= deg_to_rad(180)):
 				abloesen()
+				
+		for p in get_tree().get_nodes_in_group("Pillar"):
+			drawCheck(p, self)
+					
 	
 	
 func abloesen():
+	var pil = conList.back().get_parent()
 	conList.pop_back()
 	get_tree().get_nodes_in_group("Seilabschnitt")[get_tree().get_nodes_in_group("Seilabschnitt").size()-1].queue_free()
 	if conList.size() >0:
 		$dynLine.set_point_position(0, conList[conList.size()-1].global_position)
 	else:
 		$dynLine.set_point_position(0, get_tree().get_nodes_in_group("Wolle")[0].global_position)
-	
+	pil.update()
 
 func _on_col_timer_timeout():
 	canAtt = true
@@ -97,3 +102,54 @@ func stopWolling():
 		i.queue_free()
 	while conList.size() > 0:
 		conList.pop_back()
+	for i in get_tree().get_nodes_in_group("Verdeckung"):
+		i.queue_free()
+
+func getYAtX(x:int) -> int:
+	var start = $dynLine.get_point_position(0)  
+	var ende = $dynLine.get_point_position(1)  
+	var richtung = ende-start
+	
+	var y = start.y + richtung.y*((x - start.x)/richtung.x)
+	return y
+
+func getXAtY(y:int) -> int:
+	var start = $dynLine.get_point_position(0)  
+	var ende = $dynLine.get_point_position(1)  
+	var richtung = ende-start
+	
+	var x = start.x + richtung.x*((y - start.y)/richtung.y)
+	return x
+
+func get_point_count() -> int:
+	return $dynLine.get_point_count()
+
+func get_point_position(n) -> Vector2:
+	return $dynLine.get_point_position(n)
+	
+func drawCheck(p, s):
+	var draw: bool = true
+	if s.getYAtX(p.position.x+p.linkeKanteX) < p.position.y + p.seil_hoehe: #seil zu hoch (=dahinter)
+		draw = false
+#		print("a")
+	else: if (s.getYAtX(p.position.x+p.rechteKanteX) < p.position.y + p.seil_hoehe): #seil zu hoch[rechts]
+		draw = false
+#		print("b")
+	#seil unter pillar
+	else: if(s.getYAtX(p.position.x+p.linkeKanteX) > p.position.y-20 && s.getYAtX(p.position.x+p.rechteKanteX)> p.position.y-20):
+		draw = false
+#		print("c")
+	#seil komplett links von pillar
+	else: if(max(s.get_point_position(0).x, s.get_point_position(1).x) < p.position.x + p.linkeKanteX):
+		draw=false
+#		print("d")
+	#seil komplett rechts von pillar
+	else: if(min(s.get_point_position(0).x, s.get_point_position(1).x) > p.position.x + p.rechteKanteX):
+		draw = false
+#		print("e")
+	
+	if draw:
+		p.verdecken(self)
+#	if (getYAtX(p.position.x) > p.position.y-p.seil_hoehe)&&(getYAtX(p.position.x) < p.position.y+10)||(getXAtY(p.position.y) > p.position.x+p.linkeKanteX && getXAtY(p.position.y) < p.position.x+p.rechteKanteX) :  #(seil vor pillar)und(seil nicht zu weit unter pillar) 
+#			if(p.position.x > min(get_point_position(0).x, get_point_position(1).x) || p.position.x < max(get_point_position(0).x, get_point_position(1).x)):  #und(sei lang genug)
+#				p.verdecken(self)

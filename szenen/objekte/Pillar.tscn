@@ -23,59 +23,73 @@ scale = Vector2(1, 0.5)
 shape = SubResource("CircleShape2D_syccy")
 
 [node name="colArea1" type="Area2D" parent="."]
-position = Vector2(-20, -34)
+position = Vector2(-19, -32)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea1"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea2" type="Area2D" parent="."]
-position = Vector2(0, -46)
+position = Vector2(0, -42)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea2"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea3" type="Area2D" parent="."]
-position = Vector2(20, -35)
+position = Vector2(18, -32)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea3"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea4" type="Area2D" parent="."]
-position = Vector2(0, -22)
+position = Vector2(0, -24)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea4"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea5" type="Area2D" parent="."]
-position = Vector2(-13, -25)
+position = Vector2(-7, -25)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea5"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea6" type="Area2D" parent="."]
-position = Vector2(-13, -42)
+position = Vector2(-11, -40)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea6"]
 shape = SubResource("CircleShape2D_esa4i")
 
+[node name="colArea11" type="Area2D" parent="."]
+position = Vector2(-14, -27)
+script = ExtResource("3_0bggv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea11"]
+shape = SubResource("CircleShape2D_esa4i")
+
 [node name="colArea7" type="Area2D" parent="."]
-position = Vector2(12, -43)
+position = Vector2(11, -40)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea7"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea8" type="Area2D" parent="."]
-position = Vector2(12, -25)
+position = Vector2(7, -25)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea8"]
+shape = SubResource("CircleShape2D_esa4i")
+
+[node name="colArea10" type="Area2D" parent="."]
+position = Vector2(14, -27)
+script = ExtResource("3_0bggv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea10"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="hitBox_center" type="Marker2D" parent="."]
@@ -87,5 +101,7 @@ position = Vector2(0, -34)
 [connection signal="area_entered" from="colArea4" to="colArea4" method="_on_area_entered"]
 [connection signal="area_entered" from="colArea5" to="colArea5" method="_on_area_entered"]
 [connection signal="area_entered" from="colArea6" to="colArea6" method="_on_area_entered"]
+[connection signal="area_entered" from="colArea11" to="colArea11" method="_on_area_entered"]
 [connection signal="area_entered" from="colArea7" to="colArea7" method="_on_area_entered"]
 [connection signal="area_entered" from="colArea8" to="colArea8" method="_on_area_entered"]
+[connection signal="area_entered" from="colArea10" to="colArea10" method="_on_area_entered"]
