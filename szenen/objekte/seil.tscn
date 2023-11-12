@@ -10,6 +10,7 @@ b = Vector2(247, -9)
 script = ExtResource("1_afdkj")
 
 [node name="dynLine" type="Line2D" parent="." groups=["Seil"]]
+z_index = -1
 width = 5.0
 default_color = Color(0.411765, 0.0901961, 0.0901961, 1)
 

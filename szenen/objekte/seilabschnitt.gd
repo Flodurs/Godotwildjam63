@@ -1,35 +1,24 @@
 extends Node2D
-#var hitflag = 0
-#var primus = 1
-#var hitPoint = Vector2.ZERO
+var start:Vector2 = Vector2.ZERO
+var ende:Vector2 = Vector2.ZERO
+var richtung:Vector2 = Vector2.ZERO
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+#	start = $Line2D.get_point_position(0)  
+#	ende = $Line2D.get_point_position(1)  
+#	richtung = ende-start
+	
+	add_to_group("Cutable")
 
 func add_point(point:Vector2):
 	$Line2D.add_point(point)
 
 func getVec() -> Vector2:
 	return $Line2D.get_point_position(1) - $Line2D.get_point_position(0)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	if $Line2D.points.size() == 2:
-#		$CollisionShape2D.get_shape().a=$Line2D.points[0] 
-#		$CollisionShape2D.get_shape().b=$Line2D.points[1]
 
-#func getHitFlag():
-#	if hitflag==1:
-#		hitflag=0
-#		return 1
-#	return 0
-#func getHitPoint():
-#	return hitPoint
-
-
-
-
-		
+#func getYAtX(x:int) -> int:
+#	var y = start.y + richtung.y*((x - start.x)/richtung.x)
+#	return y
 	
-
-	
+func on_wireCut():
+	queue_free()

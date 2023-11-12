@@ -20,10 +20,12 @@ func _physics_process(_delta):
 		$AnimatedSprite2D.flip_h = 1
 		$kneulPosi.position.x = abs($kneulPosi.position.x)
 		velocity.x += 1
+		$maulPosi.position.x = abs($maulPosi.position.x)
 		
 	if Input.is_action_pressed("mLeft"):
 		$AnimatedSprite2D.flip_h = 0
 		$kneulPosi.position.x = -abs($kneulPosi.position.x)
+		$maulPosi.position.x = -abs($maulPosi.position.x)
 		
 		velocity.x -= 1
 	if Input.is_action_pressed("mDown"):
