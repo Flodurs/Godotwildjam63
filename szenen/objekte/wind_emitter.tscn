@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://djrura0ipe3nw"]
+
+[ext_resource type="Script" path="res://szenen/objekte/wind_emitter.gd" id="1_j3p81"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61og4"]
+size = Vector2(1848, 1191)
+
+[node name="WindEmitter" type="Area2D"]
+script = ExtResource("1_j3p81")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_61og4")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -23,35 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://ddejo1apgek8p" path="res://assets/sprites/WindImageSequence/frame0020.png" id="21_yf2lx"]
 [ext_resource type="Texture2D" uid="uid://bfju6jugfaog0" path="res://assets/sprites/WindImageSequence/frame0021.png" id="22_t0na3"]
 [ext_resource type="Texture2D" uid="uid://ckeo5dukn0x3c" path="res://assets/sprites/WindImageSequence/frame0022.png" id="23_wq7mu"]
+[ext_resource type="Script" path="res://szenen/objekte/wind.gd" id="24_fgl4l"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_br48e"]
-frames = 22
-frame_0/texture = ExtResource("1_iygiu")
-frame_1/texture = ExtResource("2_tb54v")
-frame_1/duration = 1.0
-frame_2/texture = ExtResource("3_6q0t0")
-frame_2/duration = 1.0
-frame_3/duration = 1.0
-frame_4/duration = 1.0
-frame_5/duration = 1.0
-frame_6/duration = 1.0
-frame_7/duration = 1.0
-frame_8/duration = 1.0
-frame_9/duration = 1.0
-frame_10/duration = 1.0
-frame_11/duration = 1.0
-frame_12/duration = 1.0
-frame_13/duration = 1.0
-frame_14/duration = 1.0
-frame_15/duration = 1.0
-frame_16/duration = 1.0
-frame_17/duration = 1.0
-frame_18/duration = 1.0
-frame_19/duration = 1.0
-frame_20/duration = 1.0
-frame_21/duration = 1.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_a3og6"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_h3h4n"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -123,16 +97,15 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("23_wq7mu")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 17.0
 }]
 
-[node name="Wind" type="CPUParticles2D"]
+[node name="Wind" type="AnimatedSprite2D"]
 modulate = Color(1, 1, 1, 0.254902)
-position = Vector2(301, 202)
-texture = SubResource("AnimatedTexture_br48e")
+sprite_frames = SubResource("SpriteFrames_h3h4n")
+autoplay = "default"
+script = ExtResource("24_fgl4l")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_a3og6")
-frame_progress = 0.68857
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

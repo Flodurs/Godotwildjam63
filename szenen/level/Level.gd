@@ -1,6 +1,8 @@
 extends Node2D
 class_name level_parent
 
+
+
 func change_scene(target):
 	get_tree().change_scene_to_file(target)
 
@@ -16,3 +18,8 @@ func _ready():
 #				if(b.position.x > min(s.get_point_position(0).x, s.get_point_position(1).x) && b.position.x < max(s.get_point_position(0).x, s.get_point_position(1).x)):  #und(sei lang genug)
 #					b.verdecken(s)
 #
+
+
+
+		
+
