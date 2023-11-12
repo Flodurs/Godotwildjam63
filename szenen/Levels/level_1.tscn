@@ -59,6 +59,6 @@ script = null
 position = Vector2(748, 0)
 
 [node name="Backgorund" type="Sprite2D" parent="." index="7"]
-z_index = -1
+z_index = -2
 scale = Vector2(2, 2)
 texture = ExtResource("10_kppow")

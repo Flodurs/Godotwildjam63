@@ -58,3 +58,6 @@ position = Vector2(-89, -38)
 
 [node name="Wollknaeul" parent="kneulPosi" instance=ExtResource("7_4m6lf")]
 scale = Vector2(0.1525, 0.1525)
+
+[node name="maulPosi" type="Marker2D" parent="." groups=["maulPosi"]]
+position = Vector2(-88, -52)

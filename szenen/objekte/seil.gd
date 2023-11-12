@@ -40,7 +40,6 @@ func addCon(a,b):
 	add_child(con)
 	con.add_point(a.global_position)
 	con.add_point(b.global_position)
-#	con.visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,7 +49,7 @@ func _process(_delta):
 		segment.b = $dynLine.get_point_position(1)
 		$dynLine/Area2D/CollisionShape2D.shape = segment
 		
-		$dynLine.set_point_position(1, get_tree().get_nodes_in_group("Katze")[0].global_position)
+		$dynLine.set_point_position(1, get_tree().get_nodes_in_group("maulPosi")[0].global_position)
 		if(conList.size() >= 1):
 			var con = conList.back()
 			$dynLine.set_point_position(0, con.getGloPos())
@@ -65,13 +64,11 @@ func _process(_delta):
 			var lastAngle = vecZone.angle_to(vectLastSeg)
 			var currAngle = vecCurr.angle_to(vecZone)
 			var angle =  abs( (lastAngle) + (currAngle) )
-#			print(Vector3(rad_to_deg(lastAngle),rad_to_deg(currAngle),rad_to_deg(angle)))
-			if(angle > deg_to_rad(182)):
+			if(angle > deg_to_rad(180)):
 				abloesen()
 	
 	
 func abloesen():
-	print("abloesen")
 	conList.pop_back()
 	get_tree().get_nodes_in_group("Seilabschnitt")[get_tree().get_nodes_in_group("Seilabschnitt").size()-1].queue_free()
 	if conList.size() >0:
@@ -86,7 +83,7 @@ func _on_col_timer_timeout():
 func startWolling():
 	$dynLine/Area2D.monitorable = true
 	$dynLine.add_point(get_tree().get_nodes_in_group("Wolle")[0].global_position)
-	$dynLine.add_point( get_tree().get_nodes_in_group("Katze")[0].global_position)
+	$dynLine.add_point( get_tree().get_nodes_in_group("maulPosi")[0].global_position)
 	
 	ziehtSeil = true
 

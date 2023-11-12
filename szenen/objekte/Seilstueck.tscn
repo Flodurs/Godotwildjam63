@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxc1mipvyf0xl"]
-
-[ext_resource type="Script" path="res://szenen/objekte/Seilstueck.gd" id="1_geaxs"]
-
-[node name="Seilstueck" type="Line2D"]
-width = 3.0
-default_color = Color(1, 0, 0, 1)
-script = ExtResource("1_geaxs")
