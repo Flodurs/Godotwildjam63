@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0sprmhk4yyal"]
 
 [ext_resource type="Script" path="res://szenen/objekte/Pillar.gd" id="1_8weh0"]
-[ext_resource type="Texture2D" uid="uid://dxrmy4vob55pj" path="res://assets/sprites/Objects/Kratzbaum.png" id="2_64scr"]
+[ext_resource type="Texture2D" uid="uid://dxrmy4vob55pj" path="res://assets/sprites/Objects/Kratzbaum.png" id="2_y75ek"]
 [ext_resource type="Script" path="res://szenen/objekte/colArea1.gd" id="3_0bggv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_syccy"]
@@ -16,7 +16,7 @@ script = ExtResource("1_8weh0")
 [node name="pillarIMage" type="Sprite2D" parent="."]
 position = Vector2(10, -90)
 scale = Vector2(0.375, 0.375)
-texture = ExtResource("2_64scr")
+texture = ExtResource("2_y75ek")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1, 0.5)
