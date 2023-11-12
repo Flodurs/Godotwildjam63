@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpkir3ceg65du"]
+[gd_scene load_steps=12 format=3 uid="uid://cpkir3ceg65du"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_chtnv"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="2_088v0"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="4_ssknb"]
 [ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="5_43jcn"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
+[ext_resource type="PackedScene" uid="uid://5cgyo1yuenvq" path="res://szenen/objekte/long_concrete.tscn" id="8_8a4ay"]
 [ext_resource type="PackedScene" uid="uid://djrura0ipe3nw" path="res://szenen/objekte/wind_emitter.tscn" id="9_k7bob"]
 [ext_resource type="Texture2D" uid="uid://bg5ashs80v1nv" path="res://assets/sprites/Background/floor.png" id="10_kppow"]
 
@@ -15,7 +16,7 @@
 script = ExtResource("2_a1d08")
 
 [node name="WindEmitter" parent="." index="0" instance=ExtResource("9_k7bob")]
-visible = false
+metadata/_edit_lock_ = true
 
 [node name="Katze" parent="." index="1"]
 position = Vector2(548, -71)
@@ -33,15 +34,22 @@ position = Vector2(-700, 322)
 scale = Vector2(0.3, 0.3)
 
 [node name="ConcretePile" parent="Objects" index="3" instance=ExtResource("5_43jcn")]
-position = Vector2(558, 420)
+position = Vector2(1037, 690)
 
 [node name="ConcretePile2" parent="Objects" index="4" instance=ExtResource("5_43jcn")]
-position = Vector2(-752, -290)
+position = Vector2(-1166, -596)
 scale = Vector2(0.7, 0.7)
 
 [node name="StaticBody2D" parent="Objects" index="5" instance=ExtResource("6_a6yn4")]
-position = Vector2(178, 434)
+position = Vector2(657, 704)
 scale = Vector2(0.8, 0.8)
+
+[node name="LongConcrete" parent="Objects" index="6" instance=ExtResource("8_8a4ay")]
+position = Vector2(-330, -755)
+
+[node name="LongConcrete2" parent="Objects" index="7" instance=ExtResource("8_8a4ay")]
+position = Vector2(1162, -677)
+scale = Vector2(-1, 1)
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("2_088v0")]
 position = Vector2(-379, 161)
@@ -60,8 +68,7 @@ script = null
 position = Vector2(748, 0)
 
 [node name="Backgorund" type="Sprite2D" parent="." index="7"]
-z_index = -1
-position = Vector2(13, -3)
+z_index = -4
 scale = Vector2(2, 2)
 texture = ExtResource("10_kppow")
 
