@@ -17,4 +17,4 @@ func wind_emitter():
 	print(rand_scale)
 func _on_timer_timeout():
 	wind_emitter()
-	$Timer.wait_time = randi_range(1, 6)
+	$Timer.wait_time = randf_range(0.5, 3)
