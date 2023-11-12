@@ -23,34 +23,42 @@ scale = Vector2(1, 0.5)
 shape = SubResource("CircleShape2D_syccy")
 
 [node name="colArea1" type="Area2D" parent="."]
-position = Vector2(-18, 0)
+position = Vector2(-19, -42)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea1"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea2" type="Area2D" parent="."]
-position = Vector2(0, -9)
+position = Vector2(0, -50)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea2"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea3" type="Area2D" parent="."]
-position = Vector2(18, 0)
+position = Vector2(18, -42)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea3"]
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="colArea4" type="Area2D" parent="."]
-position = Vector2(0, 9)
+position = Vector2(0, -34)
 script = ExtResource("3_0bggv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea4"]
 shape = SubResource("CircleShape2D_esa4i")
 
+[connection signal="area_entered" from="colArea1" to="colArea1" method="_on_area_entered"]
+[connection signal="area_shape_entered" from="colArea1" to="colArea1" method="_on_area_shape_entered"]
 [connection signal="body_entered" from="colArea1" to="colArea1" method="_on_body_entered"]
+[connection signal="area_entered" from="colArea2" to="colArea2" method="_on_area_entered"]
+[connection signal="area_shape_entered" from="colArea2" to="colArea2" method="_on_area_shape_entered"]
 [connection signal="body_entered" from="colArea2" to="colArea2" method="_on_body_entered"]
+[connection signal="area_entered" from="colArea3" to="colArea3" method="_on_area_entered"]
+[connection signal="area_shape_entered" from="colArea3" to="colArea3" method="_on_area_shape_entered"]
 [connection signal="body_entered" from="colArea3" to="colArea3" method="_on_body_entered"]
+[connection signal="area_entered" from="colArea4" to="colArea4" method="_on_area_entered"]
+[connection signal="area_shape_entered" from="colArea4" to="colArea4" method="_on_area_shape_entered"]
 [connection signal="body_entered" from="colArea4" to="colArea4" method="_on_body_entered"]
