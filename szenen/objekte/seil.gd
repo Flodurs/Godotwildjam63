@@ -40,6 +40,7 @@ func addCon(a,b):
 	add_child(con)
 	con.add_point(a.global_position)
 	con.add_point(b.global_position)
+#	con.setup()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

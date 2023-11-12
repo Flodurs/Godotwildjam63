@@ -18,7 +18,7 @@ script = ExtResource("2_a1d08")
 visible = false
 
 [node name="Katze" parent="." index="1"]
-position = Vector2(583, 37)
+position = Vector2(548, -71)
 
 [node name="Rock" parent="Objects" index="0" instance=ExtResource("3_ore7q")]
 position = Vector2(-572, 390)
