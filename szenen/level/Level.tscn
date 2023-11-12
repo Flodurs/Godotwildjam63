@@ -21,3 +21,6 @@ y_sort_enabled = true
 y_sort_enabled = true
 
 [node name="Seil" parent="." instance=ExtResource("7_xqpbt")]
+z_index = -1
+
+[node name="Shadows" type="Node2D" parent="."]

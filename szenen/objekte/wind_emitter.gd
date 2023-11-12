@@ -14,7 +14,7 @@ func wind_emitter():
 	wind.global_position = random_position
 	wind.scale = Vector2(rand_scale, rand_scale)
 	$".".add_child(wind)
-	print(rand_scale)
+	
 func _on_timer_timeout():
 	wind_emitter()
 	$Timer.wait_time = randf_range(0.5, 3)
