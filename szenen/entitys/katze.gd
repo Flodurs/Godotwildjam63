@@ -50,6 +50,7 @@ func _process(_delta):
 		if(hatWolle):
 			dropWolle()
 			hatWolle = false
+			get_tree().get_nodes_in_group("SeilMain")[0].startWolling()
 		else:
 			hebeaufWolle()
 
@@ -71,3 +72,4 @@ func hebeaufWolle():
 		w[0].position = Vector2.ZERO
 		w[0].set_texture(kneul_schmutz)
 		hatWolle = true
+		get_tree().get_nodes_in_group("SeilMain")[0].stopWolling()
