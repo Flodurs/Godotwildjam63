@@ -1,11 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjcuxfnidmejs"]
+[gd_scene load_steps=3 format=3 uid="uid://bjcuxfnidmejs"]
 
 [ext_resource type="Script" path="res://szenen/objekte/ForwardGate.gd" id="1_bdfei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_502k2"]
 size = Vector2(67, 117)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_01yha"]
 
 [node name="ForwardGate" type="Area2D"]
 script = ExtResource("1_bdfei")
@@ -13,10 +11,5 @@ script = ExtResource("1_bdfei")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_502k2")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 0.5)
-scale = Vector2(66, 117)
-texture = SubResource("PlaceholderTexture2D_01yha")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

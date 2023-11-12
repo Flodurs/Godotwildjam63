@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8tfpt2p2vro2"]
+
+[ext_resource type="Script" path="res://szenen/objekte/schalter.gd" id="1_51slo"]
+[ext_resource type="Texture2D" uid="uid://dqjm1fowwx20a" path="res://assets/sprites/Objects/Schalter/SchalterOff.png" id="1_aoa12"]
+[ext_resource type="Texture2D" uid="uid://dk00o00joqwht" path="res://assets/sprites/Objects/Schalter/SchalterOn.png" id="2_g4vs7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ydlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g4vs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_aoa12")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Schalter" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_51slo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-114, -28, 37, -36, 74, 152, 12, 166, -107, 111)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1ydlf")
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
