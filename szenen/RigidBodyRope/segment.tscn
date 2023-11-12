@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://n74hokiuu05w"]
+
+[ext_resource type="Texture2D" uid="uid://ctj2ku0io2qlh" path="res://assets/sprites/pillar_prelim.png" id="1_ymakl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tqd0b"]
+radius = 14.0
+height = 54.0
+
+[node name="Segment" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(0.47, 0.126)
+texture = ExtResource("1_ymakl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tqd0b")

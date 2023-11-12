@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bul4pdguektjf"]
+
+[ext_resource type="Texture2D" uid="uid://cl78sxmo35twt" path="res://assets/sprites/wollhaufen_schmutzig.png" id="1_10rqx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v2miv"]
+radius = 136.015
+
+[node name="RigidRootBody" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -98)
+texture = ExtResource("1_10rqx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.33)
+shape = SubResource("CircleShape2D_v2miv")

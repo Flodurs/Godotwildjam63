@@ -62,10 +62,6 @@ position = Vector2(-82, -104)
 [node name="Pillar3" parent="Pillars" index="2" instance=ExtResource("2_088v0")]
 position = Vector2(15, 244)
 
-[node name="Pillar4" parent="Pillars" index="3" instance=ExtResource("2_088v0")]
-position = Vector2(320, -15)
-script = null
-
 [node name="Backgorund" type="Sprite2D" parent="." index="6"]
 z_index = -4
 scale = Vector2(2, 2)

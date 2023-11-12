@@ -81,6 +81,7 @@ func abloesen():
 		$dynLine.set_point_position(0, conList[conList.size()-1].global_position)
 	else:
 		$dynLine.set_point_position(0, get_tree().get_nodes_in_group("Wolle")[0].global_position)
+	print(pil)
 	pil.update()
 
 func _on_col_timer_timeout():
