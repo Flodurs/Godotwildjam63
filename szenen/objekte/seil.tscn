@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7732dj7h1yrt"]
+[gd_scene load_steps=3 format=3 uid="uid://b7732dj7h1yrt"]
 
 [ext_resource type="Script" path="res://szenen/objekte/seil.gd" id="1_afdkj"]
 
-[node name="Seil" type="Node2D"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_35yvy"]
+
+[node name="Seil" type="Area2D" groups=["seil"]]
 script = ExtResource("1_afdkj")
+
+[node name="LeadSeil" type="Line2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_35yvy")

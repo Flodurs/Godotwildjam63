@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0sprmhk4yyal"]
+[gd_scene load_steps=6 format=3 uid="uid://d0sprmhk4yyal"]
 
 [ext_resource type="Script" path="res://szenen/objekte/Pillar.gd" id="1_8weh0"]
 [ext_resource type="Texture2D" uid="uid://ctj2ku0io2qlh" path="res://assets/sprites/pillar_prelim.png" id="2_lqvg6"]
+[ext_resource type="Script" path="res://szenen/objekte/colArea1.gd" id="3_0bggv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_syccy"]
 radius = 18.1108
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_esa4i"]
+radius = 5.09902
 
 [node name="Pillar" type="StaticBody2D"]
 script = ExtResource("1_8weh0")
@@ -17,3 +21,36 @@ texture = ExtResource("2_lqvg6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1, 0.5)
 shape = SubResource("CircleShape2D_syccy")
+
+[node name="colArea1" type="Area2D" parent="."]
+position = Vector2(-18, 0)
+script = ExtResource("3_0bggv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea1"]
+shape = SubResource("CircleShape2D_esa4i")
+
+[node name="colArea2" type="Area2D" parent="."]
+position = Vector2(0, -9)
+script = ExtResource("3_0bggv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea2"]
+shape = SubResource("CircleShape2D_esa4i")
+
+[node name="colArea3" type="Area2D" parent="."]
+position = Vector2(18, 0)
+script = ExtResource("3_0bggv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea3"]
+shape = SubResource("CircleShape2D_esa4i")
+
+[node name="colArea4" type="Area2D" parent="."]
+position = Vector2(0, 9)
+script = ExtResource("3_0bggv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea4"]
+shape = SubResource("CircleShape2D_esa4i")
+
+[connection signal="body_entered" from="colArea1" to="colArea1" method="_on_body_entered"]
+[connection signal="body_entered" from="colArea2" to="colArea2" method="_on_body_entered"]
+[connection signal="body_entered" from="colArea3" to="colArea3" method="_on_body_entered"]
+[connection signal="body_entered" from="colArea4" to="colArea4" method="_on_body_entered"]
