@@ -4,6 +4,8 @@ extends CharacterBody2D
 var playAudioFlag = 0
 var hatWolle: bool = true
 
+@onready var maulPosi = $maulPosi.position.x
+
 const kneul_schmutz = preload("res://assets/sprites/wollekneule_schmutzig.png")
 const haufen_schmutz = preload("res://assets/sprites/wollhaufen_schmutzig.png")
 const kneul_sauber = preload("res://assets/sprites/wollekneule_sauber.png")
@@ -20,12 +22,17 @@ func _physics_process(_delta):
 		$AnimatedSprite2D.flip_h = 1
 		$kneulPosi.position.x = abs($kneulPosi.position.x)
 		velocity.x += 1
-		$maulPosi.position.x = abs($maulPosi.position.x)
+		if $maulPosi.position.x != abs(maulPosi):
+			var twee = create_tween()
+			twee.tween_property($maulPosi, "position:x", abs(maulPosi), 0.2)
 		
 	if Input.is_action_pressed("mLeft"):
 		$AnimatedSprite2D.flip_h = 0
 		$kneulPosi.position.x = -abs($kneulPosi.position.x)
-		$maulPosi.position.x = -abs($maulPosi.position.x)
+		if $maulPosi.position.x != -abs(maulPosi):
+			var twee = create_tween()
+			twee.tween_property($maulPosi, "position:x", -abs(maulPosi), 0.2)
+		
 		
 		velocity.x -= 1
 	if Input.is_action_pressed("mDown"):
