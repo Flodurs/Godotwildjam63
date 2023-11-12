@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpkir3ceg65du"]
+
+[ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_chtnv"]
+[ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="2_088v0"]
+[ext_resource type="PackedScene" uid="uid://lp5bc8kht2kb" path="res://szenen/objekte/gate.tscn" id="3_npce4"]
+
+[node name="level1" groups=["Level"] instance=ExtResource("1_chtnv")]
+
+[node name="Pillar" parent="Pillars" index="0" instance=ExtResource("2_088v0")]
+position = Vector2(-379, 161)
+
+[node name="Pillar2" parent="Pillars" index="1" instance=ExtResource("2_088v0")]
+position = Vector2(-82, -104)
+
+[node name="Pillar3" parent="Pillars" index="2" instance=ExtResource("2_088v0")]
+position = Vector2(15, 244)
+
+[node name="Pillar4" parent="Pillars" index="3" instance=ExtResource("2_088v0")]
+position = Vector2(320, -15)
+script = null
+
+[node name="Gate" parent="." index="4" instance=ExtResource("3_npce4")]
+position = Vector2(233, -23)

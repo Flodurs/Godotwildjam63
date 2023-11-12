@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7elyyvwrxq2i"]
+
+[ext_resource type="Texture2D" uid="uid://djy4onae8u5dl" path="res://assets/sprites/Objects/Reifen.png" id="1_nksgt"]
+
+[node name="Reifen" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -74)
+texture = ExtResource("1_nksgt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -77)
+polygon = PackedVector2Array(-276, 79, -202, 134, -87, 165, 48, 171, 178, 144, 248, 102, 243, 51, 169, 12, 39, -11, -66, -8, -198, 11, -269, 45)

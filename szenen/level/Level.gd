@@ -1,6 +1,8 @@
 extends Node2D
+class_name level_parent
 
-
+func change_scene(target):
+	get_tree().change_scene_to_file(target)
 
 func _ready():
 	

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bihu5nvtiyh61"]
+
+[ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_c2i40"]
+[ext_resource type="Script" path="res://szenen/Levels/level_2.gd" id="2_eyxcm"]
+[ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_kt71y"]
+[ext_resource type="PackedScene" uid="uid://1aqljah1hsiv" path="res://szenen/objekte/backward_gate.tscn" id="4_rroj2"]
+
+[node name="level2" groups=["Level"] instance=ExtResource("1_c2i40")]
+script = ExtResource("2_eyxcm")
+
+[node name="Katze" parent="." index="0"]
+position = Vector2(-608, 16)
+
+[node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_kt71y")]
+position = Vector2(-251, -98)
+
+[node name="Pillar2" parent="Pillars" index="1" instance=ExtResource("3_kt71y")]
+position = Vector2(-117, 225)
+
+[node name="Pillar3" parent="Pillars" index="2" instance=ExtResource("3_kt71y")]
+position = Vector2(66, -17)
+
+[node name="Pillar4" parent="Pillars" index="3" instance=ExtResource("3_kt71y")]
+position = Vector2(338, -122)
+
+[node name="backward_gate" parent="." index="4" instance=ExtResource("4_rroj2")]
+position = Vector2(-771, -14)
