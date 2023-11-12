@@ -14,7 +14,7 @@ z_index = -1
 width = 5.0
 default_color = Color(0.411765, 0.0901961, 0.0901961, 1)
 
-[node name="Area2D" type="Area2D" parent="dynLine" groups=["Seil"]]
+[node name="Area2D" type="Area2D" parent="dynLine" groups=["Cutable", "Seil"]]
 script = ExtResource("2_mr1gd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dynLine/Area2D"]

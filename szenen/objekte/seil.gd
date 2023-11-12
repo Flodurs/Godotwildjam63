@@ -132,9 +132,13 @@ func drawCheck(p, s):
 	var draw: bool = true
 	if s.getYAtX(p.position.x+p.linkeKanteX) < p.position.y + p.seil_hoehe: #seil zu hoch (=dahinter)
 		draw = false
+		if(min(s.get_point_position(0).y, s.get_point_position(1).y) > p.position.y + p.seil_hoehe):
+			draw = true #unless rope ends before that
 #		print("a")
 	else: if (s.getYAtX(p.position.x+p.rechteKanteX) < p.position.y + p.seil_hoehe): #seil zu hoch[rechts]
 		draw = false
+		if(min(s.get_point_position(0).y, s.get_point_position(1).y) > p.position.y + p.seil_hoehe):
+			draw = true #unless rope ends before that
 #		print("b")
 	#seil unter pillar
 	else: if(s.getYAtX(p.position.x+p.linkeKanteX) > p.position.y-20 && s.getYAtX(p.position.x+p.rechteKanteX)> p.position.y-20):
@@ -154,3 +158,5 @@ func drawCheck(p, s):
 #	if (getYAtX(p.position.x) > p.position.y-p.seil_hoehe)&&(getYAtX(p.position.x) < p.position.y+10)||(getXAtY(p.position.y) > p.position.x+p.linkeKanteX && getXAtY(p.position.y) < p.position.x+p.rechteKanteX) :  #(seil vor pillar)und(seil nicht zu weit unter pillar) 
 #			if(p.position.x > min(get_point_position(0).x, get_point_position(1).x) || p.position.x < max(get_point_position(0).x, get_point_position(1).x)):  #und(sei lang genug)
 #				p.verdecken(self)
+
+
