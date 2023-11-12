@@ -1,10 +1,12 @@
 extends StaticBody2D
 
 
-@export var seil_hoehe:int = 50
+@export var seil_hoehe:int = 60
 var gewickelt:bool = false
 const linkeKanteX:int = -20
 const rechteKanteX:int = 20
+
+var dynVerdeck: Node2D = null
 
 func _ready():
 	add_to_group("Pillar")
@@ -13,7 +15,10 @@ func updateCover():
 	for i in get_tree().get_nodes_in_group("Seile"):
 		i.queue_free()
 	
-	
+func _process(_delta):
+	if dynVerdeck != null:
+		dynVerdeck.queue_free()
+		dynVerdeck = null
 
 func verdecken(seil): #seil muss typ Seilstueck haben
 	if (seil.get_point_count() != 2):
@@ -31,11 +36,16 @@ func verdecken(seil): #seil muss typ Seilstueck haben
 		
 		
 		var verdeckungsLinie = Line2D.new()
-		verdeckungsLinie.width = 3
-		verdeckungsLinie.default_color = "ff0000"
+		verdeckungsLinie.width = 5
+		verdeckungsLinie.default_color = "691717"
 		
 		verdeckungsLinie. add_point(punktLinks - position)
 		verdeckungsLinie.add_point(punktRechts - position)
 		add_child(verdeckungsLinie)
 		verdeckungsLinie.visible = true
+		verdeckungsLinie.add_to_group("Verdeckung")
+		
+		for g in seil.get_groups():
+			if g == "SeilMain":
+				dynVerdeck = verdeckungsLinie
 		

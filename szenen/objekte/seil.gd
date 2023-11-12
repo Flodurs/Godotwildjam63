@@ -40,7 +40,7 @@ func addCon(a,b):
 	add_child(con)
 	con.add_point(a.global_position)
 	con.add_point(b.global_position)
-#	con.setup()
+	con.setup()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -67,6 +67,12 @@ func _process(_delta):
 			var angle =  abs( (lastAngle) + (currAngle) )
 			if(angle > deg_to_rad(180)):
 				abloesen()
+				
+		for p in get_tree().get_nodes_in_group("Pillar"):
+			if (getYAtX(p.position.x) > p.position.y-p.seil_hoehe)&&(getYAtX(p.position.x) < p.position.y+10)||(getXAtY(p.position.y) > p.position.x+p.linkeKanteX && getXAtY(p.position.y) < p.position.x+p.rechteKanteX) :  #(seil vor pillar)und(seil nicht zu weit unter pillar) 
+				if(p.position.x > min($dynLine.get_point_position(0).x, $dynLine.get_point_position(1).x) && p.position.x < max($dynLine.get_point_position(0).x, $dynLine.get_point_position(1).x)):  #und(sei lang genug)
+					p.verdecken(self)
+					
 	
 	
 func abloesen():
@@ -97,3 +103,27 @@ func stopWolling():
 		i.queue_free()
 	while conList.size() > 0:
 		conList.pop_back()
+	for i in get_tree().get_nodes_in_group("Verdeckung"):
+		i.queue_free()
+
+func getYAtX(x:int) -> int:
+	var start = $dynLine.get_point_position(0)  
+	var ende = $dynLine.get_point_position(1)  
+	var richtung = ende-start
+	
+	var y = start.y + richtung.y*((x - start.x)/richtung.x)
+	return y
+
+func getXAtY(y:int) -> int:
+	var start = $dynLine.get_point_position(0)  
+	var ende = $dynLine.get_point_position(1)  
+	var richtung = ende-start
+	
+	var x = start.x + richtung.x*((y - start.y)/richtung.y)
+	return x
+
+func get_point_count() -> int:
+	return $dynLine.get_point_count()
+
+func get_point_position(n) -> Vector2:
+	return $dynLine.get_point_position(n)

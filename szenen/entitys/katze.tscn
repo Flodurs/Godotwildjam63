@@ -60,4 +60,4 @@ position = Vector2(-89, -38)
 scale = Vector2(0.1525, 0.1525)
 
 [node name="maulPosi" type="Marker2D" parent="." groups=["maulPosi"]]
-position = Vector2(-86, -44)
+position = Vector2(-88, -52)

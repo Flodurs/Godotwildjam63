@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7732dj7h1yrt"]
+
+[ext_resource type="Script" path="res://szenen/objekte/seil.gd" id="1_afdkj"]
+[ext_resource type="Script" path="res://szenen/objekte/Area2D.gd" id="2_mr1gd"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3308s"]
+b = Vector2(247, -9)
+
+[node name="Seil" type="Node2D" groups=["Seil", "SeilMain"]]
+script = ExtResource("1_afdkj")
+
+[node name="dynLine" type="Line2D" parent="." groups=["Seil"]]
+z_index = -1
+width = 5.0
+default_color = Color(0.411765, 0.0901961, 0.0901961, 1)
+
+[node name="Area2D" type="Area2D" parent="dynLine" groups=["Seil"]]
+script = ExtResource("2_mr1gd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dynLine/Area2D"]
+shape = SubResource("SegmentShape2D_3308s")
+one_way_collision_margin = 10.8
+
+[node name="colTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="colTimer" to="." method="_on_col_timer_timeout"]

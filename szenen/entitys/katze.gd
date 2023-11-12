@@ -5,6 +5,7 @@ var playAudioFlag = 0
 var hatWolle: bool = true
 
 @onready var maulPosi = $maulPosi.position.x
+const tweenTime = 0.1
 
 const kneul_schmutz = preload("res://assets/sprites/wollekneule_schmutzig.png")
 const haufen_schmutz = preload("res://assets/sprites/wollhaufen_schmutzig.png")
@@ -24,14 +25,14 @@ func _physics_process(_delta):
 		velocity.x += 1
 		if $maulPosi.position.x != abs(maulPosi):
 			var twee = create_tween()
-			twee.tween_property($maulPosi, "position:x", abs(maulPosi), 0.2)
+			twee.tween_property($maulPosi, "position:x", abs(maulPosi), tweenTime)
 		
 	if Input.is_action_pressed("mLeft"):
 		$AnimatedSprite2D.flip_h = 0
 		$kneulPosi.position.x = -abs($kneulPosi.position.x)
 		if $maulPosi.position.x != -abs(maulPosi):
 			var twee = create_tween()
-			twee.tween_property($maulPosi, "position:x", -abs(maulPosi), 0.2)
+			twee.tween_property($maulPosi, "position:x", -abs(maulPosi), tweenTime)
 		
 		
 		velocity.x -= 1
