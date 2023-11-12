@@ -97,8 +97,9 @@ func startWolling():
 
 func stopWolling():
 	ziehtSeil= false
-	$dynLine.remove_point(1)
-	$dynLine.remove_point(0)
+	if($dynLine.get_point_count() > 0):
+		$dynLine.remove_point(1)
+		$dynLine.remove_point(0)
 	for i in get_tree().get_nodes_in_group("Seilabschnitt"):
 		i.queue_free()
 	while conList.size() > 0:
