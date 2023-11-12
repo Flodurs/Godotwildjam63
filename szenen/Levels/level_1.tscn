@@ -12,14 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://bg5ashs80v1nv" path="res://assets/sprites/Background/floor.png" id="10_kppow"]
 
 [node name="level1" groups=["Level"] instance=ExtResource("1_chtnv")]
-position = Vector2(110, -118)
 script = ExtResource("2_a1d08")
 
 [node name="WindEmitter" parent="." index="0" instance=ExtResource("9_k7bob")]
 visible = false
 
 [node name="Katze" parent="." index="1"]
-position = Vector2(583, 37)
+position = Vector2(548, -71)
 
 [node name="Rock" parent="Objects" index="0" instance=ExtResource("3_ore7q")]
 position = Vector2(-572, 390)
