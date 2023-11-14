@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8tfpt2p2vro2"]
+[gd_scene load_steps=7 format=3 uid="uid://c8tfpt2p2vro2"]
 
 [ext_resource type="Script" path="res://szenen/objekte/schalter.gd" id="1_51slo"]
 [ext_resource type="Texture2D" uid="uid://dqjm1fowwx20a" path="res://assets/sprites/Objects/Schalter/SchalterOff.png" id="1_aoa12"]
 [ext_resource type="Texture2D" uid="uid://dk00o00joqwht" path="res://assets/sprites/Objects/Schalter/SchalterOn.png" id="2_g4vs7"]
+[ext_resource type="Script" path="res://szenen/objekte/switchColArea.gd" id="4_4il8r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1ydlf"]
 animations = [{
@@ -18,7 +19,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Schalter" type="StaticBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_fyjbd"]
+radius = 4.0
+
+[node name="Schalter" type="StaticBody2D" groups=["Schalter"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_51slo")
 
@@ -32,4 +36,28 @@ frame_progress = 1.0
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="colArea1" type="Area2D" parent="."]
+position = Vector2(42, 168)
+script = ExtResource("4_4il8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea1"]
+shape = SubResource("CircleShape2D_fyjbd")
+
+[node name="colArea2" type="Area2D" parent="."]
+position = Vector2(-6, 142)
+script = ExtResource("4_4il8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea2"]
+shape = SubResource("CircleShape2D_fyjbd")
+
+[node name="colArea3" type="Area2D" parent="."]
+position = Vector2(68, 130)
+script = ExtResource("4_4il8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colArea3"]
+shape = SubResource("CircleShape2D_fyjbd")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="colArea1" to="colArea1" method="_on_area_entered"]
+[connection signal="area_entered" from="colArea2" to="colArea2" method="_on_area_entered"]
+[connection signal="area_entered" from="colArea3" to="colArea3" method="_on_area_entered"]

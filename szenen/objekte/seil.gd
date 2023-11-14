@@ -65,8 +65,8 @@ func _process(_delta):
 			var lastAngle = vecZone.angle_to(vectLastSeg)
 			var currAngle = vecCurr.angle_to(vecZone)
 			var angle =  abs( (lastAngle) + (currAngle) )
-			print(rad_to_deg(lastAngle))
-			if(angle >= deg_to_rad(180)):
+#			print(rad_to_deg(lastAngle))
+			if(angle >= deg_to_rad(181)):
 				abloesen()
 				
 		for p in get_tree().get_nodes_in_group("Pillar"):
