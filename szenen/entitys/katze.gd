@@ -63,7 +63,8 @@ func _process(_delta):
 			get_tree().get_nodes_in_group("SeilMain")[0].startWolling()
 		else:
 			if !hebeaufWolle():
-				get_tree().get_nodes_in_group("Schalter")[0].schalter_test($maulPosi.global_position)
+				if get_tree().get_nodes_in_group("Schalter").size() > 0:
+					get_tree().get_nodes_in_group("Schalter")[0].schalter_test($maulPosi.global_position)
 
 func dropWolle():
 	var w = get_tree().get_nodes_in_group("Wolle")

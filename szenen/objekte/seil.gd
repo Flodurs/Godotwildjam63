@@ -173,4 +173,8 @@ func drawCheck(p, s):
 #			if(p.position.x > min(get_point_position(0).x, get_point_position(1).x) || p.position.x < max(get_point_position(0).x, get_point_position(1).x)):  #und(sei lang genug)
 #				p.verdecken(self)
 
-
+func endPunkt():
+	ziehtSeil =false
+	$dynLine.remove_point(1)
+	$dynLine.remove_point(0)
+	
