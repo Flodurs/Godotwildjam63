@@ -9,5 +9,6 @@ func _on_area_2d_area_entered(area):
 			await $cutTimer.timeout
 			area.on_wireCut()
 #			print("CUT!!")
+
 			for schalter in get_tree().get_nodes_in_group("Schalter"):
-				schalter.isConnected = false
+				schalter.isConnectNoMore()

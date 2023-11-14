@@ -56,13 +56,14 @@ func _physics_process(_delta):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_action_just_pressed("wolleInteraktion"):
+	if Input.is_action_just_pressed("Interaktion"):
 		if(hatWolle):
 			dropWolle()
 			hatWolle = false
 			get_tree().get_nodes_in_group("SeilMain")[0].startWolling()
 		else:
-			hebeaufWolle()
+			if !hebeaufWolle():
+				get_tree().get_nodes_in_group("Schalter")[0].schalter_test($maulPosi.global_position)
 
 func dropWolle():
 	var w = get_tree().get_nodes_in_group("Wolle")
@@ -72,7 +73,7 @@ func dropWolle():
 	w[0].position = Vector2(posi.x, posi.y + 20)
 	w[0].set_texture(haufen_schmutz)
 
-func hebeaufWolle():
+func hebeaufWolle() -> bool:
 	var w = get_tree().get_nodes_in_group("Wolle")
 	var posi = w[0].global_position
 	var mPos = $kneulPosi.global_position
@@ -83,3 +84,6 @@ func hebeaufWolle():
 		w[0].set_texture(kneul_schmutz)
 		hatWolle = true
 		get_tree().get_nodes_in_group("SeilMain")[0].stopWolling()
+		return true
+	else:
+		return false

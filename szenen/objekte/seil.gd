@@ -83,7 +83,19 @@ func abloesen():
 	else:
 		$dynLine.set_point_position(0, get_tree().get_nodes_in_group("Wolle")[0].global_position)
 	
-	pil.update()
+	var schalterCon = true
+	for g in pil.get_groups():
+		if  g == "Pillar":
+			pil.update()
+			break
+		else: if g == "Schalter":
+			schalterCon = false
+			for i in conList:
+				for group in i.get_parent().get_groups():
+					if group =="Schalter":
+						schalterCon = true
+	if !schalterCon:
+		pil.isConnectNoMore()
 
 func _on_col_timer_timeout():
 	canAtt = true

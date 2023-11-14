@@ -41,3 +41,8 @@ shape = SubResource("RectangleShape2D_twq20")
 position = Vector2(-6, -4)
 rotation = 1.5708
 scale = Vector2(1.951, 1.951)
+
+[node name="openeable" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="openeable" to="." method="_on_openeable_timeout"]
