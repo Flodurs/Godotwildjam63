@@ -178,3 +178,20 @@ func endPunkt():
 	$dynLine.remove_point(1)
 	$dynLine.remove_point(0)
 	
+	#give time for level to register wether objective is completed
+	$colTimer.start()
+	await $colTimer.timeout 
+	
+	if get_tree().get_nodes_in_group("LevelNode")[0].zielErreicht:
+		get_tree().get_nodes_in_group("Seilabschnitt").front().queue_free()
+		var twee = create_tween()
+		twee.set_parallel(false)
+		for i in get_tree().get_nodes_in_group("Seilabschnitt"):
+			twee.tween_property(i.get_children()[0], "default_color", "3db3c7", 1)
+#		for i in get_tree().get_nodes_in_group("Seilabschnitt"):
+#			twee.tween_property(i.get_children()[0], "default_color", "ff0000", 1)
+		for i in get_tree().get_nodes_in_group("Seilabschnitt"):
+#			i.get_children()[0].default_color = "ff0000"
+			i.remove_from_group("Seilabschnitt")
+		get_tree().get_first_node_in_group("Wolle").set_texture(get_tree().get_first_node_in_group("LevelNode").kneulTextur)
+	

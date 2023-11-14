@@ -1,6 +1,9 @@
 extends Node2D
 class_name level_parent
 
+var zielErreicht:bool = false
+var kneulTextur = preload("res://assets/sprites/wollekneule_schmutzig.png") # kann mit suaber ausgetauscht werden
+var haufenTextur = preload("res://assets/sprites/wollhaufen_schmutzig.png")
 
 
 func change_scene(target):
