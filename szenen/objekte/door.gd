@@ -11,5 +11,5 @@ func close():
 	$CollisionShape2D.disabled = false
 
 
-func _on_openeable_timeout():
-	canBeOpened = true
+#func _on_openeable_timeout():
+#	canBeOpened = true
