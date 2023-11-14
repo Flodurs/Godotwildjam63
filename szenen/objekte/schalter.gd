@@ -11,7 +11,7 @@ func _process(_delta):
 
 func schalter_triggered():
 	$AnimatedSprite2D.frame = 0
-	if isConnected && get_tree().get_nodes_in_group("Door")[0].canBeOpened:
+	if (isConnected || get_tree().get_first_node_in_group("LevelNode").zielErreicht) && get_tree().get_nodes_in_group("Door")[0].canBeOpened:
 		get_tree().get_nodes_in_group("Door")[0].open()
 	else:
 		$AnimatedSprite2D.frame = 1

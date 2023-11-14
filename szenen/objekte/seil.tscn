@@ -24,4 +24,7 @@ one_way_collision_margin = 10.8
 [node name="colTimer" type="Timer" parent="."]
 wait_time = 0.1
 
+[node name="minitimer" type="Timer" parent="."]
+wait_time = 0.05
+
 [connection signal="timeout" from="colTimer" to="." method="_on_col_timer_timeout"]
