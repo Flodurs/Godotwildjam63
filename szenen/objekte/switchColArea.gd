@@ -3,7 +3,7 @@ extends Area2D
 var toCenter:Vector2 = Vector2.ZERO
 
 func _ready():
-	var pillPos = $"..".global_position
+	var pillPos = $"../hitBox_center".global_position
 	toCenter = pillPos - self.global_position
 	monitoring = true
 
