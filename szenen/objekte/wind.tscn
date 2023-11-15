@@ -103,7 +103,7 @@ animations = [{
 }]
 
 [node name="Wind" type="AnimatedSprite2D"]
-modulate = Color(1, 1, 1, 0.254902)
+modulate = Color(1, 1, 1, 0.501961)
 sprite_frames = SubResource("SpriteFrames_h3h4n")
 autoplay = "default"
 script = ExtResource("24_fgl4l")

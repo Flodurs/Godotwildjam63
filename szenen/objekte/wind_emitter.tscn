@@ -6,6 +6,7 @@
 size = Vector2(2895, 1620)
 
 [node name="WindEmitter" type="Area2D"]
+modulate = Color(1, 1, 1, 0.992157)
 script = ExtResource("1_j3p81")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -3,20 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_c2i40"]
 [ext_resource type="Script" path="res://szenen/Levels/level_2.gd" id="2_eyxcm"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="3_5xlad"]
-[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="3_gwtow"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="3_gwtow"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_kt71y"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/backward_gate.tscn" id="4_rroj2"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/rock.tscn" id="4_x87rh"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/long_concrete.tscn" id="5_4i28k"]
+[ext_resource type="PackedScene" uid="uid://1aqljah1hsiv" path="res://szenen/objekte/backward_gate.tscn" id="4_rroj2"]
+[ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="4_x87rh"]
+[ext_resource type="PackedScene" uid="uid://5cgyo1yuenvq" path="res://szenen/objekte/long_concrete.tscn" id="5_4i28k"]
 [ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="5_icjvr"]
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="6_xab8s"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/grass.tscn" id="6_y2jvx"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/reifen.tscn" id="7_xgcrc"]
-[ext_resource type="PackedScene" uid="uid://cy275b2isyok0" path="res://szenen/objekte/spike.tscn" id="8_e1s8p"]
-[ext_resource type="PackedScene" uid="uid://b36pjof40em80" path="res://szenen/objekte/stachelzaun.tscn" id="9_f6184"]
-[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="9_o8sp5"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/concrete_pile.tscn" id="10_rmbg1"]
-[ext_resource type="PackedScene" uid="uid://dxlu5br0kfd1f" path="res://szenen/objekte/Teich.tscn" id="11_lej5r"]
+[ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="6_y2jvx"]
+[ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="7_xgcrc"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/spike.tscn" id="8_e1s8p"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="9_f6184"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="9_o8sp5"]
+[ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="10_rmbg1"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/Teich.tscn" id="11_lej5r"]
 [ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="18_d6iob"]
 
 [node name="level2" instance=ExtResource("1_c2i40")]
@@ -57,7 +57,7 @@ scale = Vector2(0.400001, 0.400001)
 position = Vector2(368, 457)
 scale = Vector2(0.480001, 0.480001)
 
-[node name="Spiked_barricade7" parent="Objects" index="7" groups=["Door"] instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade7" parent="Objects" index="7" instance=ExtResource("3_5xlad")]
 position = Vector2(942, 478)
 scale = Vector2(0.400001, 0.400001)
 
