@@ -3,13 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_chtnv"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="2_088v0"]
 [ext_resource type="Script" path="res://szenen/Levels/level_1.gd" id="2_a1d08"]
-[ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="3_ore7q"]
-[ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="4_ssknb"]
-[ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="5_43jcn"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
-[ext_resource type="PackedScene" uid="uid://5cgyo1yuenvq" path="res://szenen/objekte/long_concrete.tscn" id="8_8a4ay"]
-[ext_resource type="PackedScene" uid="uid://djrura0ipe3nw" path="res://szenen/objekte/wind_emitter.tscn" id="9_k7bob"]
-[ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="9_uyeks"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/rock.tscn" id="3_ore7q"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/grass.tscn" id="4_ssknb"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/concrete_pile.tscn" id="5_43jcn"]
+[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/long_concrete.tscn" id="8_8a4ay"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/wind_emitter.tscn" id="9_k7bob"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/reifen.tscn" id="9_uyeks"]
 [ext_resource type="Texture2D" uid="uid://bg5ashs80v1nv" path="res://assets/sprites/Background/floor.png" id="10_kppow"]
 [ext_resource type="Texture2D" uid="uid://bdwmuot6ok2uy" path="res://assets/sprites/Objects/Shadow.png" id="12_bgoay"]
 [ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="13_1k5b6"]
@@ -114,5 +114,9 @@ position = Vector2(783, 164)
 position = Vector2(435, -693)
 
 [node name="Spiked_barricade" parent="." index="12" instance=ExtResource("14_ru02u")]
-position = Vector2(300, 10)
+position = Vector2(482, 47)
 scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade2" parent="." index="13" instance=ExtResource("14_ru02u")]
+position = Vector2(-14, 69)
+scale = Vector2(0.500778, 0.500778)
