@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_c2i40"]
 [ext_resource type="Script" path="res://szenen/Levels/level_2.gd" id="2_eyxcm"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="3_5xlad"]
-[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="3_gwtow"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="3_gwtow"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_kt71y"]
 [ext_resource type="PackedScene" uid="uid://1aqljah1hsiv" path="res://szenen/objekte/backward_gate.tscn" id="4_rroj2"]
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="4_x87rh"]
@@ -21,7 +21,7 @@
 [node name="level2" instance=ExtResource("1_c2i40")]
 script = ExtResource("2_eyxcm")
 
-[node name="Katze" parent="." index="0"]
+[node name="Katze" parent="." index="1"]
 position = Vector2(-1083, 647)
 
 [node name="Baumstamm" parent="Objects" index="0" instance=ExtResource("3_gwtow")]
@@ -120,6 +120,10 @@ scale = Vector2(0.511882, 0.511882)
 position = Vector2(-1459, -27)
 scale = Vector2(0.56, 0.6)
 
+[node name="backward_gate" parent="." index="4" instance=ExtResource("4_rroj2")]
+visible = false
+position = Vector2(-1473, 970)
+
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_kt71y")]
 position = Vector2(-736, 603)
 
@@ -140,10 +144,6 @@ position = Vector2(629, 352)
 
 [node name="Pillar7" parent="Pillars" index="6" instance=ExtResource("3_kt71y")]
 position = Vector2(-216, -186)
-
-[node name="backward_gate" parent="." index="4" instance=ExtResource("4_rroj2")]
-visible = false
-position = Vector2(-1473, 970)
 
 [node name="Schalter" parent="." index="7" instance=ExtResource("5_icjvr")]
 position = Vector2(-9, 348)
