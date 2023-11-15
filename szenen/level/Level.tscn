@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ceheqoktc83rp" path="res://szenen/entitys/katze.tscn" id="1_fv7qr"]
 [ext_resource type="PackedScene" uid="uid://b7732dj7h1yrt" path="res://szenen/objekte/seil.tscn" id="7_xqpbt"]
 
-[node name="level" type="Node2D" groups=["LevelNode"]]
+[node name="level" type="Node2D" groups=["Level", "LevelNode"]]
 y_sort_enabled = true
 script = ExtResource("1_6dvvy")
 
@@ -20,7 +20,6 @@ y_sort_enabled = true
 [node name="Pillars" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Seil" parent="." instance=ExtResource("7_xqpbt")]
-z_index = -1
-
 [node name="Shadows" type="Node2D" parent="."]
+
+[node name="Seil" parent="." instance=ExtResource("7_xqpbt")]

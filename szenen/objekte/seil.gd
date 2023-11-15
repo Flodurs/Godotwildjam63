@@ -184,9 +184,8 @@ func endPunkt():
 	
 	if get_tree().get_nodes_in_group("LevelNode")[0].zielErreicht:
 		get_tree().get_nodes_in_group("Seilabschnitt").front().queue_free()
-		var twee = create_tween()
-		twee.set_parallel(false)
-		$minitimer.wait_time = 0.05
+		
+		$minitimer.wait_time = 0.01
 		for i in get_tree().get_nodes_in_group("Seilabschnitt"):
 			i.get_children()[0].default_color = "3db3c7"
 			$minitimer.start()
@@ -194,11 +193,16 @@ func endPunkt():
 		$minitimer.wait_time = 0.2
 		$minitimer.start()
 		await $minitimer.timeout 
-		$minitimer.wait_time = 0.05
+		$minitimer.wait_time = 0.01
 		for i in get_tree().get_nodes_in_group("Seilabschnitt"):
 			i.get_children()[0].default_color = "ff0000"
 			$minitimer.start()
 			await $minitimer.timeout 	
 			i.remove_from_group("Seilabschnitt")
+		for p in get_tree().get_nodes_in_group("Pillar"):
+			for s in p.get_children():
+				for i in s.get_groups():
+					if i == "Verdeckung":
+						s.default_color = "ff0000"
 		get_tree().get_first_node_in_group("Wolle").set_texture(get_tree().get_first_node_in_group("LevelNode").kneulTextur)
 	

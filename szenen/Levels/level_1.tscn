@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="14_elfmc"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="14_ru02u"]
 
-[node name="level1" groups=["Level"] instance=ExtResource("1_chtnv")]
+[node name="level1" instance=ExtResource("1_chtnv")]
 script = ExtResource("2_a1d08")
 
 [node name="WindEmitter" parent="." index="0" instance=ExtResource("9_k7bob")]
@@ -70,23 +70,7 @@ position = Vector2(-82, -104)
 [node name="Pillar3" parent="Pillars" index="2" instance=ExtResource("2_088v0")]
 position = Vector2(15, 244)
 
-[node name="Backgorund" type="Sprite2D" parent="." index="6"]
-z_index = -4
-scale = Vector2(2, 2)
-texture = ExtResource("10_kppow")
-metadata/_edit_lock_ = true
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="7"]
-top_level = true
-color = Color(0.776471, 0.811765, 0.839216, 1)
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="8"]
-position = Vector2(-2559, -1314)
-rotation = -0.785398
-energy = 0.42
-height = 1.0
-
-[node name="Shadows" parent="." index="9"]
+[node name="Shadows" parent="." index="5"]
 z_index = -1
 
 [node name="Sprite2D" type="Sprite2D" parent="Shadows" index="0"]
@@ -106,6 +90,22 @@ modulate = Color(1, 1, 1, 0.627451)
 position = Vector2(-568, 366)
 scale = Vector2(0.43, 0.155)
 texture = ExtResource("12_bgoay")
+
+[node name="Backgorund" type="Sprite2D" parent="." index="6"]
+z_index = -4
+scale = Vector2(2, 2)
+texture = ExtResource("10_kppow")
+metadata/_edit_lock_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="7"]
+top_level = true
+color = Color(0.776471, 0.811765, 0.839216, 1)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="8"]
+position = Vector2(-2559, -1314)
+rotation = -0.785398
+energy = 0.42
+height = 1.0
 
 [node name="Schalter" parent="." index="10" instance=ExtResource("13_1k5b6")]
 position = Vector2(783, 164)
