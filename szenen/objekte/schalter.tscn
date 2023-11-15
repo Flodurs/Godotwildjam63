@@ -42,6 +42,7 @@ script = ExtResource("4_4il8r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea1"]
 position = Vector2(-6, -2)
+scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_fyjbd")
 
 [node name="colArea2" type="Area2D" parent="."]
@@ -49,6 +50,7 @@ position = Vector2(-6, 142)
 script = ExtResource("4_4il8r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea2"]
+scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_fyjbd")
 
 [node name="colArea3" type="Area2D" parent="."]
@@ -56,6 +58,7 @@ position = Vector2(68, 130)
 script = ExtResource("4_4il8r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea3"]
+scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_fyjbd")
 
 [node name="hitBox_center" type="Marker2D" parent="."]
