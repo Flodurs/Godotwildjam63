@@ -16,7 +16,7 @@ func _ready():
 func _process(_delta):
 	if dynVerdeck != null:
 		dynVerdeck.queue_free()
-	if (get_tree().get_first_node_in_group("Katze").position - position).x < 10:
+	if (get_tree().get_first_node_in_group("Katze").position - position).x < 20 || (get_tree().get_first_node_in_group("Katze").position - position).y <20:
 		update()
 	
 func update():

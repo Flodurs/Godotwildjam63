@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bihu5nvtiyh61"]
+[gd_scene load_steps=18 format=3 uid="uid://bihu5nvtiyh61"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_c2i40"]
 [ext_resource type="Script" path="res://szenen/Levels/level_2.gd" id="2_eyxcm"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="3_5xlad"]
+[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="3_gwtow"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_kt71y"]
 [ext_resource type="PackedScene" uid="uid://1aqljah1hsiv" path="res://szenen/objekte/backward_gate.tscn" id="4_rroj2"]
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="4_x87rh"]
@@ -23,102 +24,107 @@ script = ExtResource("2_eyxcm")
 [node name="Katze" parent="." index="0"]
 position = Vector2(-1083, 647)
 
-[node name="Spiked_barricade" parent="Objects" index="0" instance=ExtResource("3_5xlad")]
+[node name="Baumstamm" parent="Objects" index="0" instance=ExtResource("3_gwtow")]
+position = Vector2(647, 798)
+rotation = -0.053874
+scale = Vector2(0.400001, 0.400001)
+
+[node name="Spiked_barricade" parent="Objects" index="1" instance=ExtResource("3_5xlad")]
 position = Vector2(-108, 252)
 scale = Vector2(0.489011, 0.489011)
 
-[node name="Spiked_barricade2" parent="Objects" index="1" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade2" parent="Objects" index="2" instance=ExtResource("3_5xlad")]
 position = Vector2(-220, -103)
 scale = Vector2(0.400001, 0.400001)
 
-[node name="Spiked_barricade3" parent="Objects" index="2" instance=ExtResource("3_5xlad")]
-position = Vector2(-695, -25)
+[node name="Spiked_barricade3" parent="Objects" index="3" instance=ExtResource("3_5xlad")]
+position = Vector2(-655, -25)
 scale = Vector2(0.400001, 0.400001)
 
-[node name="Spiked_barricade4" parent="Objects" index="3" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade4" parent="Objects" index="4" instance=ExtResource("3_5xlad")]
 position = Vector2(-610, 507)
 scale = Vector2(0.56, 0.56)
 
-[node name="Spiked_barricade5" parent="Objects" index="4" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade5" parent="Objects" index="5" instance=ExtResource("3_5xlad")]
 position = Vector2(110, -297)
 scale = Vector2(0.400001, 0.400001)
 
-[node name="Spiked_barricade6" parent="Objects" index="5" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade6" parent="Objects" index="6" instance=ExtResource("3_5xlad")]
 position = Vector2(353, 525)
 scale = Vector2(0.480001, 0.480001)
 
-[node name="Spiked_barricade7" parent="Objects" index="6" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade7" parent="Objects" index="7" instance=ExtResource("3_5xlad")]
 position = Vector2(942, 441)
 scale = Vector2(0.400001, 0.400001)
 
-[node name="Spiked_barricade8" parent="Objects" index="7" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade8" parent="Objects" index="8" instance=ExtResource("3_5xlad")]
 position = Vector2(375, 20)
 scale = Vector2(0.28, 0.28)
 
-[node name="Spiked_barricade9" parent="Objects" index="8" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade9" parent="Objects" index="9" instance=ExtResource("3_5xlad")]
 position = Vector2(758, -229)
 scale = Vector2(0.400001, 0.400001)
 
-[node name="Spiked_barricade10" parent="Objects" index="9" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade10" parent="Objects" index="10" instance=ExtResource("3_5xlad")]
 position = Vector2(839, -32)
 scale = Vector2(0.400001, 0.400001)
 
-[node name="Spiked_barricade11" parent="Objects" index="10" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade11" parent="Objects" index="11" instance=ExtResource("3_5xlad")]
 position = Vector2(-497, -360)
 scale = Vector2(0.400001, 0.400001)
 
-[node name="Rock" parent="Objects" index="11" instance=ExtResource("4_x87rh")]
+[node name="Rock" parent="Objects" index="12" instance=ExtResource("4_x87rh")]
 position = Vector2(-1149, -578)
 
-[node name="LongConcrete" parent="Objects" index="12" instance=ExtResource("5_4i28k")]
+[node name="LongConcrete" parent="Objects" index="13" instance=ExtResource("5_4i28k")]
 position = Vector2(-1144, 691)
 rotation = 3.14159
 scale = Vector2(1, -1)
 
-[node name="Grass" parent="Objects" index="13" instance=ExtResource("6_y2jvx")]
+[node name="Grass" parent="Objects" index="14" instance=ExtResource("6_y2jvx")]
 position = Vector2(-850, -530)
 scale = Vector2(0.551883, 0.551883)
 
-[node name="Rock2" parent="Objects" index="14" instance=ExtResource("4_x87rh")]
+[node name="Rock2" parent="Objects" index="15" instance=ExtResource("4_x87rh")]
 position = Vector2(-51, 882)
 scale = Vector2(0.52, 0.52)
 
-[node name="Reifen" parent="Objects" index="15" instance=ExtResource("7_xgcrc")]
+[node name="Reifen" parent="Objects" index="16" instance=ExtResource("7_xgcrc")]
 position = Vector2(-394.993, 960.735)
 scale = Vector2(0.600001, 0.600001)
 
-[node name="Reifen2" parent="Objects" index="16" instance=ExtResource("7_xgcrc")]
+[node name="Reifen2" parent="Objects" index="17" instance=ExtResource("7_xgcrc")]
 position = Vector2(698, -656)
 scale = Vector2(0.560002, 0.560002)
 
-[node name="spike" parent="Objects" index="17" instance=ExtResource("8_e1s8p")]
+[node name="spike" parent="Objects" index="18" instance=ExtResource("8_e1s8p")]
 position = Vector2(942, -682)
 scale = Vector2(1.4, 1.4)
 
-[node name="Spiked_barricade12" parent="Objects" index="18" instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade12" parent="Objects" index="19" instance=ExtResource("3_5xlad")]
 position = Vector2(-686, -613)
 scale = Vector2(0.586034, 0.713824)
 
-[node name="Fass" parent="Objects" index="19" instance=ExtResource("9_o8sp5")]
+[node name="Fass" parent="Objects" index="20" instance=ExtResource("9_o8sp5")]
 position = Vector2(-1411, 558)
 scale = Vector2(0.92, 0.92)
 
-[node name="ConcretePile" parent="Objects" index="20" instance=ExtResource("10_rmbg1")]
-position = Vector2(1452, 980)
+[node name="ConcretePile" parent="Objects" index="21" instance=ExtResource("10_rmbg1")]
+position = Vector2(1266, 861)
 
-[node name="Grass2" parent="Objects" index="21" instance=ExtResource("6_y2jvx")]
+[node name="Grass2" parent="Objects" index="22" instance=ExtResource("6_y2jvx")]
 position = Vector2(-290.993, 890.735)
 scale = Vector2(0.511882, 0.511882)
 
-[node name="Teich" parent="Objects" index="22" instance=ExtResource("11_lej5r")]
-position = Vector2(-1423, -27)
+[node name="Teich" parent="Objects" index="23" instance=ExtResource("11_lej5r")]
+position = Vector2(-1459, -27)
 scale = Vector2(0.56, 0.6)
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_kt71y")]
 position = Vector2(-736, 603)
 
 [node name="Pillar2" parent="Pillars" index="1" instance=ExtResource("3_kt71y")]
-position = Vector2(-840, -92)
+position = Vector2(-762, -92)
 
 [node name="Pillar3" parent="Pillars" index="2" instance=ExtResource("3_kt71y")]
 position = Vector2(1111, -356)
