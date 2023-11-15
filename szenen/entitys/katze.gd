@@ -5,7 +5,7 @@ var playAudioFlag = 0
 var hatWolle: bool = true
 
 @onready var maulPosi = $maulPosi.position.x
-const tweenTime = 0.2
+const tweenTime = 0.5
 
 const kneul_schmutz = preload("res://assets/sprites/wollekneule_schmutzig.png")
 const haufen_schmutz = preload("res://assets/sprites/wollhaufen_schmutzig.png")
