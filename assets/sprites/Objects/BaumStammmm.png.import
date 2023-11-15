@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gmvn31rem86t"
-path="res://.godot/imported/BaumStammmm.png-bb1cfe591a19db86e5b47ad9ad472df3.ctex"
+uid="uid://dhs7oewtvgcox"
+path="res://.godot/imported/BaumStammmm.png-cf25c93f7043e7c79892283df99a6529.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/BaumStammmm.png"
-dest_files=["res://.godot/imported/BaumStammmm.png-bb1cfe591a19db86e5b47ad9ad472df3.ctex"]
+source_file="res://assets/sprites/Objects/BaumStammmm.png"
+dest_files=["res://.godot/imported/BaumStammmm.png-cf25c93f7043e7c79892283df99a6529.ctex"]
 
 [params]
 
