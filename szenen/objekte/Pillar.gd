@@ -16,17 +16,16 @@ func _ready():
 func _process(_delta):
 	if dynVerdeck != null:
 		dynVerdeck.queue_free()
-
+	if (get_tree().get_first_node_in_group("Katze").position - position).x < 10:
+		update()
+	
 func update():
-	var chi = get_children()
-	for c in chi:
+	for c in get_children():
 		for i in c.get_groups():
 			if i=="Verdeckung":
 				c.queue_free()
 	for s in get_tree().get_nodes_in_group("Seilabschnitt"):
-		if (s.getYAtX(position.x) > position.y-seil_hoehe)&&(s.getYAtX(position.x) < position.y+10)||(s.getXAtY(position.y) > position.x+linkeKanteX && s.getXAtY(position.y) < position.x+rechteKanteX) :  #(seil vor pillar)und(seil nicht zu weit unter pillar) 
-			if(position.x > min(s.get_point_position(0).x, s.get_point_position(1).x) || position.x < max(s.get_point_position(0).x, s.get_point_position(1).x)):  #und(sei lang genug)
-				verdecken(s)
+		s.drawCheck(self, s)
 
 func verdecken(seil): #seil muss typ Seilstueck haben
 	if (seil.get_point_count() != 2):
