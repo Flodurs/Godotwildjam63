@@ -57,7 +57,7 @@ scale = Vector2(0.400001, 0.400001)
 position = Vector2(368, 457)
 scale = Vector2(0.480001, 0.480001)
 
-[node name="Spiked_barricade7" parent="Objects" index="7" groups=["Door"] instance=ExtResource("3_5xlad")]
+[node name="Spiked_barricade7" parent="Objects" index="7" instance=ExtResource("3_5xlad")]
 position = Vector2(942, 478)
 scale = Vector2(0.400001, 0.400001)
 
