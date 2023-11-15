@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2oiwqwixlsae"]
+
+[ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_76sjb"]
+[ext_resource type="Script" path="res://szenen/Levels/level_3.gd" id="2_5nico"]
+[ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="2_ad5c7"]
+[ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="3_noqsw"]
+
+[node name="level_3" instance=ExtResource("1_76sjb")]
+script = ExtResource("2_5nico")
+
+[node name="Door" parent="." index="8" instance=ExtResource("2_ad5c7")]
+position = Vector2(-794, -531)
+scale = Vector2(1, 1)
+
+[node name="Schalter" parent="." index="9" instance=ExtResource("3_noqsw")]
