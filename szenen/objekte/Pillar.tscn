@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0sprmhk4yyal"]
+[gd_scene load_steps=7 format=3 uid="uid://d0sprmhk4yyal"]
 
 [ext_resource type="Script" path="res://szenen/objekte/Pillar.gd" id="1_8weh0"]
+[ext_resource type="Texture2D" uid="uid://cnjg3udda4dj0" path="res://assets/sprites/Objects/KratzbaumPlatte.png" id="2_8nxe6"]
 [ext_resource type="Texture2D" uid="uid://dxrmy4vob55pj" path="res://assets/sprites/Objects/Kratzbaum.png" id="2_y75ek"]
 [ext_resource type="Script" path="res://szenen/objekte/colArea1.gd" id="3_0bggv"]
 
@@ -13,8 +14,14 @@ radius = 3.0
 [node name="Pillar" type="StaticBody2D"]
 script = ExtResource("1_8weh0")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(0, -101)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("2_8nxe6")
+
 [node name="pillarIMage" type="Sprite2D" parent="."]
-position = Vector2(10, -90)
+position = Vector2(-1, -100)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("2_y75ek")
 
@@ -103,7 +110,7 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_esa4i")
 
 [node name="hitBox_center" type="Marker2D" parent="."]
-position = Vector2(0, -34)
+position = Vector2(0.1, -34.1)
 
 [connection signal="area_entered" from="colArea1" to="colArea1" method="_on_area_entered"]
 [connection signal="area_entered" from="colArea2" to="colArea2" method="_on_area_entered"]
