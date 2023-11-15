@@ -5,6 +5,7 @@ extends StaticBody2D
 var gewickelt:bool = false
 const linkeKanteX:int = -15
 const rechteKanteX:int = 15
+var doUpdate: bool = true
 
 var dynVerdeck: Node2D = null
 
@@ -20,12 +21,13 @@ func _process(_delta):
 		update()
 	
 func update():
-	for c in get_children():
-		for i in c.get_groups():
-			if i=="Verdeckung":
-				c.queue_free()
-	for s in get_tree().get_nodes_in_group("Seilabschnitt"):
-		s.drawCheck(self, s)
+	if doUpdate:
+		for c in get_children():
+			for i in c.get_groups():
+				if i=="Verdeckung":
+					c.queue_free()
+		for s in get_tree().get_nodes_in_group("Seilabschnitt"):
+			s.drawCheck(self, s)
 
 func verdecken(seil): #seil muss typ Seilstueck haben
 	if (seil.get_point_count() != 2):

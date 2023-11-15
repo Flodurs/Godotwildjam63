@@ -75,7 +75,7 @@ func _physics_process(delta):
 	
 	
 func abloesen():
-	var pil = conList.back().get_parent()
+	var par = conList.back().get_parent()
 	conList.pop_back()
 	get_tree().get_nodes_in_group("Seilabschnitt").back().queue_free()
 	if conList.size() >0:
@@ -84,9 +84,9 @@ func abloesen():
 		$dynLine.set_point_position(0, get_tree().get_nodes_in_group("Wolle")[0].global_position)
 	
 	var schalterCon = true
-	for g in pil.get_groups():
+	for g in par.get_groups():
 		if  g == "Pillar":
-			pil.update()
+			par.update()
 			break
 		else: if g == "Schalter":
 			schalterCon = false
@@ -94,8 +94,10 @@ func abloesen():
 				for group in i.get_parent().get_groups():
 					if group =="Schalter":
 						schalterCon = true
+		else: if g == "Door":
+			par.canBeOpened = false
 	if !schalterCon:
-		pil.isConnectNoMore()
+		par.isConnectNoMore()
 
 func _on_col_timer_timeout():
 	canAtt = true
@@ -119,6 +121,10 @@ func stopWolling():
 		conList.pop_back()
 	for i in get_tree().get_nodes_in_group("Verdeckung"):
 		i.queue_free()
+	
+	if get_tree().get_first_node_in_group("LevelNode").zielErreicht == false:
+		get_tree().get_first_node_in_group("Door").canBeOpened = false 
+	
 
 func getYAtX(x:int) -> int:
 	var start = $dynLine.get_point_position(0)  
@@ -183,6 +189,8 @@ func endPunkt():
 	await $colTimer.timeout 
 	
 	if get_tree().get_nodes_in_group("LevelNode")[0].zielErreicht:
+		for p in get_tree().get_nodes_in_group("Pillar"):
+			p.doUpdate=false
 		get_tree().get_nodes_in_group("Seilabschnitt").front().queue_free()
 		
 		$minitimer.wait_time = 0.01
