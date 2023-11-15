@@ -77,9 +77,9 @@ func _physics_process(delta):
 func abloesen():
 	var pil = conList.back().get_parent()
 	conList.pop_back()
-	get_tree().get_nodes_in_group("Seilabschnitt")[get_tree().get_nodes_in_group("Seilabschnitt").size()-1].queue_free()
+	get_tree().get_nodes_in_group("Seilabschnitt").back().queue_free()
 	if conList.size() >0:
-		$dynLine.set_point_position(0, conList[conList.size()-1].global_position)
+		$dynLine.set_point_position(0, conList.back().global_position)
 	else:
 		$dynLine.set_point_position(0, get_tree().get_nodes_in_group("Wolle")[0].global_position)
 	
