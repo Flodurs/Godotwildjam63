@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bihu5nvtiyh61"]
+[gd_scene load_steps=19 format=3 uid="uid://bihu5nvtiyh61"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_c2i40"]
 [ext_resource type="Script" path="res://szenen/Levels/level_2.gd" id="2_eyxcm"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" path="res://szenen/objekte/grass.tscn" id="6_y2jvx"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/reifen.tscn" id="7_xgcrc"]
 [ext_resource type="PackedScene" uid="uid://cy275b2isyok0" path="res://szenen/objekte/spike.tscn" id="8_e1s8p"]
+[ext_resource type="PackedScene" uid="uid://b36pjof40em80" path="res://szenen/objekte/stachelzaun.tscn" id="9_f6184"]
 [ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="9_o8sp5"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/concrete_pile.tscn" id="10_rmbg1"]
 [ext_resource type="PackedScene" uid="uid://dxlu5br0kfd1f" path="res://szenen/objekte/Teich.tscn" id="11_lej5r"]
@@ -23,6 +24,9 @@ script = ExtResource("2_eyxcm")
 
 [node name="Katze" parent="." index="0"]
 position = Vector2(-1083, 647)
+
+[node name="Camera2D" parent="." index="1"]
+zoom = Vector2(0.6, 0.6)
 
 [node name="Baumstamm" parent="Objects" index="0" instance=ExtResource("3_gwtow")]
 position = Vector2(647, 798)
@@ -77,46 +81,82 @@ scale = Vector2(0.400001, 0.400001)
 position = Vector2(-1149, -578)
 
 [node name="LongConcrete" parent="Objects" index="13" instance=ExtResource("5_4i28k")]
-position = Vector2(-1144, 691)
-rotation = 3.14159
+position = Vector2(-1124, 719)
+rotation = 3.24398
 scale = Vector2(1, -1)
 
 [node name="Grass" parent="Objects" index="14" instance=ExtResource("6_y2jvx")]
 position = Vector2(-850, -530)
 scale = Vector2(0.551883, 0.551883)
 
-[node name="Rock2" parent="Objects" index="15" instance=ExtResource("4_x87rh")]
+[node name="Grass3" parent="Objects" index="15" instance=ExtResource("6_y2jvx")]
+position = Vector2(742, 858)
+scale = Vector2(0.551883, 0.551883)
+
+[node name="Rock2" parent="Objects" index="16" instance=ExtResource("4_x87rh")]
 position = Vector2(-51, 882)
 scale = Vector2(0.52, 0.52)
 
-[node name="Reifen" parent="Objects" index="16" instance=ExtResource("7_xgcrc")]
+[node name="Rock3" parent="Objects" index="17" instance=ExtResource("4_x87rh")]
+position = Vector2(1469, 662)
+scale = Vector2(-0.68, 0.68)
+
+[node name="Reifen" parent="Objects" index="18" instance=ExtResource("7_xgcrc")]
 position = Vector2(-394.993, 960.735)
 scale = Vector2(0.600001, 0.600001)
 
-[node name="Reifen2" parent="Objects" index="17" instance=ExtResource("7_xgcrc")]
-position = Vector2(698, -656)
+[node name="Reifen2" parent="Objects" index="19" instance=ExtResource("7_xgcrc")]
+position = Vector2(682, -712)
 scale = Vector2(0.560002, 0.560002)
 
-[node name="spike" parent="Objects" index="18" instance=ExtResource("8_e1s8p")]
+[node name="stachelzaun" parent="Objects" index="20" instance=ExtResource("9_f6184")]
+position = Vector2(1585, -578)
+scale = Vector2(0.560002, 0.560002)
+
+[node name="Reifen3" parent="Objects" index="21" instance=ExtResource("7_xgcrc")]
+position = Vector2(1341, -803)
+scale = Vector2(0.560002, 0.560002)
+
+[node name="Reifen4" parent="Objects" index="22" instance=ExtResource("7_xgcrc")]
+position = Vector2(1110, -875)
+scale = Vector2(0.560002, 0.560002)
+
+[node name="Reifen5" parent="Objects" index="23" instance=ExtResource("7_xgcrc")]
+position = Vector2(870, -821)
+scale = Vector2(0.560002, 0.560002)
+
+[node name="spike" parent="Objects" index="24" instance=ExtResource("8_e1s8p")]
 position = Vector2(942, -682)
 scale = Vector2(1.4, 1.4)
 
-[node name="Spiked_barricade12" parent="Objects" index="19" instance=ExtResource("3_5xlad")]
+[node name="spike2" parent="Objects" index="25" instance=ExtResource("8_e1s8p")]
+position = Vector2(1378, 222)
+scale = Vector2(1.4, 1.4)
+
+[node name="Spiked_barricade12" parent="Objects" index="26" instance=ExtResource("3_5xlad")]
 position = Vector2(-686, -613)
 scale = Vector2(0.586034, 0.713824)
 
-[node name="Fass" parent="Objects" index="20" instance=ExtResource("9_o8sp5")]
+[node name="Spiked_barricade13" parent="Objects" index="27" instance=ExtResource("3_5xlad")]
+position = Vector2(1430, 371)
+scale = Vector2(0.586034, 0.713824)
+
+[node name="Fass" parent="Objects" index="28" instance=ExtResource("9_o8sp5")]
 position = Vector2(-1411, 558)
 scale = Vector2(0.92, 0.92)
 
-[node name="ConcretePile" parent="Objects" index="21" instance=ExtResource("10_rmbg1")]
+[node name="Fass2" parent="Objects" index="29" instance=ExtResource("9_o8sp5")]
+position = Vector2(1337, 494)
+scale = Vector2(0.92, 0.92)
+
+[node name="ConcretePile" parent="Objects" index="30" instance=ExtResource("10_rmbg1")]
 position = Vector2(1266, 861)
 
-[node name="Grass2" parent="Objects" index="22" instance=ExtResource("6_y2jvx")]
+[node name="Grass2" parent="Objects" index="31" instance=ExtResource("6_y2jvx")]
 position = Vector2(-290.993, 890.735)
 scale = Vector2(0.511882, 0.511882)
 
-[node name="Teich" parent="Objects" index="23" instance=ExtResource("11_lej5r")]
+[node name="Teich" parent="Objects" index="32" instance=ExtResource("11_lej5r")]
 position = Vector2(-1459, -27)
 scale = Vector2(0.56, 0.6)
 
