@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b36pjof40em80"]
+
+[ext_resource type="Texture2D" uid="uid://dk64civgovfo" path="res://assets/sprites/Objects/stachelzaun.png" id="1_1v4md"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhuue"]
+size = Vector2(43.6621, 118.069)
+
+[node name="stachelzaun" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1v4md")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-35, -26)
+scale = Vector2(5.26773, 24.96)
+shape = SubResource("RectangleShape2D_jhuue")
