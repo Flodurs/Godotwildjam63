@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="3_ore7q"]
 [ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="4_ssknb"]
 [ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="5_43jcn"]
-[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
 [ext_resource type="PackedScene" uid="uid://5cgyo1yuenvq" path="res://szenen/objekte/long_concrete.tscn" id="8_8a4ay"]
 [ext_resource type="PackedScene" uid="uid://djrura0ipe3nw" path="res://szenen/objekte/wind_emitter.tscn" id="9_k7bob"]
 [ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="9_uyeks"]
