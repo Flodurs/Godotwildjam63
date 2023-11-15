@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_c2i40"]
 [ext_resource type="Script" path="res://szenen/Levels/level_2.gd" id="2_eyxcm"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="3_5xlad"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="3_gwtow"]
+[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="3_gwtow"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_kt71y"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/backward_gate.tscn" id="4_rroj2"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/rock.tscn" id="4_x87rh"]
@@ -25,7 +25,7 @@ script = ExtResource("2_eyxcm")
 [node name="Katze" parent="." index="1"]
 position = Vector2(-1083, 647)
 
-[node name="Camera2D" parent="." index="1"]
+[node name="Camera2D" parent="." index="2"]
 zoom = Vector2(0.6, 0.6)
 
 [node name="Baumstamm" parent="Objects" index="0" instance=ExtResource("3_gwtow")]

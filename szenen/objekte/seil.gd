@@ -183,6 +183,8 @@ func endPunkt():
 	await $colTimer.timeout 
 	
 	if get_tree().get_nodes_in_group("LevelNode")[0].zielErreicht:
+		for p in get_tree().get_nodes_in_group("Pillar"):
+			p.doUpdate=false
 		get_tree().get_nodes_in_group("Seilabschnitt").front().queue_free()
 		
 		$minitimer.wait_time = 0.01
