@@ -71,7 +71,7 @@ scale = Vector2(0.400001, 0.400001)
 position = Vector2(-1149, -578)
 
 [node name="LongConcrete" parent="Objects" index="12" instance=ExtResource("5_4i28k")]
-position = Vector2(-1171, 808)
+position = Vector2(-1144, 691)
 rotation = 3.14159
 scale = Vector2(1, -1)
 
@@ -80,11 +80,11 @@ position = Vector2(-850, -530)
 scale = Vector2(0.551883, 0.551883)
 
 [node name="Rock2" parent="Objects" index="14" instance=ExtResource("4_x87rh")]
-position = Vector2(-42, 921)
+position = Vector2(-51, 882)
 scale = Vector2(0.52, 0.52)
 
 [node name="Reifen" parent="Objects" index="15" instance=ExtResource("7_xgcrc")]
-position = Vector2(-344, 1009)
+position = Vector2(-394.993, 960.735)
 scale = Vector2(0.600001, 0.600001)
 
 [node name="Reifen2" parent="Objects" index="16" instance=ExtResource("7_xgcrc")]
@@ -100,19 +100,19 @@ position = Vector2(-686, -613)
 scale = Vector2(0.586034, 0.713824)
 
 [node name="Fass" parent="Objects" index="19" instance=ExtResource("9_o8sp5")]
-position = Vector2(-1435, 684)
+position = Vector2(-1411, 558)
 scale = Vector2(0.92, 0.92)
 
 [node name="ConcretePile" parent="Objects" index="20" instance=ExtResource("10_rmbg1")]
 position = Vector2(1452, 980)
 
 [node name="Grass2" parent="Objects" index="21" instance=ExtResource("6_y2jvx")]
-position = Vector2(-240, 939)
+position = Vector2(-290.993, 890.735)
 scale = Vector2(0.511882, 0.511882)
 
-[node name="StaticBody2D" parent="Objects" index="22" instance=ExtResource("11_lej5r")]
-position = Vector2(-1414, -36)
-scale = Vector2(0.56, 0.56)
+[node name="Teich" parent="Objects" index="22" instance=ExtResource("11_lej5r")]
+position = Vector2(-1423, -27)
+scale = Vector2(0.56, 0.6)
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_kt71y")]
 position = Vector2(-736, 603)
@@ -136,7 +136,8 @@ position = Vector2(629, 352)
 position = Vector2(-216, -186)
 
 [node name="backward_gate" parent="." index="4" instance=ExtResource("4_rroj2")]
-position = Vector2(-1284, 631)
+visible = false
+position = Vector2(-1473, 970)
 
 [node name="Schalter" parent="." index="7" instance=ExtResource("5_icjvr")]
 position = Vector2(-9, 348)
