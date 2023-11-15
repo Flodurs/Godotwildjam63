@@ -193,7 +193,7 @@ scale = Vector2(0.6, 0.6)
 [node name="Door" parent="." index="8" instance=ExtResource("6_xab8s")]
 position = Vector2(4, -930)
 
-[node name="Backgorund" type="Sprite2D" parent="." index="9"]
+[node name="Backgorund2" type="Sprite2D" parent="." index="9"]
 z_index = -4
 scale = Vector2(2, 2)
 texture = ExtResource("18_d6iob")
