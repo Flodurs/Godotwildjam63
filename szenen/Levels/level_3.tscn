@@ -64,52 +64,92 @@ scale = Vector2(0.36, 0.36)
 [node name="LongConcrete" parent="Objects" index="9" instance=ExtResource("5_8gorb")]
 position = Vector2(-367, -747)
 
-[node name="Reifen" parent="Objects" index="10" instance=ExtResource("6_8yxf8")]
+[node name="LongConcrete2" parent="Objects" index="10" instance=ExtResource("5_8gorb")]
+position = Vector2(1624, 565)
+
+[node name="Reifen" parent="Objects" index="11" instance=ExtResource("6_8yxf8")]
 position = Vector2(252, -753)
 scale = Vector2(0.560002, 0.560002)
 
-[node name="Rock" parent="Objects" index="11" instance=ExtResource("7_nfqqg")]
+[node name="Rock" parent="Objects" index="12" instance=ExtResource("7_nfqqg")]
 position = Vector2(1264, -754)
 
-[node name="StaticBody2D" parent="Objects" index="12" instance=ExtResource("8_1wlac")]
+[node name="Rock3" parent="Objects" index="13" instance=ExtResource("7_nfqqg")]
+position = Vector2(1473, -582)
+scale = Vector2(-0.76, 0.64)
+
+[node name="Rock4" parent="Objects" index="14" instance=ExtResource("7_nfqqg")]
+position = Vector2(1436, -431)
+scale = Vector2(0.56, 0.4)
+
+[node name="Rock5" parent="Objects" index="15" instance=ExtResource("7_nfqqg")]
+position = Vector2(1557, -283)
+scale = Vector2(-0.700155, 0.606329)
+
+[node name="StaticBody2D" parent="Objects" index="16" instance=ExtResource("8_1wlac")]
 position = Vector2(491, -703)
 
-[node name="Spiked_barricade9" parent="Objects" index="13" instance=ExtResource("3_cm6be")]
+[node name="StaticBody2D2" parent="Objects" index="17" instance=ExtResource("8_1wlac")]
+position = Vector2(1366, -158)
+
+[node name="StaticBody2D3" parent="Objects" index="18" instance=ExtResource("8_1wlac")]
+position = Vector2(1437, -101)
+
+[node name="StaticBody2D4" parent="Objects" index="19" instance=ExtResource("8_1wlac")]
+position = Vector2(1403, -14)
+
+[node name="Spiked_barricade9" parent="Objects" index="20" instance=ExtResource("3_cm6be")]
 position = Vector2(750, -736)
 scale = Vector2(0.760001, 0.760001)
 
-[node name="stachelzaun" parent="Objects" index="14" instance=ExtResource("9_8dneq")]
+[node name="stachelzaun" parent="Objects" index="21" instance=ExtResource("9_8dneq")]
 position = Vector2(-1402, 105)
 scale = Vector2(0.435531, 0.435531)
 
-[node name="Spiked_barricade10" parent="Objects" index="15" instance=ExtResource("3_cm6be")]
+[node name="Spiked_barricade10" parent="Objects" index="22" instance=ExtResource("3_cm6be")]
 position = Vector2(-1295, 807)
 scale = Vector2(0.560001, 0.560001)
 
-[node name="Spiked_barricade11" parent="Objects" index="16" instance=ExtResource("3_cm6be")]
-position = Vector2(151, 292)
+[node name="Spiked_barricade11" parent="Objects" index="23" instance=ExtResource("3_cm6be")]
+position = Vector2(151, 245)
 scale = Vector2(0.560001, 0.560001)
 
-[node name="Baumstamm" parent="Objects" index="17" instance=ExtResource("10_x2eoi")]
+[node name="Spiked_barricade12" parent="Objects" index="24" instance=ExtResource("3_cm6be")]
+position = Vector2(1473, 104)
+scale = Vector2(0.560001, 0.560001)
+
+[node name="Baumstamm" parent="Objects" index="25" instance=ExtResource("10_x2eoi")]
 position = Vector2(-198, 817)
 rotation = -0.00781969
 scale = Vector2(0.52, 0.52)
 
-[node name="Reifen2" parent="Objects" index="18" instance=ExtResource("6_8yxf8")]
+[node name="Reifen2" parent="Objects" index="26" instance=ExtResource("6_8yxf8")]
 position = Vector2(-1066, 797)
 scale = Vector2(0.52, 0.52)
 
-[node name="ConcretePile" parent="Objects" index="19" instance=ExtResource("11_viv8q")]
+[node name="ConcretePile" parent="Objects" index="27" instance=ExtResource("11_viv8q")]
 position = Vector2(1255, 824)
 rotation = -0.00781969
 scale = Vector2(0.960299, 0.960299)
 
-[node name="Reifen3" parent="Objects" index="20" instance=ExtResource("6_8yxf8")]
+[node name="Reifen3" parent="Objects" index="28" instance=ExtResource("6_8yxf8")]
 position = Vector2(558, 879)
 scale = Vector2(0.47409, 0.692916)
 
-[node name="Rock2" parent="Objects" index="21" instance=ExtResource("7_nfqqg")]
+[node name="Reifen4" parent="Objects" index="29" instance=ExtResource("6_8yxf8")]
+position = Vector2(1564, 253)
+scale = Vector2(0.674089, 0.692916)
+
+[node name="Reifen5" parent="Objects" index="30" instance=ExtResource("6_8yxf8")]
+position = Vector2(1456, 374)
+scale = Vector2(0.674089, 0.692916)
+
+[node name="Rock2" parent="Objects" index="31" instance=ExtResource("7_nfqqg")]
 position = Vector2(841, 858)
+scale = Vector2(0.52, 0.52)
+
+[node name="Rock6" parent="Objects" index="32" instance=ExtResource("7_nfqqg")]
+position = Vector2(1453, 545)
 scale = Vector2(0.52, 0.52)
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("4_imssc")]
