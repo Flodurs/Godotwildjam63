@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://r3qqrro7548x" path="res://assets/sprites/Objects/Door/DoorClose.png" id="1_34s0t"]
 [ext_resource type="Script" path="res://szenen/objekte/door.gd" id="1_w45rm"]
 [ext_resource type="Texture2D" uid="uid://b1mgjutu47mux" path="res://assets/sprites/Objects/Door/DoorOpen.png" id="2_xkfck"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/forward_gate.tscn" id="4_hqywx"]
+[ext_resource type="PackedScene" uid="uid://bjcuxfnidmejs" path="res://szenen/objekte/forward_gate.tscn" id="4_hqywx"]
 [ext_resource type="Script" path="res://szenen/objekte/colAreaGate.gd" id="5_375mh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h0nbo"]

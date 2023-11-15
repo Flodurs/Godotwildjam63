@@ -44,7 +44,7 @@ func addCon(a,b):
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _physics_process(delta):
 	if ziehtSeil:
 		segment.a = $dynLine.get_point_position(0)
 		segment.b = $dynLine.get_point_position(1)
@@ -58,7 +58,7 @@ func _process(_delta):
 		#abloes logik:
 		if(get_tree().get_nodes_in_group("Seilabschnitt").size() >= 1):
 			var lastSeg =  get_tree().get_nodes_in_group("Seilabschnitt").back()
-			var vectLastSeg = -lastSeg.getVec()
+			var vectLastSeg = lastSeg.getVec()
 			var vecCurr = $dynLine.get_point_position(1) - $dynLine.get_point_position(0)
 			var vecZone = conList[conList.size()-1].toCenter
 			
@@ -66,7 +66,7 @@ func _process(_delta):
 			var currAngle = vecCurr.angle_to(vecZone)
 			var angle =  abs( (lastAngle) + (currAngle) )
 #			print(rad_to_deg(lastAngle))
-			if(angle >= deg_to_rad(181)):
+			if(angle >= deg_to_rad(185)):
 				abloesen()
 				
 		for p in get_tree().get_nodes_in_group("Pillar"):
