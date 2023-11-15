@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxlu5br0kfd1f"]
+
+[ext_resource type="Texture2D" uid="uid://qwx3hkxlnpg5" path="res://assets/sprites/Objects/Teich.png" id="1_mi4qm"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mi4qm")
+offset = Vector2(0, -400)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, -829, 163, -841, 264, -781, 441, -673, 564, -494, 663, -344, 753, -104, 735, 7, 792, 235, 804, 366, 681, 507, 627, 624, 393, 729, 106, 831, -119, 897, -347, 882, -653, 882, -778, 723, -817, 519, -662, 208, -790, 4, -793, -125, -769, -197, -775, -317, -739, -512, -557, -745, -332, -829, -140, -859)

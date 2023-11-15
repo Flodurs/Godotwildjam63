@@ -1,12 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://bihu5nvtiyh61"]
+[gd_scene load_steps=17 format=3 uid="uid://bihu5nvtiyh61"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_c2i40"]
 [ext_resource type="Script" path="res://szenen/Levels/level_2.gd" id="2_eyxcm"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="3_5xlad"]
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_kt71y"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/backward_gate.tscn" id="4_rroj2"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/rock.tscn" id="4_x87rh"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/long_concrete.tscn" id="5_4i28k"]
 [ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="5_icjvr"]
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="6_xab8s"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/grass.tscn" id="6_y2jvx"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/reifen.tscn" id="7_xgcrc"]
+[ext_resource type="PackedScene" uid="uid://cy275b2isyok0" path="res://szenen/objekte/spike.tscn" id="8_e1s8p"]
+[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="9_o8sp5"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/concrete_pile.tscn" id="10_rmbg1"]
+[ext_resource type="PackedScene" uid="uid://dxlu5br0kfd1f" path="res://szenen/objekte/Teich.tscn" id="11_lej5r"]
+[ext_resource type="Texture2D" uid="uid://bg5ashs80v1nv" path="res://assets/sprites/Background/floor.png" id="13_i2sjm"]
 
 [node name="level2" instance=ExtResource("1_c2i40")]
 script = ExtResource("2_eyxcm")
@@ -58,6 +67,53 @@ scale = Vector2(0.400001, 0.400001)
 position = Vector2(-497, -360)
 scale = Vector2(0.400001, 0.400001)
 
+[node name="Rock" parent="Objects" index="11" instance=ExtResource("4_x87rh")]
+position = Vector2(-1149, -578)
+
+[node name="LongConcrete" parent="Objects" index="12" instance=ExtResource("5_4i28k")]
+position = Vector2(-1171, 808)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Grass" parent="Objects" index="13" instance=ExtResource("6_y2jvx")]
+position = Vector2(-850, -530)
+scale = Vector2(0.551883, 0.551883)
+
+[node name="Rock2" parent="Objects" index="14" instance=ExtResource("4_x87rh")]
+position = Vector2(-42, 921)
+scale = Vector2(0.52, 0.52)
+
+[node name="Reifen" parent="Objects" index="15" instance=ExtResource("7_xgcrc")]
+position = Vector2(-344, 1009)
+scale = Vector2(0.600001, 0.600001)
+
+[node name="Reifen2" parent="Objects" index="16" instance=ExtResource("7_xgcrc")]
+position = Vector2(698, -656)
+scale = Vector2(0.560002, 0.560002)
+
+[node name="spike" parent="Objects" index="17" instance=ExtResource("8_e1s8p")]
+position = Vector2(942, -682)
+scale = Vector2(1.4, 1.4)
+
+[node name="Spiked_barricade12" parent="Objects" index="18" instance=ExtResource("3_5xlad")]
+position = Vector2(-686, -613)
+scale = Vector2(0.586034, 0.713824)
+
+[node name="Fass" parent="Objects" index="19" instance=ExtResource("9_o8sp5")]
+position = Vector2(-1435, 684)
+scale = Vector2(0.92, 0.92)
+
+[node name="ConcretePile" parent="Objects" index="20" instance=ExtResource("10_rmbg1")]
+position = Vector2(1452, 980)
+
+[node name="Grass2" parent="Objects" index="21" instance=ExtResource("6_y2jvx")]
+position = Vector2(-240, 939)
+scale = Vector2(0.511882, 0.511882)
+
+[node name="StaticBody2D" parent="Objects" index="22" instance=ExtResource("11_lej5r")]
+position = Vector2(-1414, -36)
+scale = Vector2(0.56, 0.56)
+
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_kt71y")]
 position = Vector2(-736, 603)
 
@@ -88,3 +144,9 @@ scale = Vector2(0.6, 0.6)
 
 [node name="Door" parent="." index="8" instance=ExtResource("6_xab8s")]
 position = Vector2(4, -930)
+
+[node name="Backgorund" type="Sprite2D" parent="." index="9"]
+z_index = -4
+scale = Vector2(2, 2)
+texture = ExtResource("13_i2sjm")
+metadata/_edit_lock_ = true
