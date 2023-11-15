@@ -11,7 +11,7 @@
 [node name="level_0" instance=ExtResource("1_515rf")]
 script = ExtResource("2_urqw5")
 
-[node name="Katze" parent="." index="0"]
+[node name="Katze" parent="." index="1"]
 position = Vector2(136, 685)
 
 [node name="Door" parent="Objects" index="0" instance=ExtResource("3_jkce6")]
@@ -38,10 +38,10 @@ metadata/_edit_lock_ = true
 
 [node name="pressE" type="Label" parent="." index="7"]
 offset_left = -662.0
-offset_top = 653.0
-offset_right = -414.0
-offset_bottom = 679.0
-scale = Vector2(2.16, 2.16)
+offset_top = 614.0
+offset_right = -51.0
+offset_bottom = 730.0
+theme_override_font_sizes/font_size = 40
 text = "Press \"E\" to put down your wool 
 and Interact with objects"
 
@@ -50,16 +50,16 @@ offset_left = 199.0
 offset_top = 138.0
 offset_right = 447.0
 offset_bottom = 190.0
-scale = Vector2(2.16, 2.16)
+theme_override_font_sizes/font_size = 40
 text = "Wrap the rope around the pillars
 Avoid the spikes"
 
 [node name="connectToDoor" type="Label" parent="." index="9"]
 offset_left = -1063.0
 offset_top = -464.0
-offset_right = -692.0
-offset_bottom = -386.0
-scale = Vector2(2.16, 2.16)
+offset_right = -144.0
+offset_bottom = -290.0
+theme_override_font_sizes/font_size = 40
 text = "Connect to the door to complete the connection
 
 Then pull the lever to complete the level"

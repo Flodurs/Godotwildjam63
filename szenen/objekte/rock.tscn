@@ -5,7 +5,7 @@
 [node name="Rock" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -204)
+position = Vector2(28, -212)
 texture = ExtResource("1_17j46")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
