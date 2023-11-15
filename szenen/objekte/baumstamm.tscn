@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://drw6ntmuqiclm"]
 
-[ext_resource type="Texture2D" uid="uid://gmvn31rem86t" path="res://assets/sprites/BaumStammmm.png" id="1_8evvi"]
+[ext_resource type="Texture2D" uid="uid://dhs7oewtvgcox" path="res://assets/sprites/Objects/BaumStammmm.png" id="1_wlklm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_egqul"]
 radius = 41.0
@@ -10,7 +10,7 @@ height = 2746.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -101)
-texture = ExtResource("1_8evvi")
+texture = ExtResource("1_wlklm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-45, 6)
