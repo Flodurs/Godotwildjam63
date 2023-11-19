@@ -24,14 +24,15 @@ animations = [{
 size = Vector2(250, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_altcw"]
-size = Vector2(20, 35)
+size = Vector2(44, 87.5)
 
 [node name="Door" type="StaticBody2D" groups=["Door"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_w45rm")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.7, 0.7)
+position = Vector2(95.5, -95.5)
+scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_h0nbo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -54,6 +55,7 @@ position = Vector2(-145.5, 182.5)
 script = ExtResource("5_375mh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colAreaGate"]
+position = Vector2(1.5, -22.25)
 shape = SubResource("RectangleShape2D_altcw")
 
 [node name="hitBoxCenter" type="Marker2D" parent="."]
