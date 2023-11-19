@@ -55,6 +55,7 @@ position = Vector2(33.0001, 121)
 scale = Vector2(0.3, 0.3)
 
 [node name="Rock" parent="Objects" index="9" instance=ExtResource("4_t6fhs")]
+z_index = -3
 position = Vector2(38, -691)
 scale = Vector2(0.7, 0.7)
 
@@ -116,7 +117,6 @@ position = Vector2(-934, 447)
 position = Vector2(-2, 657)
 
 [node name="Door" parent="." index="9" instance=ExtResource("5_bfjpx")]
-z_index = 1
 position = Vector2(555, -852)
 scale = Vector2(1.36, 1.36)
 
