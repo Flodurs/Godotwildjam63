@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="6_xab8s"]
 [ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="6_y2jvx"]
 [ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="7_xgcrc"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/spike.tscn" id="8_e1s8p"]
+[ext_resource type="PackedScene" uid="uid://bj4ihsp1x4aql" path="res://szenen/objekte/spike.tscn" id="8_e1s8p"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="9_f6184"]
 [ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="9_o8sp5"]
 [ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="10_rmbg1"]
@@ -25,11 +25,8 @@ script = ExtResource("2_eyxcm")
 [node name="Katze" parent="." index="1"]
 position = Vector2(-1083, 647)
 
-[node name="Camera2D" parent="." index="2"]
-zoom = Vector2(0.6, 0.6)
-
 [node name="Baumstamm" parent="Objects" index="0" instance=ExtResource("3_gwtow")]
-position = Vector2(647, 798)
+position = Vector2(645, 733)
 rotation = -0.053874
 scale = Vector2(0.400001, 0.400001)
 
@@ -95,7 +92,7 @@ position = Vector2(742, 858)
 scale = Vector2(0.551883, 0.551883)
 
 [node name="Rock2" parent="Objects" index="16" instance=ExtResource("4_x87rh")]
-position = Vector2(-51, 882)
+position = Vector2(-82, 776)
 scale = Vector2(0.52, 0.52)
 
 [node name="Rock3" parent="Objects" index="17" instance=ExtResource("4_x87rh")]
@@ -103,31 +100,31 @@ position = Vector2(1469, 662)
 scale = Vector2(-0.68, 0.68)
 
 [node name="Reifen" parent="Objects" index="18" instance=ExtResource("7_xgcrc")]
-position = Vector2(-394.993, 960.735)
+position = Vector2(-507, 841)
 scale = Vector2(0.600001, 0.600001)
 
 [node name="Reifen2" parent="Objects" index="19" instance=ExtResource("7_xgcrc")]
-position = Vector2(682, -712)
+position = Vector2(558, -641)
 scale = Vector2(0.560002, 0.560002)
 
-[node name="stachelzaun" parent="Objects" index="20" instance=ExtResource("9_f6184")]
-position = Vector2(1585, -578)
+[node name="Reifen3" parent="Objects" index="20" instance=ExtResource("7_xgcrc")]
+position = Vector2(-527, -689)
 scale = Vector2(0.560002, 0.560002)
 
-[node name="Reifen3" parent="Objects" index="21" instance=ExtResource("7_xgcrc")]
-position = Vector2(1341, -803)
+[node name="stachelzaun" parent="Objects" index="21" instance=ExtResource("9_f6184")]
+position = Vector2(1355, -613)
 scale = Vector2(0.560002, 0.560002)
 
 [node name="Reifen4" parent="Objects" index="22" instance=ExtResource("7_xgcrc")]
-position = Vector2(1110, -875)
+position = Vector2(1117, -707)
 scale = Vector2(0.560002, 0.560002)
 
 [node name="Reifen5" parent="Objects" index="23" instance=ExtResource("7_xgcrc")]
-position = Vector2(870, -821)
+position = Vector2(746, -750)
 scale = Vector2(0.560002, 0.560002)
 
 [node name="spike" parent="Objects" index="24" instance=ExtResource("8_e1s8p")]
-position = Vector2(942, -682)
+position = Vector2(954, -708)
 scale = Vector2(1.4, 1.4)
 
 [node name="spike2" parent="Objects" index="25" instance=ExtResource("8_e1s8p")]
@@ -159,8 +156,8 @@ scale = Vector2(0.511882, 0.511882)
 
 [node name="Teich" parent="Objects" index="32" instance=ExtResource("11_lej5r")]
 z_index = -1
-position = Vector2(-1459, -27)
-scale = Vector2(0.56, 0.6)
+position = Vector2(-1441, -4)
+scale = Vector2(0.5, 0.536)
 
 [node name="backward_gate" parent="." index="4" instance=ExtResource("4_rroj2")]
 visible = false
@@ -173,7 +170,7 @@ position = Vector2(-736, 603)
 position = Vector2(-762, -92)
 
 [node name="Pillar3" parent="Pillars" index="2" instance=ExtResource("3_kt71y")]
-position = Vector2(1111, -356)
+position = Vector2(1007, -328)
 
 [node name="Pillar4" parent="Pillars" index="3" instance=ExtResource("3_kt71y")]
 position = Vector2(355, -112)
@@ -193,6 +190,8 @@ scale = Vector2(0.6, 0.6)
 
 [node name="Door" parent="." index="8" instance=ExtResource("6_xab8s")]
 position = Vector2(4, -930)
+scale = Vector2(1.5, 1.5)
+metadata/_edit_lock_ = true
 
 [node name="Backgorund2" type="Sprite2D" parent="." index="9"]
 z_index = -4

@@ -1,5 +1,6 @@
 extends level_parent
-var next_scene: String = "res://szenen/Levels/level_5.tscn"
+
+var next_scene: String = "res://szenen/Levels/level_7.tscn"
 var last_scene: String = "res://szenen/Levels/level_3.tscn"
 
 func _process(_delta):

@@ -1,0 +1,129 @@
+[gd_scene load_steps=12 format=3 uid="uid://doifknswrgjcy"]
+
+[ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_rwr3h"]
+[ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="2_g3hkb"]
+[ext_resource type="Script" path="res://szenen/Levels/level_5.gd" id="2_ycdoe"]
+[ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_yyn82"]
+[ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="4_6mc8v"]
+[ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="4_t6fhs"]
+[ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="5_bfjpx"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="5_tnlm2"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="6_3xjnb"]
+[ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="6_s8476"]
+[ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="7_k8227"]
+
+[node name="level_5" instance=ExtResource("1_rwr3h")]
+script = ExtResource("2_ycdoe")
+
+[node name="Katze" parent="." index="1"]
+position = Vector2(-581, 725)
+
+[node name="Spiked_barricade" parent="Objects" index="0" instance=ExtResource("2_g3hkb")]
+position = Vector2(-87, -143)
+scale = Vector2(0.3, 0.3)
+
+[node name="Spiked_barricade2" parent="Objects" index="1" instance=ExtResource("2_g3hkb")]
+position = Vector2(456, -83)
+scale = Vector2(0.4, 0.4)
+
+[node name="Spiked_barricade8" parent="Objects" index="2" instance=ExtResource("2_g3hkb")]
+position = Vector2(-56, 415)
+scale = Vector2(0.4, 0.4)
+
+[node name="Spiked_barricade4" parent="Objects" index="3" instance=ExtResource("2_g3hkb")]
+position = Vector2(173, -348)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade7" parent="Objects" index="4" instance=ExtResource("2_g3hkb")]
+position = Vector2(-1008, 58)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade3" parent="Objects" index="5" instance=ExtResource("2_g3hkb")]
+position = Vector2(-703, -218)
+scale = Vector2(0.3, 0.3)
+
+[node name="Spiked_barricade5" parent="Objects" index="6" instance=ExtResource("2_g3hkb")]
+position = Vector2(1048, 333)
+scale = Vector2(0.3, 0.3)
+
+[node name="Spiked_barricade6" parent="Objects" index="7" instance=ExtResource("2_g3hkb")]
+position = Vector2(963, -416)
+scale = Vector2(0.3, 0.3)
+
+[node name="Spiked_barricade9" parent="Objects" index="8" instance=ExtResource("2_g3hkb")]
+position = Vector2(33.0001, 121)
+scale = Vector2(0.3, 0.3)
+
+[node name="Rock" parent="Objects" index="9" instance=ExtResource("4_t6fhs")]
+position = Vector2(38, -691)
+scale = Vector2(0.7, 0.7)
+
+[node name="Rock2" parent="Objects" index="10" instance=ExtResource("4_t6fhs")]
+position = Vector2(-1170, 674)
+scale = Vector2(0.7, 0.7)
+
+[node name="stachelzaun" parent="Objects" index="11" instance=ExtResource("5_tnlm2")]
+position = Vector2(-1276, -373)
+scale = Vector2(0.6, 0.6)
+
+[node name="Baumstamm" parent="Objects" index="12" instance=ExtResource("6_3xjnb")]
+position = Vector2(200, 847)
+rotation = -0.359538
+scale = Vector2(0.6, 0.6)
+
+[node name="Grass" parent="Objects" index="13" instance=ExtResource("7_k8227")]
+position = Vector2(1259, -519)
+scale = Vector2(0.3, 0.3)
+
+[node name="Grass2" parent="Objects" index="14" instance=ExtResource("7_k8227")]
+position = Vector2(1335, -451)
+scale = Vector2(0.3, 0.3)
+
+[node name="Grass3" parent="Objects" index="15" instance=ExtResource("7_k8227")]
+position = Vector2(1322, -637)
+scale = Vector2(0.3, 0.3)
+
+[node name="Grass4" parent="Objects" index="16" instance=ExtResource("7_k8227")]
+position = Vector2(-954, 702)
+scale = Vector2(0.3, 0.3)
+
+[node name="Grass5" parent="Objects" index="17" instance=ExtResource("7_k8227")]
+position = Vector2(-157, -629)
+scale = Vector2(0.3, 0.3)
+
+[node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_yyn82")]
+position = Vector2(-740, -172)
+
+[node name="Pillar2" parent="Pillars" index="1" instance=ExtResource("3_yyn82")]
+position = Vector2(1016, 263)
+
+[node name="Pillar3" parent="Pillars" index="2" instance=ExtResource("3_yyn82")]
+position = Vector2(913, -365)
+
+[node name="Pillar4" parent="Pillars" index="3" instance=ExtResource("3_yyn82")]
+position = Vector2(508, 260)
+
+[node name="Pillar5" parent="Pillars" index="4" instance=ExtResource("3_yyn82")]
+position = Vector2(-80, -221)
+
+[node name="Pillar7" parent="Pillars" index="5" instance=ExtResource("3_yyn82")]
+position = Vector2(-1016, -505)
+
+[node name="Pillar6" parent="Pillars" index="6" instance=ExtResource("3_yyn82")]
+position = Vector2(-934, 447)
+
+[node name="Schalter" parent="." index="8" instance=ExtResource("4_6mc8v")]
+position = Vector2(-2, 457)
+metadata/_edit_lock_ = true
+
+[node name="Door" parent="." index="9" instance=ExtResource("5_bfjpx")]
+z_index = 1
+position = Vector2(507, -760)
+scale = Vector2(1, 1)
+metadata/_edit_lock_ = true
+
+[node name="Backgorund2" type="Sprite2D" parent="." index="10"]
+z_index = -4
+scale = Vector2(2, 2)
+texture = ExtResource("6_s8476")
+metadata/_edit_lock_ = true

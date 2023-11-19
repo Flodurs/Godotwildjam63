@@ -1,0 +1,156 @@
+[gd_scene load_steps=12 format=3 uid="uid://cevstg7g4guxt"]
+
+[ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_74fd5"]
+[ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="2_2ckdd"]
+[ext_resource type="Script" path="res://szenen/Levels/level_7.gd" id="2_jwjew"]
+[ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_nful0"]
+[ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="4_kt2hu"]
+[ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="4_wp0k1"]
+[ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="5_egd5c"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/Teich.tscn" id="5_h84oy"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="6_dutes"]
+[ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="6_l661u"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="7_f1d01"]
+
+[node name="level_7" instance=ExtResource("1_74fd5")]
+script = ExtResource("2_jwjew")
+
+[node name="Katze" parent="." index="1"]
+position = Vector2(-35, 678)
+
+[node name="Spiked_barricade" parent="Objects" index="0" instance=ExtResource("2_2ckdd")]
+position = Vector2(682, 30)
+scale = Vector2(0.3, 0.3)
+
+[node name="Spiked_barricade2" parent="Objects" index="1" instance=ExtResource("2_2ckdd")]
+position = Vector2(568, -165)
+scale = Vector2(0.3, 0.3)
+
+[node name="Spiked_barricade11" parent="Objects" index="2" instance=ExtResource("2_2ckdd")]
+position = Vector2(-34, -280)
+scale = Vector2(0.3, 0.3)
+
+[node name="Spiked_barricade4" parent="Objects" index="3" instance=ExtResource("2_2ckdd")]
+position = Vector2(-628, -202)
+scale = Vector2(0.4, 0.4)
+
+[node name="Spiked_barricade9" parent="Objects" index="4" instance=ExtResource("2_2ckdd")]
+position = Vector2(-450, -491)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade12" parent="Objects" index="5" instance=ExtResource("2_2ckdd")]
+position = Vector2(978, -127)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade13" parent="Objects" index="6" instance=ExtResource("2_2ckdd")]
+position = Vector2(1106, -559)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade14" parent="Objects" index="7" instance=ExtResource("2_2ckdd")]
+position = Vector2(1389, 210)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade15" parent="Objects" index="8" instance=ExtResource("2_2ckdd")]
+position = Vector2(1357, 93)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade6" parent="Objects" index="9" instance=ExtResource("2_2ckdd")]
+position = Vector2(-907, 154)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade5" parent="Objects" index="10" instance=ExtResource("2_2ckdd")]
+position = Vector2(-1136, -190)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade7" parent="Objects" index="11" instance=ExtResource("2_2ckdd")]
+position = Vector2(-518, 145)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade10" parent="Objects" index="12" instance=ExtResource("2_2ckdd")]
+position = Vector2(50, 170)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spiked_barricade3" parent="Objects" index="13" instance=ExtResource("2_2ckdd")]
+position = Vector2(194, -84)
+scale = Vector2(0.4, 0.4)
+
+[node name="Spiked_barricade8" parent="Objects" index="14" instance=ExtResource("2_2ckdd")]
+position = Vector2(771, 158)
+scale = Vector2(0.3, 0.3)
+
+[node name="Rock" parent="Objects" index="15" instance=ExtResource("4_wp0k1")]
+position = Vector2(-1407, 924)
+
+[node name="Rock2" parent="Objects" index="16" instance=ExtResource("4_wp0k1")]
+position = Vector2(1212, -648)
+scale = Vector2(0.7, 0.7)
+
+[node name="Rock3" parent="Objects" index="17" instance=ExtResource("4_wp0k1")]
+position = Vector2(1390, -466)
+scale = Vector2(-0.7, 0.7)
+
+[node name="Rock4" parent="Objects" index="18" instance=ExtResource("4_wp0k1")]
+position = Vector2(-1061, 767)
+scale = Vector2(-0.4, 0.4)
+
+[node name="Rock5" parent="Objects" index="19" instance=ExtResource("4_wp0k1")]
+position = Vector2(-596, -653)
+scale = Vector2(-0.4, 0.4)
+
+[node name="StaticBody2D" parent="Objects" index="20" instance=ExtResource("5_h84oy")]
+position = Vector2(-1510, 296)
+scale = Vector2(0.5, 0.5)
+
+[node name="Baumstamm" parent="Objects" index="21" instance=ExtResource("6_dutes")]
+position = Vector2(1650, -336)
+rotation = 0.120428
+scale = Vector2(-0.4, 0.4)
+
+[node name="Baumstamm2" parent="Objects" index="22" instance=ExtResource("6_dutes")]
+position = Vector2(-1746, -566)
+rotation = 0.120428
+scale = Vector2(-0.4, 0.4)
+
+[node name="stachelzaun" parent="Objects" index="23" instance=ExtResource("7_f1d01")]
+position = Vector2(1356, 796)
+scale = Vector2(0.4, 0.4)
+
+[node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_nful0")]
+position = Vector2(-408, 181)
+
+[node name="Pillar8" parent="Pillars" index="1" instance=ExtResource("3_nful0")]
+position = Vector2(-1006, 482)
+
+[node name="Pillar2" parent="Pillars" index="2" instance=ExtResource("3_nful0")]
+position = Vector2(-47, -242)
+
+[node name="Pillar3" parent="Pillars" index="3" instance=ExtResource("3_nful0")]
+position = Vector2(686, 158)
+
+[node name="Pillar4" parent="Pillars" index="4" instance=ExtResource("3_nful0")]
+position = Vector2(867, -399)
+
+[node name="Pillar5" parent="Pillars" index="5" instance=ExtResource("3_nful0")]
+position = Vector2(467, -185)
+
+[node name="Pillar6" parent="Pillars" index="6" instance=ExtResource("3_nful0")]
+position = Vector2(-989, -204)
+
+[node name="Pillar7" parent="Pillars" index="7" instance=ExtResource("3_nful0")]
+position = Vector2(1042, 519)
+
+[node name="Schalter" parent="." index="8" instance=ExtResource("4_kt2hu")]
+position = Vector2(210, 466)
+metadata/_edit_lock_ = true
+
+[node name="Door" parent="." index="9" instance=ExtResource("5_egd5c")]
+z_index = 1
+position = Vector2(-923, -780)
+scale = Vector2(1, 1)
+metadata/_edit_lock_ = true
+
+[node name="Backgorund2" type="Sprite2D" parent="." index="10"]
+z_index = -4
+scale = Vector2(2, 2)
+texture = ExtResource("6_l661u")
+metadata/_edit_lock_ = true

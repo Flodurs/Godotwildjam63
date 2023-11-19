@@ -33,7 +33,7 @@ func _physics_process(_delta):
 		$kneulPosi.position.x = -abs($kneulPosi.position.x)
 		if $maulPosi.position.x != -abs(maulPosi):
 			var twee = create_tween()
-			twee.set_trans(Tween.TRANS_LINEAR)
+			twee.set_trans(Tween.TRANS_QUAD)
 			twee.tween_property($maulPosi, "position:x", -abs(maulPosi), tweenTime)
 		
 		
