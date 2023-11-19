@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cevstg7g4guxt"]
+[gd_scene load_steps=12 format=3 uid="uid://u4u8i088pkpp"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_74fd5"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="2_2ckdd"]
@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="4_kt2hu"]
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="4_wp0k1"]
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="5_egd5c"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/Teich.tscn" id="5_h84oy"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="6_dutes"]
+[ext_resource type="PackedScene" uid="uid://dxlu5br0kfd1f" path="res://szenen/objekte/Teich.tscn" id="5_h84oy"]
+[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="6_dutes"]
 [ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="6_l661u"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="7_f1d01"]
+[ext_resource type="PackedScene" uid="uid://b36pjof40em80" path="res://szenen/objekte/stachelzaun.tscn" id="7_f1d01"]
 
 [node name="level_7" instance=ExtResource("1_74fd5")]
 script = ExtResource("2_jwjew")
@@ -145,9 +145,8 @@ metadata/_edit_lock_ = true
 
 [node name="Door" parent="." index="9" instance=ExtResource("5_egd5c")]
 z_index = 1
-position = Vector2(-923, -780)
-scale = Vector2(1, 1)
-metadata/_edit_lock_ = true
+position = Vector2(-864, -840)
+scale = Vector2(1.2, 1.2)
 
 [node name="Backgorund2" type="Sprite2D" parent="." index="10"]
 z_index = -4
