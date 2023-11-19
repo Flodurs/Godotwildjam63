@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://doifknswrgjcy"]
+[gd_scene load_steps=12 format=3 uid="uid://bh0yy7ncjppa3"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_rwr3h"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="2_g3hkb"]
@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="4_6mc8v"]
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="4_t6fhs"]
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="5_bfjpx"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="5_tnlm2"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="6_3xjnb"]
+[ext_resource type="PackedScene" uid="uid://b36pjof40em80" path="res://szenen/objekte/stachelzaun.tscn" id="5_tnlm2"]
+[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="6_3xjnb"]
 [ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="6_s8476"]
 [ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="7_k8227"]
 
@@ -67,8 +67,8 @@ position = Vector2(-1276, -373)
 scale = Vector2(0.6, 0.6)
 
 [node name="Baumstamm" parent="Objects" index="12" instance=ExtResource("6_3xjnb")]
-position = Vector2(200, 847)
-rotation = -0.359538
+position = Vector2(375, 816)
+rotation = -0.178396
 scale = Vector2(0.6, 0.6)
 
 [node name="Grass" parent="Objects" index="13" instance=ExtResource("7_k8227")]
@@ -113,8 +113,7 @@ position = Vector2(-1016, -505)
 position = Vector2(-934, 447)
 
 [node name="Schalter" parent="." index="8" instance=ExtResource("4_6mc8v")]
-position = Vector2(-2, 457)
-metadata/_edit_lock_ = true
+position = Vector2(-2, 657)
 
 [node name="Door" parent="." index="9" instance=ExtResource("5_bfjpx")]
 z_index = 1
