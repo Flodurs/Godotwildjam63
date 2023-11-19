@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://rwtn145gv2fy"]
+[gd_scene load_steps=8 format=3 uid="uid://rwtn145gv2fy"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_fadl3"]
 [ext_resource type="Script" path="res://szenen/Levels/level_4.gd" id="2_xvuo4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0sprmhk4yyal" path="res://szenen/objekte/Pillar.tscn" id="3_xq5ny"]
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="4_7bdtm"]
 [ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="5_ldmrk"]
+[ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="7_0lxtf"]
 
 [node name="level_4" instance=ExtResource("1_fadl3")]
 script = ExtResource("2_xvuo4")
@@ -125,3 +126,9 @@ scale = Vector2(1.11908, 1.11908)
 
 [node name="Schalter" parent="." index="10" instance=ExtResource("5_ldmrk")]
 position = Vector2(-1127, 581)
+
+[node name="Backgorund2" type="Sprite2D" parent="." index="11"]
+z_index = -4
+scale = Vector2(2, 2)
+texture = ExtResource("7_0lxtf")
+metadata/_edit_lock_ = true
