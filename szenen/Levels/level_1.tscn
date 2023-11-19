@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="3_ore7q"]
 [ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="4_ssknb"]
 [ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="5_43jcn"]
-[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="6_a6yn4"]
 [ext_resource type="PackedScene" uid="uid://5cgyo1yuenvq" path="res://szenen/objekte/long_concrete.tscn" id="8_8a4ay"]
 [ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="9_uyeks"]
 [ext_resource type="Texture2D" uid="uid://bdwmuot6ok2uy" path="res://assets/sprites/Objects/Shadow.png" id="12_bgoay"]
@@ -56,6 +56,10 @@ scale = Vector2(-1, 1)
 position = Vector2(-801, 301)
 scale = Vector2(0.5, 0.5)
 
+[node name="Door" parent="Objects" index="9" instance=ExtResource("14_elfmc")]
+position = Vector2(410, -577)
+scale = Vector2(1, 1)
+
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("2_088v0")]
 position = Vector2(-379, 161)
 
@@ -100,13 +104,10 @@ texture = ExtResource("12_bgoay")
 [node name="Schalter" parent="." index="8" instance=ExtResource("13_1k5b6")]
 position = Vector2(783, 245)
 
-[node name="Door" parent="." index="9" instance=ExtResource("14_elfmc")]
-position = Vector2(435, -693)
-
-[node name="Spiked_barricade" parent="." index="10" instance=ExtResource("14_ru02u")]
+[node name="Spiked_barricade" parent="." index="9" instance=ExtResource("14_ru02u")]
 position = Vector2(482, 47)
 scale = Vector2(0.5, 0.5)
 
-[node name="Spiked_barricade2" parent="." index="11" instance=ExtResource("14_ru02u")]
+[node name="Spiked_barricade2" parent="." index="10" instance=ExtResource("14_ru02u")]
 position = Vector2(-14, 69)
 scale = Vector2(0.500778, 0.500778)

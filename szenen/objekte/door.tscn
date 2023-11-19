@@ -21,44 +21,46 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twq20"]
-size = Vector2(158, 45)
+size = Vector2(250, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_altcw"]
-size = Vector2(40, 54)
+size = Vector2(44, 87.5)
 
 [node name="Door" type="StaticBody2D" groups=["Door"]]
-z_index = -2
+y_sort_enabled = true
 scale = Vector2(2, 2)
 script = ExtResource("1_w45rm")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.7, 0.7)
+position = Vector2(95.5, -259.5)
+scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_h0nbo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-1, 30.5)
-polygon = PackedVector2Array(-288, -44, -256, 192, -161.5, 195.5, -153, 135, -165, -92.5, -16.5, -68, -15.5, 158.5, -1.5, 186, 105.5, 187, 124.5, -151, -226.5, -105.5)
+position = Vector2(0, -164)
+polygon = PackedVector2Array(-258, 38, -256, 192, -136, 201, -115, 158, -108, -92, 94, -101, 100, 185, 121, 203, 246, 204, 267, -183, -244, -89)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-79.5, 182.5)
+position = Vector2(0, -17.5)
 shape = SubResource("RectangleShape2D_twq20")
 
 [node name="ForwardGate" parent="." instance=ExtResource("4_hqywx")]
-position = Vector2(-86, 66.5)
+position = Vector2(-6, -168)
 rotation = 1.5708
-scale = Vector2(2.51399, -1.34221)
+scale = Vector2(1.951, 1.951)
 
 [node name="openeable" type="Timer" parent="."]
 autostart = true
 
 [node name="colAreaGate" type="Area2D" parent="."]
-position = Vector2(-188.5, 192)
+position = Vector2(-145.5, 18.5)
 script = ExtResource("5_375mh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colAreaGate"]
+position = Vector2(1.5, -22.25)
 shape = SubResource("RectangleShape2D_altcw")
 
 [node name="hitBoxCenter" type="Marker2D" parent="."]
-position = Vector2(-186.5, 200.5)
+position = Vector2(-143.5, 27)
 
 [connection signal="area_entered" from="colAreaGate" to="colAreaGate" method="_on_area_entered"]

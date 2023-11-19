@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dg36ak4eji1ha"]
+[gd_scene load_steps=12 format=3 uid="uid://debbn84480ioo"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_lvh1m"]
 [ext_resource type="Script" path="res://szenen/Levels/level_6.gd" id="2_5er27"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="5_gsq4d"]
 [ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="6_6cpd5"]
 [ext_resource type="PackedScene" uid="uid://5cgyo1yuenvq" path="res://szenen/objekte/long_concrete.tscn" id="6_x562n"]
-[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="7_b5v6m"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="7_b5v6m"]
 
 [node name="level_6" instance=ExtResource("1_lvh1m")]
 script = ExtResource("2_5er27")
@@ -76,6 +76,10 @@ position = Vector2(-1334, 662)
 [node name="StaticBody2D3" parent="Objects" index="15" instance=ExtResource("7_b5v6m")]
 position = Vector2(-1371, 11)
 
+[node name="Door" parent="Objects" index="16" instance=ExtResource("4_6w7ns")]
+position = Vector2(533, -546)
+scale = Vector2(1, 1)
+
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_byihv")]
 position = Vector2(1136, 39)
 
@@ -91,14 +95,10 @@ position = Vector2(78, 206)
 [node name="Pillar4" parent="Pillars" index="4" instance=ExtResource("3_byihv")]
 position = Vector2(-954, -195)
 
-[node name="Door" parent="." index="8" instance=ExtResource("4_6w7ns")]
-position = Vector2(547, -997)
-scale = Vector2(1.56, 1.56)
-
-[node name="Schalter" parent="." index="9" instance=ExtResource("5_bnilw")]
+[node name="Schalter" parent="." index="8" instance=ExtResource("5_bnilw")]
 position = Vector2(-918, 518)
 
-[node name="Backgorund2" type="Sprite2D" parent="." index="10"]
+[node name="Backgorund2" type="Sprite2D" parent="." index="9"]
 z_index = -4
 scale = Vector2(2, 2)
 texture = ExtResource("6_6cpd5")

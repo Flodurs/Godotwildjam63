@@ -15,8 +15,8 @@ script = ExtResource("2_urqw5")
 position = Vector2(136, 685)
 
 [node name="Door" parent="Objects" index="0" instance=ExtResource("3_jkce6")]
-position = Vector2(-45, -746)
-scale = Vector2(1.48, 1.48)
+position = Vector2(5, -540)
+scale = Vector2(1, 1)
 
 [node name="Schalter" parent="Objects" index="1" instance=ExtResource("3_b6yfu")]
 position = Vector2(-23, 511)
