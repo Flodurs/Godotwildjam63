@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://diqvnlbmcwra8"]
+[gd_scene load_steps=3 format=3 uid="uid://diqvnlbmcwra8"]
 
 [ext_resource type="Script" path="res://szenen/Global/musicController.gd" id="1_fbkyc"]
+[ext_resource type="AudioStream" uid="uid://b1jrp2vic288g" path="res://MusicRelatedFiles/soundTrack.wav" id="2_331lv"]
 
 [node name="musicController" type="Node"]
 script = ExtResource("1_fbkyc")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_331lv")
 volume_db = -10.0
-autoplay = true
