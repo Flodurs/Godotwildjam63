@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://6f32n7a8doxn"]
+
+[ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_njhlw"]
+[ext_resource type="Texture2D" uid="uid://cwipsk6e0lg6" path="res://assets/End.png" id="2_m3xn5"]
+
+[node name="end" instance=ExtResource("1_njhlw")]
+
+[node name="Backgorund2" type="Sprite2D" parent="." index="9"]
+z_index = -4
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_m3xn5")
+metadata/_edit_lock_ = true

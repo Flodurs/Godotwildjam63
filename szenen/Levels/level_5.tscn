@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bh0yy7ncjppa3"]
+[gd_scene load_steps=12 format=3 uid="uid://doifknswrgjcy"]
 
 [ext_resource type="PackedScene" uid="uid://ct8c5s7tamylk" path="res://szenen/level/Level.tscn" id="1_rwr3h"]
 [ext_resource type="PackedScene" uid="uid://cwh7edg1y4haq" path="res://szenen/objekte/spiked_barricade.tscn" id="2_g3hkb"]
@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c8tfpt2p2vro2" path="res://szenen/objekte/schalter.tscn" id="4_6mc8v"]
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="4_t6fhs"]
 [ext_resource type="PackedScene" uid="uid://bnaxmo8xg4yjm" path="res://szenen/objekte/door.tscn" id="5_bfjpx"]
-[ext_resource type="PackedScene" uid="uid://b36pjof40em80" path="res://szenen/objekte/stachelzaun.tscn" id="5_tnlm2"]
-[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="6_3xjnb"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="5_tnlm2"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="6_3xjnb"]
 [ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="6_s8476"]
 [ext_resource type="PackedScene" uid="uid://bl75k08wo6xhn" path="res://szenen/objekte/grass.tscn" id="7_k8227"]
 
@@ -91,6 +91,11 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(-157, -629)
 scale = Vector2(0.3, 0.3)
 
+[node name="Door" parent="Objects" index="18" instance=ExtResource("5_bfjpx")]
+z_index = 1
+position = Vector2(484, -607)
+scale = Vector2(1, 1)
+
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_yyn82")]
 position = Vector2(-740, -172)
 
@@ -115,13 +120,7 @@ position = Vector2(-934, 447)
 [node name="Schalter" parent="." index="8" instance=ExtResource("4_6mc8v")]
 position = Vector2(-2, 657)
 
-[node name="Door" parent="." index="9" instance=ExtResource("5_bfjpx")]
-z_index = 1
-position = Vector2(507, -760)
-scale = Vector2(1, 1)
-metadata/_edit_lock_ = true
-
-[node name="Backgorund2" type="Sprite2D" parent="." index="10"]
+[node name="Backgorund2" type="Sprite2D" parent="." index="9"]
 z_index = -4
 scale = Vector2(2, 2)
 texture = ExtResource("6_s8476")

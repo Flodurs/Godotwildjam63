@@ -55,7 +55,7 @@ position = Vector2(1357, 93)
 scale = Vector2(0.5, 0.5)
 
 [node name="Spiked_barricade6" parent="Objects" index="9" instance=ExtResource("2_2ckdd")]
-position = Vector2(-907, 154)
+position = Vector2(-979, 154)
 scale = Vector2(0.5, 0.5)
 
 [node name="Spiked_barricade5" parent="Objects" index="10" instance=ExtResource("2_2ckdd")]
@@ -63,7 +63,7 @@ position = Vector2(-1136, -190)
 scale = Vector2(0.5, 0.5)
 
 [node name="Spiked_barricade7" parent="Objects" index="11" instance=ExtResource("2_2ckdd")]
-position = Vector2(-518, 145)
+position = Vector2(-480, 145)
 scale = Vector2(0.5, 0.5)
 
 [node name="Spiked_barricade10" parent="Objects" index="12" instance=ExtResource("2_2ckdd")]
@@ -94,7 +94,7 @@ position = Vector2(-1061, 767)
 scale = Vector2(-0.4, 0.4)
 
 [node name="Rock5" parent="Objects" index="19" instance=ExtResource("4_wp0k1")]
-position = Vector2(-596, -653)
+position = Vector2(-479, -664)
 scale = Vector2(-0.4, 0.4)
 
 [node name="StaticBody2D" parent="Objects" index="20" instance=ExtResource("5_h84oy")]
@@ -107,13 +107,17 @@ rotation = 0.120428
 scale = Vector2(-0.4, 0.4)
 
 [node name="Baumstamm2" parent="Objects" index="22" instance=ExtResource("6_dutes")]
-position = Vector2(-1746, -566)
+position = Vector2(-1874, -585)
 rotation = 0.120428
 scale = Vector2(-0.4, 0.4)
 
 [node name="stachelzaun" parent="Objects" index="23" instance=ExtResource("7_f1d01")]
 position = Vector2(1356, 796)
 scale = Vector2(0.4, 0.4)
+
+[node name="Door" parent="Objects" index="24" instance=ExtResource("5_egd5c")]
+position = Vector2(-936, -554)
+scale = Vector2(1, 1)
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_nful0")]
 position = Vector2(-408, 181)
@@ -143,13 +147,7 @@ position = Vector2(1042, 519)
 position = Vector2(210, 466)
 metadata/_edit_lock_ = true
 
-[node name="Door" parent="." index="9" instance=ExtResource("5_egd5c")]
-z_index = 1
-position = Vector2(-923, -780)
-scale = Vector2(1, 1)
-metadata/_edit_lock_ = true
-
-[node name="Backgorund2" type="Sprite2D" parent="." index="10"]
+[node name="Backgorund2" type="Sprite2D" parent="." index="9"]
 z_index = -4
 scale = Vector2(2, 2)
 texture = ExtResource("6_l661u")

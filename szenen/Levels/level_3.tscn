@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="6_8yxf8"]
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="7_nfqqg"]
 [ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="7_npax0"]
-[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="8_1wlac"]
-[ext_resource type="PackedScene" uid="uid://b36pjof40em80" path="res://szenen/objekte/stachelzaun.tscn" id="9_8dneq"]
-[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="10_x2eoi"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="8_1wlac"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="9_8dneq"]
+[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="10_x2eoi"]
 [ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="11_viv8q"]
 
 [node name="level_3" instance=ExtResource("1_76sjb")]
@@ -152,6 +152,10 @@ scale = Vector2(0.52, 0.52)
 position = Vector2(1453, 545)
 scale = Vector2(0.52, 0.52)
 
+[node name="Door" parent="Objects" index="33" instance=ExtResource("2_ad5c7")]
+position = Vector2(-1171, -577)
+scale = Vector2(1, 1)
+
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("4_imssc")]
 position = Vector2(-1103, 484)
 
@@ -164,14 +168,10 @@ position = Vector2(946, -41)
 [node name="Pillar4" parent="Pillars" index="3" instance=ExtResource("4_imssc")]
 position = Vector2(-968, -47)
 
-[node name="Door" parent="." index="8" instance=ExtResource("2_ad5c7")]
-position = Vector2(-1164, -712)
-scale = Vector2(1, 1)
+[node name="Schalter" parent="." index="8" instance=ExtResource("3_noqsw")]
+position = Vector2(821, 417)
 
-[node name="Schalter" parent="." index="9" instance=ExtResource("3_noqsw")]
-position = Vector2(1046, 464)
-
-[node name="Backgorund2" type="Sprite2D" parent="." index="10"]
+[node name="Backgorund2" type="Sprite2D" parent="." index="9"]
 z_index = -4
 scale = Vector2(2, 2)
 texture = ExtResource("7_npax0")

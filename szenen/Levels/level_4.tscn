@@ -90,6 +90,10 @@ scale = Vector2(0.399999, 0.399999)
 position = Vector2(-731, -438)
 scale = Vector2(0.399999, 0.399999)
 
+[node name="Door" parent="Objects" index="19" instance=ExtResource("4_7bdtm")]
+position = Vector2(1117, -593)
+scale = Vector2(1.11908, 1.11908)
+
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource("3_xq5ny")]
 position = Vector2(-930, 60)
 
@@ -120,14 +124,10 @@ position = Vector2(780, 55)
 [node name="Pillar9" parent="Pillars" index="9" instance=ExtResource("3_xq5ny")]
 position = Vector2(1107, -161)
 
-[node name="Door" parent="." index="9" instance=ExtResource("4_7bdtm")]
-position = Vector2(1117, -827)
-scale = Vector2(1.11908, 1.11908)
-
-[node name="Schalter" parent="." index="10" instance=ExtResource("5_ldmrk")]
+[node name="Schalter" parent="." index="9" instance=ExtResource("5_ldmrk")]
 position = Vector2(-1127, 581)
 
-[node name="Backgorund2" type="Sprite2D" parent="." index="11"]
+[node name="Backgorund2" type="Sprite2D" parent="." index="10"]
 z_index = -4
 scale = Vector2(2, 2)
 texture = ExtResource("7_0lxtf")

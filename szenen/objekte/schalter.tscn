@@ -23,15 +23,16 @@ animations = [{
 radius = 24.3311
 
 [node name="Schalter" type="StaticBody2D" groups=["Schalter"]]
+z_index = -2
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_51slo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-110.6, -377.6)
+position = Vector2(-110.6, -303.6)
 polygon = PackedVector2Array(-80, 390, 20, 446, 316, 466, 310, 304, 22, 318, -68, 332)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-40.6, -59.6)
+position = Vector2(-40.6, 14.4001)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_1ydlf")
 frame_progress = 1.0
@@ -40,31 +41,34 @@ frame_progress = 1.0
 autostart = true
 
 [node name="colArea1" type="Area2D" parent="."]
-position = Vector2(-84.6, -217.6)
+position = Vector2(-68.6, -135.6)
 script = ExtResource("4_4il8r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea1"]
+position = Vector2(-16, -8)
 scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_fyjbd")
 
 [node name="colArea2" type="Area2D" parent="."]
-position = Vector2(-110.6, -239.6)
+position = Vector2(-116.6, -161.6)
 script = ExtResource("4_4il8r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea2"]
+position = Vector2(6, -4)
 scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_fyjbd")
 
 [node name="colArea3" type="Area2D" parent="."]
-position = Vector2(-64.6, -239.6)
+position = Vector2(-42.6, -173.6)
 script = ExtResource("4_4il8r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colArea3"]
+position = Vector2(-22, 8)
 scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_fyjbd")
 
 [node name="hitBox_center" type="Marker2D" parent="."]
-position = Vector2(-84.6, -233.6)
+position = Vector2(-84.6, -159.6)
 
 [connection signal="area_entered" from="colArea1" to="colArea1" method="_on_area_entered"]
 [connection signal="area_entered" from="colArea2" to="colArea2" method="_on_area_entered"]

@@ -1,8 +1,8 @@
 extends level_parent
 
-var next_scene: String = "res://szenen/Levels/level_7.tscn"
+var next_scene: String = "res://szenen/Levels/end.tscn"
 var last_scene: String = "res://szenen/Levels/level_3.tscn"
 
 func _process(_delta):
-	if !zielErreicht && $Schalter.isConnected && $Door.canBeOpened:
+	if !zielErreicht && $Schalter.isConnected && $Objects/Door.canBeOpened:
 		zielErreicht = true
