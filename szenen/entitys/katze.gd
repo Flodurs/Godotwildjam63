@@ -11,10 +11,12 @@ const kneul_schmutz = preload("res://assets/sprites/wollekneule_schmutzig.png")
 const haufen_schmutz = preload("res://assets/sprites/wollhaufen_schmutzig.png")
 const kneul_sauber = preload("res://assets/sprites/wollekneule_sauber.png")
 const haufen_sauber = preload("res://assets/sprites/wollhaufen_sauber.png")
+var steps = preload("res://MusicRelatedFiles/steps.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("Player") # Replace with function body.
+	$AudioStreamPlayer.set_stream(steps)
 	
 	
 func _physics_process(_delta):

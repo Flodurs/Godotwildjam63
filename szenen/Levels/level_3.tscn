@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c7elyyvwrxq2i" path="res://szenen/objekte/reifen.tscn" id="6_8yxf8"]
 [ext_resource type="PackedScene" uid="uid://38776gmtrgq8" path="res://szenen/objekte/rock.tscn" id="7_nfqqg"]
 [ext_resource type="Texture2D" uid="uid://4n6so5dqn6xs" path="res://assets/sprites/Objects/Ground.png" id="7_npax0"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/fass.tscn" id="8_1wlac"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/stachelzaun.tscn" id="9_8dneq"]
-[ext_resource type="PackedScene" path="res://szenen/objekte/baumstamm.tscn" id="10_x2eoi"]
+[ext_resource type="PackedScene" uid="uid://d3tvtvy7u3jp4" path="res://szenen/objekte/fass.tscn" id="8_1wlac"]
+[ext_resource type="PackedScene" uid="uid://b36pjof40em80" path="res://szenen/objekte/stachelzaun.tscn" id="9_8dneq"]
+[ext_resource type="PackedScene" uid="uid://drw6ntmuqiclm" path="res://szenen/objekte/baumstamm.tscn" id="10_x2eoi"]
 [ext_resource type="PackedScene" uid="uid://b3yj2axpflnrq" path="res://szenen/objekte/concrete_pile.tscn" id="11_viv8q"]
 
 [node name="level_3" instance=ExtResource("1_76sjb")]
