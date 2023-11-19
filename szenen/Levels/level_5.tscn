@@ -117,9 +117,8 @@ position = Vector2(-2, 657)
 
 [node name="Door" parent="." index="9" instance=ExtResource("5_bfjpx")]
 z_index = 1
-position = Vector2(507, -760)
-scale = Vector2(1, 1)
-metadata/_edit_lock_ = true
+position = Vector2(555, -852)
+scale = Vector2(1.36, 1.36)
 
 [node name="Backgorund2" type="Sprite2D" parent="." index="10"]
 z_index = -4

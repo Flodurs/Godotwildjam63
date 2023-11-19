@@ -121,8 +121,8 @@ position = Vector2(780, 55)
 position = Vector2(1107, -161)
 
 [node name="Door" parent="." index="9" instance=ExtResource("4_7bdtm")]
-position = Vector2(1117, -827)
-scale = Vector2(1.11908, 1.11908)
+position = Vector2(1189, -906)
+scale = Vector2(1.47908, 1.47908)
 
 [node name="Schalter" parent="." index="10" instance=ExtResource("5_ldmrk")]
 position = Vector2(-1127, 581)

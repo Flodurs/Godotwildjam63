@@ -98,8 +98,7 @@ scale = Vector2(0.43, 0.155)
 texture = ExtResource("12_bgoay")
 
 [node name="Schalter" parent="." index="8" instance=ExtResource("13_1k5b6")]
-z_index = 0
-position = Vector2(783, 164)
+position = Vector2(783, 245)
 
 [node name="Door" parent="." index="9" instance=ExtResource("14_elfmc")]
 position = Vector2(435, -693)

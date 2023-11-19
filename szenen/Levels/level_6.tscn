@@ -92,9 +92,8 @@ position = Vector2(78, 206)
 position = Vector2(-954, -195)
 
 [node name="Door" parent="." index="8" instance=ExtResource("4_6w7ns")]
-position = Vector2(491, -747)
-scale = Vector2(1, 1)
-metadata/_edit_lock_ = true
+position = Vector2(547, -955)
+scale = Vector2(1.32, 1.32)
 
 [node name="Schalter" parent="." index="9" instance=ExtResource("5_bnilw")]
 position = Vector2(-918, 518)
