@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://szenen/objekte/wind_emitter.gd" id="1_j3p81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61og4"]
-size = Vector2(2895, 1620)
+size = Vector2(3500, 2000)
 
 [node name="WindEmitter" type="Area2D"]
 modulate = Color(1, 1, 1, 0.992157)

@@ -18,7 +18,7 @@ func schalter_triggered():
 		get_tree().get_nodes_in_group("Door")[0].close()
 		
 func schalter_test(katzPos):
-	if (katzPos- position).length() < 100:
+	if (katzPos- position).length() < 200:
 		schalter_triggered() 
 
 func update(): 
