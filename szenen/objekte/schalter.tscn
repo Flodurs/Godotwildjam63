@@ -23,13 +23,13 @@ animations = [{
 radius = 24.3311
 
 [node name="Schalter" type="StaticBody2D" groups=["Schalter"]]
-z_index = -2
+y_sort_enabled = true
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_51slo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-110.6, -303.6)
-polygon = PackedVector2Array(-80, 390, 20, 446, 316, 466, 310, 304, 22, 318, -68, 332)
+polygon = PackedVector2Array(-80, 390, 20, 446, 112.6, 423.6, 126.6, 339.6, 22, 318, -68, 332)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-40.6, 14.4001)
@@ -69,8 +69,6 @@ shape = SubResource("CircleShape2D_fyjbd")
 
 [node name="hitBox_center" type="Marker2D" parent="."]
 position = Vector2(-84.6, -159.6)
-
-[node name="audioStream" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="area_entered" from="colArea1" to="colArea1" method="_on_area_entered"]
 [connection signal="area_entered" from="colArea2" to="colArea2" method="_on_area_entered"]
